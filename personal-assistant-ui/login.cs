@@ -1,8 +1,8 @@
 namespace personal_assistant_ui
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
         }
@@ -14,7 +14,9 @@ namespace personal_assistant_ui
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            signup signup = new signup();
+            signup.Show();
         }
     }
 }
