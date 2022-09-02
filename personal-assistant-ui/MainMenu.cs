@@ -66,7 +66,9 @@ namespace personal_assistant_ui
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            ShoeRackForm shoerack = new ShoeRackForm();
+            shoerack.Show();
         }
 
         private void label6_Click(object sender, EventArgs e)

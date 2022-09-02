@@ -63,6 +63,16 @@ namespace personal_assistant_ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap info_circle {
+            get {
+                object obj = ResourceManager.GetObject("info-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lightOff {
             get {
                 object obj = ResourceManager.GetObject("lightOff", resourceCulture);

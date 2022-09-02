@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_smart_shoe_rack = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -46,6 +46,7 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.Location = new System.Drawing.Point(171, 124);
             this.button1.Name = "button1";
@@ -55,21 +56,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btn_smart_shoe_rack
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(409, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 104);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_smart_shoe_rack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_smart_shoe_rack.BackgroundImage")));
+            this.btn_smart_shoe_rack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_smart_shoe_rack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_smart_shoe_rack.Location = new System.Drawing.Point(409, 124);
+            this.btn_smart_shoe_rack.Name = "btn_smart_shoe_rack";
+            this.btn_smart_shoe_rack.Size = new System.Drawing.Size(113, 104);
+            this.btn_smart_shoe_rack.TabIndex = 1;
+            this.btn_smart_shoe_rack.UseVisualStyleBackColor = true;
+            this.btn_smart_shoe_rack.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(528, 124);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(113, 104);
@@ -91,6 +94,7 @@
             // 
             this.button5.BackgroundImage = global::personal_assistant_ui.Properties.Resources.lightOff;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Location = new System.Drawing.Point(290, 124);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 104);
@@ -168,10 +172,11 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_smart_shoe_rack);
             this.Controls.Add(this.button1);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Personal Assistant - Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,7 +185,7 @@
         #endregion
 
         private Button button1;
-        private Button button2;
+        private Button btn_smart_shoe_rack;
         private Button button3;
         private Button button4;
         private Button button5;

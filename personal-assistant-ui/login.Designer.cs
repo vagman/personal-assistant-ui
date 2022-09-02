@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.btn_login = new System.Windows.Forms.Button();
             this.btn_signup = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -35,10 +36,12 @@
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_login
             // 
+            this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_login.Location = new System.Drawing.Point(268, 221);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(75, 23);
@@ -49,6 +52,7 @@
             // 
             // btn_signup
             // 
+            this.btn_signup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_signup.Location = new System.Drawing.Point(370, 221);
             this.btn_signup.Name = "btn_signup";
             this.btn_signup.Size = new System.Drawing.Size(75, 23);
@@ -79,15 +83,15 @@
             // 
             this.tb_username.Location = new System.Drawing.Point(325, 112);
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(137, 23);
+            this.tb_username.Size = new System.Drawing.Size(180, 23);
             this.tb_username.TabIndex = 4;
             this.tb_username.Text = "enter your username";
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(325, 145);
+            this.tb_password.Location = new System.Drawing.Point(324, 145);
             this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(137, 23);
+            this.tb_password.Size = new System.Drawing.Size(180, 23);
             this.tb_password.TabIndex = 5;
             this.tb_password.Text = "enter your password";
             // 
@@ -101,11 +105,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(757, 407);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(31, 31);
+            this.button4.TabIndex = 7;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_username);
@@ -114,7 +130,8 @@
             this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.btn_login);
             this.Name = "login";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Personal Assistant - Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +146,6 @@
         private TextBox tb_username;
         private TextBox tb_password;
         private Button button1;
+        private Button button4;
     }
 }

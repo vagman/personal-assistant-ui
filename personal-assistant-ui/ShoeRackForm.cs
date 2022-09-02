@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace personal_assistant_ui
 {
-    public partial class signup : Form
+    public partial class ShoeRackForm : Form
     {
-        public signup()
+        public ShoeRackForm()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
