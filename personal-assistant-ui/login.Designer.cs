@@ -90,7 +90,7 @@
             this.tb_password.TabIndex = 5;
             this.tb_password.Text = "enter your password";
             // 
-            // Form1
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,8 +101,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.btn_login);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "login";
+            this.Text = "Personal Assistant - Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
