@@ -44,11 +44,11 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImage = global::personal_assistant_ui.Properties.Resources.daily_planner;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(171, 124);
+            this.button1.Location = new System.Drawing.Point(126, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 104);
             this.button1.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             // btn_smart_shoe_rack
             // 
-            this.btn_smart_shoe_rack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_smart_shoe_rack.BackgroundImage")));
+            this.btn_smart_shoe_rack.BackgroundImage = global::personal_assistant_ui.Properties.Resources.shoe_rack;
             this.btn_smart_shoe_rack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_smart_shoe_rack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_smart_shoe_rack.Location = new System.Drawing.Point(409, 124);
@@ -70,12 +70,12 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.BackgroundImage = global::personal_assistant_ui.Properties.Resources.pet_feeder;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(528, 124);
+            this.button3.Location = new System.Drawing.Point(544, 124);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 104);
+            this.button3.Size = new System.Drawing.Size(74, 104);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -84,6 +84,7 @@
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Location = new System.Drawing.Point(757, 407);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(31, 31);
@@ -92,10 +93,10 @@
             // 
             // button5
             // 
-            this.button5.BackgroundImage = global::personal_assistant_ui.Properties.Resources.lightOff;
+            this.button5.BackgroundImage = global::personal_assistant_ui.Properties.Resources.lights_off;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(290, 124);
+            this.button5.Location = new System.Drawing.Point(267, 124);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 104);
             this.button5.TabIndex = 4;
@@ -105,7 +106,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(188, 231);
+            this.label1.Location = new System.Drawing.Point(144, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 15);
             this.label1.TabIndex = 5;
@@ -114,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(311, 231);
+            this.label2.Location = new System.Drawing.Point(288, 231);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
             this.label2.TabIndex = 6;
@@ -132,7 +133,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(528, 231);
+            this.label4.Location = new System.Drawing.Point(526, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 15);
             this.label4.TabIndex = 8;
@@ -141,7 +142,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(302, 246);
+            this.label5.Location = new System.Drawing.Point(279, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 15);
             this.label5.TabIndex = 9;
@@ -151,7 +152,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(361, 246);
+            this.label6.Location = new System.Drawing.Point(338, 246);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 15);
             this.label6.TabIndex = 10;
