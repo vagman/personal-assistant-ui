@@ -28,5 +28,15 @@ namespace personal_assistant_ui
             this.Hide(); //the Hide method putted at the bottom to hide smoothly the loginForm
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

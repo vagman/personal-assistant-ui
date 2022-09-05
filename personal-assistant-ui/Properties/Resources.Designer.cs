@@ -63,6 +63,16 @@ namespace personal_assistant_ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap daily_planner {
+            get {
+                object obj = ResourceManager.GetObject("daily-planner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap info_circle {
             get {
                 object obj = ResourceManager.GetObject("info-circle", resourceCulture);
@@ -86,6 +96,46 @@ namespace personal_assistant_ui.Properties {
         internal static System.Drawing.Bitmap lightOn {
             get {
                 object obj = ResourceManager.GetObject("lightOn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lights_off {
+            get {
+                object obj = ResourceManager.GetObject("lights-off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pet_feeder {
+            get {
+                object obj = ResourceManager.GetObject("pet-feeder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shoe_rack {
+            get {
+                object obj = ResourceManager.GetObject("shoe-rack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shoe_rack1 {
+            get {
+                object obj = ResourceManager.GetObject("shoe-rack1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
