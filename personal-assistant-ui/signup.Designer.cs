@@ -60,6 +60,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(370, 108);
             this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Enter your username";
             this.textBox1.Size = new System.Drawing.Size(172, 23);
             this.textBox1.TabIndex = 1;
             // 
@@ -67,20 +68,27 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(371, 165);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "Enter your email";
             this.textBox2.Size = new System.Drawing.Size(171, 23);
             this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(371, 194);
+            this.textBox3.MaxLength = 14;
             this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
+            this.textBox3.PlaceholderText = "Enter your password";
             this.textBox3.Size = new System.Drawing.Size(171, 23);
             this.textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(371, 228);
+            this.textBox4.MaxLength = 14;
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
+            this.textBox4.PlaceholderText = "Re-enter your password";
             this.textBox4.Size = new System.Drawing.Size(171, 23);
             this.textBox4.TabIndex = 4;
             // 
@@ -134,6 +142,7 @@
             // 
             this.textBox5.Location = new System.Drawing.Point(370, 135);
             this.textBox5.Name = "textBox5";
+            this.textBox5.PlaceholderText = "Enter your full name";
             this.textBox5.Size = new System.Drawing.Size(172, 23);
             this.textBox5.TabIndex = 10;
             // 
@@ -158,6 +167,7 @@
             this.button2.Size = new System.Drawing.Size(27, 27);
             this.button2.TabIndex = 12;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -169,6 +179,7 @@
             this.button3.Size = new System.Drawing.Size(27, 27);
             this.button3.TabIndex = 13;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // signup
             // 
