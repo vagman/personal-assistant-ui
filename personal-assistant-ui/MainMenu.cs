@@ -23,7 +23,10 @@ namespace personal_assistant_ui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Scheduler scheduler = new Scheduler();
+            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close(); //When exited from the Scheduler form the program closed too.
+            scheduler.Show();
+            this.Hide(); //the Hide method putted at the bottom to hide smoothly the loginForm
         }
 
 
@@ -74,6 +77,14 @@ namespace personal_assistant_ui
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Scheduler scheduler = new Scheduler();            
+            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close(); //When exited from the Scheduler form the program closed too.
+            scheduler.Show();
+            this.Hide(); //the Hide method putted at the bottom to hide smoothly the loginForm
         }
     }
 }
