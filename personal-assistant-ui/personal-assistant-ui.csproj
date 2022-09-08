@@ -10,12 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="WPF_ClockPicker">
-      <HintPath>..\..\WPF_ClockPicker\WPF_ClockPicker\bin\Debug\WPF_ClockPicker.exe</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="App.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
