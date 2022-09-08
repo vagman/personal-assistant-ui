@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loginErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_help1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -137,6 +138,15 @@
             this.loginErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.loginErrorProvider.ContainerControl = this;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // btn_help1
             // 
             this.btn_help1.AutoSize = true;
@@ -156,6 +166,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_help1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_help);
@@ -189,6 +200,7 @@
         private Label label3;
         private ContextMenuStrip contextMenuStrip1;
         private ErrorProvider loginErrorProvider;
+        private Button button1;
         private Label btn_help1;
     }
 }

@@ -33,7 +33,7 @@ namespace personal_assistant_ui
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "MM-dd-yyyy";
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             
             
         }
@@ -48,8 +48,6 @@ namespace personal_assistant_ui
         {
             Scheduler sch = new Scheduler();
             SetValueForTitle = titleBox.Text;
-
-            Label taskLabel = new Label();
 
             cnt++; //To change task number: Task[cnt] (Task1, Task2, ...)
 
@@ -68,14 +66,12 @@ namespace personal_assistant_ui
                 File.Delete(path);
             }
             using (StreamWriter sw = File.CreateText(path))
-            sw.WriteLine("Title: " + titleBox.Text);
+            sw.WriteLine("Title: " + titleBox.Text + "\n" + 
+                "Date: " + dateTimePicker1.Value.ToString("dd-MM-yyyy") + "\n" +
+                "Time: " + hoursCB.Text + ":" + minCB.Text + " " + periodCB + "\n" +
+                "Type of task: ");
 
-            //sch.showDayTasks();
-            //taskLabel.Text = "Task " + cnt;
-            taskLabel.Text = dateTimePicker1.Value.ToString("MM-dd-yyyy");
-            taskLabel.Location = new Point(200, positionY);
-            positionY += 100;
-            sch.Controls.Add(taskLabel);
+
             
             
             //sch.Show();
@@ -106,7 +102,7 @@ namespace personal_assistant_ui
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox4.SelectedValue = "AM";
+            periodCB.SelectedValue = "AM";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
