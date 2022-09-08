@@ -187,6 +187,7 @@
             this.Controls.Add(this.gbox);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.addBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Scheduler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scheduler";

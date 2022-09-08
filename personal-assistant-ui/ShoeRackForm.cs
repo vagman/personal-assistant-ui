@@ -21,5 +21,21 @@ namespace personal_assistant_ui
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MainMenu mainmenu = new MainMenu();
+            mainmenu.Closed += (s, AssemblyLoadEventArgs) => Close();
+            mainmenu.Show();
+            Hide();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            MainMenu mainmenu = new MainMenu();
+            mainmenu.Closed += (s, AssemblyLoadEventArgs) => Close();
+            mainmenu.Show();
+            Hide();
+        }
     }
 }

@@ -36,11 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_password = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_help = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loginErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_help1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +59,9 @@
             // btn_signup
             // 
             this.btn_signup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_signup.Location = new System.Drawing.Point(407, 312);
+            this.btn_signup.Location = new System.Drawing.Point(407, 309);
             this.btn_signup.Name = "btn_signup";
-            this.btn_signup.Size = new System.Drawing.Size(80, 29);
+            this.btn_signup.Size = new System.Drawing.Size(50, 35);
             this.btn_signup.TabIndex = 1;
             this.btn_signup.Text = "here";
             this.btn_signup.UseVisualStyleBackColor = true;
@@ -96,7 +97,7 @@
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(325, 150);
+            this.tb_password.Location = new System.Drawing.Point(325, 153);
             this.tb_password.MaxLength = 14;
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '*';
@@ -105,17 +106,17 @@
             this.tb_password.TabIndex = 5;
             this.tb_password.Validating += new System.ComponentModel.CancelEventHandler(this.tb_password_Validating);
             // 
-            // button4
+            // btn_help
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(757, 407);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 31);
-            this.button4.TabIndex = 7;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_help.BackgroundImage")));
+            this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_help.Location = new System.Drawing.Point(757, 407);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(31, 31);
+            this.btn_help.TabIndex = 7;
+            this.btn_help.UseVisualStyleBackColor = true;
+            this.btn_help.Click += new System.EventHandler(this.button4_Click);
             // 
             // label3
             // 
@@ -146,6 +147,17 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // btn_help1
+            // 
+            this.btn_help1.AutoSize = true;
+            this.btn_help1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_help1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_help1.Location = new System.Drawing.Point(662, 411);
+            this.btn_help1.Name = "btn_help1";
+            this.btn_help1.Size = new System.Drawing.Size(89, 20);
+            this.btn_help1.TabIndex = 15;
+            this.btn_help1.Text = "Need help ?";
+            this.btn_help1.Click += new System.EventHandler(this.label5_Click);
             // 
             // login
             // 
@@ -155,14 +167,16 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_help1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_help);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.btn_login);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Login";
@@ -182,10 +196,11 @@
         private Label label2;
         private TextBox tb_username;
         private TextBox tb_password;
-        private Button button4;
+        private Button btn_help;
         private Label label3;
         private ContextMenuStrip contextMenuStrip1;
         private ErrorProvider loginErrorProvider;
         private Button button1;
+        private Label btn_help1;
     }
 }
