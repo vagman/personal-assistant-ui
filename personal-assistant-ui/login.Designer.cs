@@ -96,7 +96,7 @@
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(325, 150);
+            this.tb_password.Location = new System.Drawing.Point(325, 153);
             this.tb_password.MaxLength = 14;
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '*';
@@ -165,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.btn_login);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Login";

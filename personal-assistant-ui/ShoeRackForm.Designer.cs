@@ -113,6 +113,7 @@
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_help);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShoeRackForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Smart Shoe Rack";

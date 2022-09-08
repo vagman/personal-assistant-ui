@@ -54,14 +54,14 @@ namespace personal_assistant_ui
             }        
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            PetFeederForm petFeeder = new PetFeederForm();
+            petFeeder.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            petFeeder.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -80,9 +80,9 @@ namespace personal_assistant_ui
         private void label1_Click(object sender, EventArgs e)
         {
             Scheduler scheduler = new Scheduler();            
-            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close(); //When exited from the Scheduler form the program closed too.
+            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close();
             scheduler.Show();
-            this.Hide(); //the Hide method putted at the bottom to hide smoothly the loginForm
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -146,7 +146,10 @@ namespace personal_assistant_ui
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            PetFeederForm petFeeder = new PetFeederForm();
+            petFeeder.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            petFeeder.Show();
+            this.Hide();
         }
     }
 }

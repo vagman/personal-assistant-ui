@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.button1 = new System.Windows.Forms.Button();
             this.btn_smart_shoe_rack = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_pet_feeder = new System.Windows.Forms.Button();
             this.btn_help = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,17 +71,17 @@
             this.btn_smart_shoe_rack.UseVisualStyleBackColor = true;
             this.btn_smart_shoe_rack.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btn_pet_feeder
             // 
-            this.button3.BackgroundImage = global::personal_assistant_ui.Properties.Resources.pet_feeder;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(562, 124);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 104);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_pet_feeder.BackgroundImage = global::personal_assistant_ui.Properties.Resources.pet_feeder;
+            this.btn_pet_feeder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_pet_feeder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pet_feeder.Location = new System.Drawing.Point(562, 124);
+            this.btn_pet_feeder.Name = "btn_pet_feeder";
+            this.btn_pet_feeder.Size = new System.Drawing.Size(113, 104);
+            this.btn_pet_feeder.TabIndex = 2;
+            this.btn_pet_feeder.UseVisualStyleBackColor = true;
+            this.btn_pet_feeder.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_help
             // 
@@ -230,9 +230,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btn_help);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_pet_feeder);
             this.Controls.Add(this.btn_smart_shoe_rack);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Main Menu";
@@ -245,7 +246,7 @@
 
         private Button button1;
         private Button btn_smart_shoe_rack;
-        private Button button3;
+        private Button btn_pet_feeder;
         private Button btn_help;
         private Button button5;
         private Label label1;
