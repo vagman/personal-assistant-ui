@@ -90,5 +90,10 @@ namespace personal_assistant_ui
         {
             e.Cancel = false;
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
