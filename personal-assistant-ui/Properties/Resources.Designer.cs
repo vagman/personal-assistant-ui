@@ -113,6 +113,26 @@ namespace personal_assistant_ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lights_off1 {
+            get {
+                object obj = ResourceManager.GetObject("lights-off1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lights_on {
+            get {
+                object obj = ResourceManager.GetObject("lights-on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pet_feeder {
             get {
                 object obj = ResourceManager.GetObject("pet-feeder", resourceCulture);
@@ -136,6 +156,16 @@ namespace personal_assistant_ui.Properties {
         internal static System.Drawing.Bitmap shoe_rack1 {
             get {
                 object obj = ResourceManager.GetObject("shoe-rack1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash {
+            get {
+                object obj = ResourceManager.GetObject("trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
