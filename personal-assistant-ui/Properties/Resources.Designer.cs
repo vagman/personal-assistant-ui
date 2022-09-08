@@ -85,17 +85,7 @@ namespace personal_assistant_ui.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap lights_off {
             get {
-                object obj = ResourceManager.GetObject("lights-off", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lights_off1 {
-            get {
-                object obj = ResourceManager.GetObject("lights-off1", resourceCulture);
+                object obj = ResourceManager.GetObject("lights_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +95,7 @@ namespace personal_assistant_ui.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap lights_on {
             get {
-                object obj = ResourceManager.GetObject("lights-on", resourceCulture);
+                object obj = ResourceManager.GetObject("lights_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
