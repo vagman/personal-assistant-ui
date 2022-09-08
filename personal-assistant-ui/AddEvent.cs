@@ -33,7 +33,7 @@ namespace personal_assistant_ui
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "MM-dd-yyyy";
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             
             
         }
@@ -72,7 +72,7 @@ namespace personal_assistant_ui
 
             //sch.showDayTasks();
             //taskLabel.Text = "Task " + cnt;
-            taskLabel.Text = dateTimePicker1.Value.ToString("MM-dd-yyyy");
+            taskLabel.Text = dateTimePicker1.Value.ToString("dd-MM-yyyy");
             taskLabel.Location = new Point(200, positionY);
             positionY += 100;
             sch.Controls.Add(taskLabel);
