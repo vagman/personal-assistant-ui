@@ -36,5 +36,10 @@ namespace personal_assistant_ui
         {
 
         }
+
+        private void signup_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = false;
+        }
     }
 }

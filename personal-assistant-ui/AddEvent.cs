@@ -8,7 +8,6 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WPF_ClockPicker;
 using System.IO;
 
 namespace personal_assistant_ui
