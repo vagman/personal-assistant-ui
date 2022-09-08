@@ -38,9 +38,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.hoursCB = new System.Windows.Forms.ComboBox();
+            this.minCB = new System.Windows.Forms.ComboBox();
+            this.periodCB = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -137,11 +137,11 @@
             this.button4.TabIndex = 8;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // hoursCB
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.hoursCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hoursCB.FormattingEnabled = true;
+            this.hoursCB.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -154,16 +154,16 @@
             "10",
             "11",
             "12"});
-            this.comboBox2.Location = new System.Drawing.Point(85, 81);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(41, 23);
-            this.comboBox2.TabIndex = 10;
+            this.hoursCB.Location = new System.Drawing.Point(85, 81);
+            this.hoursCB.Name = "hoursCB";
+            this.hoursCB.Size = new System.Drawing.Size(41, 23);
+            this.hoursCB.TabIndex = 10;
             // 
-            // comboBox3
+            // minCB
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.minCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.minCB.FormattingEnabled = true;
+            this.minCB.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -223,23 +223,23 @@
             "57",
             "58",
             "59"});
-            this.comboBox3.Location = new System.Drawing.Point(132, 81);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(50, 23);
-            this.comboBox3.TabIndex = 11;
+            this.minCB.Location = new System.Drawing.Point(132, 81);
+            this.minCB.Name = "minCB";
+            this.minCB.Size = new System.Drawing.Size(50, 23);
+            this.minCB.TabIndex = 11;
             // 
-            // comboBox4
+            // periodCB
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.periodCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.periodCB.FormattingEnabled = true;
+            this.periodCB.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.comboBox4.Location = new System.Drawing.Point(188, 81);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(46, 23);
-            this.comboBox4.TabIndex = 1;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            this.periodCB.Location = new System.Drawing.Point(188, 81);
+            this.periodCB.Name = "periodCB";
+            this.periodCB.Size = new System.Drawing.Size(46, 23);
+            this.periodCB.TabIndex = 1;
+            this.periodCB.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -286,9 +286,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.periodCB);
+            this.Controls.Add(this.minCB);
+            this.Controls.Add(this.hoursCB);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -318,9 +318,9 @@
         private Button button1;
         private Button button2;
         private Button button4;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
-        private ComboBox comboBox4;
+        private ComboBox hoursCB;
+        private ComboBox minCB;
+        private ComboBox periodCB;
         private Label label4;
         private TextBox titleBox;
         private Label label5;

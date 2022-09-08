@@ -38,6 +38,10 @@
             this.showTaskBtn = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nameOfTask = new System.Windows.Forms.TextBox();
+            this.taskEditBtn = new System.Windows.Forms.Button();
+            this.gbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // addBtn
@@ -64,14 +68,17 @@
             // 
             // gbox
             // 
-            this.gbox.Location = new System.Drawing.Point(511, 48);
+            this.gbox.Controls.Add(this.taskEditBtn);
+            this.gbox.Controls.Add(this.nameOfTask);
+            this.gbox.Controls.Add(this.label2);
+            this.gbox.Location = new System.Drawing.Point(261, 48);
             this.gbox.Name = "gbox";
-            this.gbox.Size = new System.Drawing.Size(321, 387);
+            this.gbox.Size = new System.Drawing.Size(571, 394);
             this.gbox.TabIndex = 11;
             this.gbox.TabStop = false;
             this.gbox.Text = "groupBox1";
             this.gbox.Visible = false;
-            this.gbox.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.gbox.Enter += new System.EventHandler(this.gbox_Enter);
             // 
             // listBox1
             // 
@@ -137,6 +144,35 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Select date to view tasks:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(25, 162);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Title: ";
+            this.label2.Visible = false;
+            // 
+            // nameOfTask
+            // 
+            this.nameOfTask.Location = new System.Drawing.Point(66, 159);
+            this.nameOfTask.Name = "nameOfTask";
+            this.nameOfTask.Size = new System.Drawing.Size(196, 23);
+            this.nameOfTask.TabIndex = 1;
+            this.nameOfTask.Visible = false;
+            // 
+            // taskEditBtn
+            // 
+            this.taskEditBtn.Location = new System.Drawing.Point(496, 365);
+            this.taskEditBtn.Name = "taskEditBtn";
+            this.taskEditBtn.Size = new System.Drawing.Size(69, 23);
+            this.taskEditBtn.TabIndex = 2;
+            this.taskEditBtn.Text = "Edit";
+            this.taskEditBtn.UseVisualStyleBackColor = true;
+            this.taskEditBtn.Visible = false;
+            this.taskEditBtn.Click += new System.EventHandler(this.taskEditBtn_Click);
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -155,6 +191,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Scheduler";
             this.Load += new System.EventHandler(this.Scheduler_Load);
+            this.gbox.ResumeLayout(false);
+            this.gbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +209,8 @@
         private Button showTaskBtn;
         private Button refreshBtn;
         private Label label1;
+        private TextBox nameOfTask;
+        private Label label2;
+        private Button taskEditBtn;
     }
 }

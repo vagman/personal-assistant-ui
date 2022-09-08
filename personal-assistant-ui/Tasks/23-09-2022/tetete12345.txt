@@ -1,0 +1,4 @@
+Title: tetete
+Date: 23-09-2022
+Time: 4:07 System.Windows.Forms.ComboBox, Items.Count: 2
+Type of task: 
