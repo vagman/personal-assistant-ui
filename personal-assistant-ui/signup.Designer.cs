@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signup));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -43,6 +44,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.signupErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.signupErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -181,6 +184,10 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // signupErrorProvider
+            // 
+            this.signupErrorProvider.ContainerControl = this;
+            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -204,6 +211,8 @@
             this.Name = "signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Sign up";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.signup_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.signupErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +234,6 @@
         private Button button4;
         private Button button2;
         private Button button3;
+        private ErrorProvider signupErrorProvider;
     }
 }
