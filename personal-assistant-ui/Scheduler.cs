@@ -192,7 +192,7 @@ namespace personal_assistant_ui
             gbox.Controls.Add(editBtn);
 
 
-            // MAKE THE EDIT BUTTON FUNCTION AFTER THIRD TIME CLICKED
+            // MAKE THE EDIT BUTTON FUNCTION AFTER THIRD TIME CLICKED.
 
             int editBtnWasClicked = 1;
             string titleTaskBoxText = titleTaskBox.Text;
