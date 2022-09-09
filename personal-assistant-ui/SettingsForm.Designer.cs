@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Settings";
-
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.label_Title = new System.Windows.Forms.Label();
             this.label_Theme = new System.Windows.Forms.Label();
@@ -54,7 +49,7 @@
             // 
             this.label_Title.AutoSize = true;
             this.label_Title.BackColor = System.Drawing.Color.Transparent;
-            this.label_Title.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold);
+            this.label_Title.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_Title.ForeColor = System.Drawing.Color.White;
             this.label_Title.Location = new System.Drawing.Point(141, 29);
             this.label_Title.Name = "label_Title";
@@ -66,7 +61,7 @@
             // 
             this.label_Theme.AutoSize = true;
             this.label_Theme.BackColor = System.Drawing.Color.Transparent;
-            this.label_Theme.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label_Theme.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_Theme.Location = new System.Drawing.Point(25, 115);
             this.label_Theme.Name = "label_Theme";
             this.label_Theme.Size = new System.Drawing.Size(67, 23);
@@ -78,8 +73,8 @@
             this.label_Language.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Language.AutoSize = true;
             this.label_Language.BackColor = System.Drawing.Color.Transparent;
-            this.label_Language.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label_Language.Location = new System.Drawing.Point(25, 160);
+            this.label_Language.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_Language.Location = new System.Drawing.Point(25, 158);
             this.label_Language.Name = "label_Language";
             this.label_Language.Size = new System.Drawing.Size(88, 23);
             this.label_Language.TabIndex = 5;
@@ -97,7 +92,7 @@
             this.comboBox_Theme.Items.AddRange(new object[] {
             "Light",
             "Dark"});
-            this.comboBox_Theme.Location = new System.Drawing.Point(123, 120);
+            this.comboBox_Theme.Location = new System.Drawing.Point(123, 118);
             this.comboBox_Theme.MaxDropDownItems = 2;
             this.comboBox_Theme.Name = "comboBox_Theme";
             this.comboBox_Theme.Size = new System.Drawing.Size(161, 27);
@@ -117,7 +112,7 @@
             this.comboBox_Language.Items.AddRange(new object[] {
             "English",
             "Ελληνικά"});
-            this.comboBox_Language.Location = new System.Drawing.Point(123, 160);
+            this.comboBox_Language.Location = new System.Drawing.Point(123, 158);
             this.comboBox_Language.MaxDropDownItems = 2;
             this.comboBox_Language.Name = "comboBox_Language";
             this.comboBox_Language.Size = new System.Drawing.Size(161, 27);
@@ -127,7 +122,7 @@
             // 
             // panel_Top
             // 
-            this.panel_Top.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel_Top.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(69)))));
             this.panel_Top.Controls.Add(this.label_Title);
@@ -138,12 +133,12 @@
             // 
             // panel_Bottom
             // 
-            this.panel_Bottom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.panel_Bottom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_Bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(69)))));
             this.panel_Bottom.Controls.Add(this.button_Help);
             this.panel_Bottom.Controls.Add(this.pictureBox1);
-            this.panel_Bottom.Location = new System.Drawing.Point(-1, 223);
+            this.panel_Bottom.Location = new System.Drawing.Point(-1, 219);
             this.panel_Bottom.Name = "panel_Bottom";
             this.panel_Bottom.Size = new System.Drawing.Size(435, 105);
             this.panel_Bottom.TabIndex = 9;
@@ -170,7 +165,8 @@
             // 
             // imageList_Buttons
             // 
-            this.imageList_Buttons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_Buttons.ImageStream")));
+            this.imageList_Buttons.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList_Buttons.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList_Buttons.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // pictureBox1
@@ -184,11 +180,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox_Back_Click);
             // 
-            // Settings_Form
+            // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 295);
+            this.ClientSize = new System.Drawing.Size(384, 291);
             this.Controls.Add(this.panel_Bottom);
             this.Controls.Add(this.comboBox_Language);
             this.Controls.Add(this.comboBox_Theme);
@@ -196,13 +192,14 @@
             this.Controls.Add(this.label_Theme);
             this.Controls.Add(this.panel_Top);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Calibri", 12F);
+            this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "Settings_Form";
+            this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Smart_Quarantine - Settings";
+            this.Text = "Personal Assistant - Settings";
             this.Load += new System.EventHandler(this.Settings_Load);
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();

@@ -183,5 +183,29 @@ namespace personal_assistant_ui
             sf.Show();
             this.Hide();
         }
+
+        private void lbl_logout_MouseEnter(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = red;
+            lbl_logout.ForeColor = red;
+        }
+
+        private void btn_logout_MouseEnter(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = red;
+            lbl_logout.ForeColor = red;
+        }
+
+        private void lbl_logout_MouseLeave(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = Color.Black;
+            lbl_logout.ForeColor = Color.Black;
+        }
+
+        private void btn_logout_MouseLeave(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = Color.Black;
+            lbl_logout.ForeColor = Color.Black;
+        }
     }
 }

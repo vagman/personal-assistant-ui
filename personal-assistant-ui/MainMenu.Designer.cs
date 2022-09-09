@@ -41,9 +41,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_help1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.lbl_logout = new System.Windows.Forms.Label();
+            this.btn_settings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -188,41 +188,46 @@
             this.btn_help1.TabIndex = 14;
             this.btn_help1.Text = "Need help ?";
             // 
-            // button2
+            // btn_logout
             // 
-            this.button2.BackgroundImage = global::personal_assistant_ui.Properties.Resources.logout;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(8, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
-            this.button2.TabIndex = 15;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btn_logout.BackgroundImage = global::personal_assistant_ui.Properties.Resources.logout;
+            this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Location = new System.Drawing.Point(8, 24);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(30, 30);
+            this.btn_logout.TabIndex = 15;
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.button2_Click_1);
+            this.btn_logout.MouseEnter += new System.EventHandler(this.btn_logout_MouseEnter);
+            this.btn_logout.MouseLeave += new System.EventHandler(this.btn_logout_MouseLeave);
             // 
-            // label8
+            // lbl_logout
             // 
-            this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(40, 24);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.label8.Size = new System.Drawing.Size(68, 30);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Log out";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lbl_logout.AutoSize = true;
+            this.lbl_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_logout.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_logout.Location = new System.Drawing.Point(40, 24);
+            this.lbl_logout.Name = "lbl_logout";
+            this.lbl_logout.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.lbl_logout.Size = new System.Drawing.Size(68, 30);
+            this.lbl_logout.TabIndex = 16;
+            this.lbl_logout.Text = "Log out";
+            this.lbl_logout.Click += new System.EventHandler(this.label8_Click);
+            this.lbl_logout.MouseEnter += new System.EventHandler(this.lbl_logout_MouseEnter);
+            this.lbl_logout.MouseLeave += new System.EventHandler(this.lbl_logout_MouseLeave);
             // 
-            // button3
+            // btn_settings
             // 
-            this.button3.Location = new System.Drawing.Point(713, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "btn_settings";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btn_settings.BackgroundImage = global::personal_assistant_ui.Properties.Resources.settings;
+            this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_settings.Location = new System.Drawing.Point(738, 14);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(50, 50);
+            this.btn_settings.TabIndex = 17;
+            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // MainMenu
             // 
@@ -230,9 +235,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_settings);
+            this.Controls.Add(this.lbl_logout);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_help1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -269,8 +274,8 @@
         private Label label6;
         private Label label7;
         private Label btn_help1;
-        private Button button2;
-        private Label label8;
-        private Button button3;
+        private Button btn_logout;
+        private Label lbl_logout;
+        private Button btn_settings;
     }
 }
