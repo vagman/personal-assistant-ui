@@ -37,5 +37,10 @@ namespace personal_assistant_ui
             mainmenu.Show();
             Hide();
         }
+
+        private void btn_help1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
