@@ -90,12 +90,13 @@ namespace personal_assistant_ui
         {
             e.Cancel = false;
         }
-        
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             Scheduler sch = new Scheduler();
             this.Hide();
             sch.Show();
+        }
         private void label5_Click(object sender, EventArgs e)
         {
         }
