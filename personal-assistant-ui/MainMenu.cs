@@ -13,7 +13,6 @@ using System.Windows.Forms;
 
 namespace personal_assistant_ui
 
-
 {
     public partial class MainMenu : Form
     {
@@ -53,8 +52,6 @@ namespace personal_assistant_ui
                 label6.Refresh();
             }        
         }
-
-
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -150,6 +147,65 @@ namespace personal_assistant_ui
             petFeeder.Closed += (s, AssemblyLoadEventArgs) => this.Close();
             petFeeder.Show();
             this.Hide();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            string path = "Settings.txt";
+            if (!File.Exists(path))
+            {
+                File.Create(path).Dispose();
+
+                using (TextWriter tw = new StreamWriter(path))
+                {
+                    tw.WriteLine("English");
+                    tw.WriteLine("Light");
+                    tw.Close();
+                }
+            }
+            var lines = File.ReadAllLines("Settings.txt");
+            if (lines[0].ToLower().Equals("greek"))
+            {
+                // changeToGreek();
+                return;
+            }
+            if (lines[1].ToLower().Equals("dark"))
+            {
+                // changeToDark();
+                return;
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            SettingsForm sf = new SettingsForm();
+            sf.Closed += (s, AssemblyLoadEventArgs) => Close();
+            sf.Show();
+            this.Hide();
+        }
+
+        private void lbl_logout_MouseEnter(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = red;
+            lbl_logout.ForeColor = red;
+        }
+
+        private void btn_logout_MouseEnter(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = red;
+            lbl_logout.ForeColor = red;
+        }
+
+        private void lbl_logout_MouseLeave(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = Color.Black;
+            lbl_logout.ForeColor = Color.Black;
+        }
+
+        private void btn_logout_MouseLeave(object sender, EventArgs e)
+        {
+            btn_logout.ForeColor = Color.Black;
+            lbl_logout.ForeColor = Color.Black;
         }
     }
 }
