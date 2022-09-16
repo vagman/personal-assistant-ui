@@ -98,7 +98,8 @@ namespace personal_assistant_ui
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            //TODO close the window with the cancel button
+            //TODO check if any text box is not empty show message "Are you sure to cancel?"
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
