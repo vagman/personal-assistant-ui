@@ -42,7 +42,7 @@ namespace personal_assistant_ui
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                string text = "Welcome to the personal assistant application";
+                string text = "Welcome to the smart personal assistant application";
                 speak.SpeakAsync(text);
                 MessageBox.Show("Welcome back " + tb_username.Text + "!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MainMenu mainmenu = new MainMenu();
@@ -83,7 +83,7 @@ namespace personal_assistant_ui
 
         public void changeToDark()
         {
-            this.BackColor = Color.DarkSlateGray;
+            BackColor = Color.DarkSlateGray;
             btn_help.BackColor = Color.White;
             btn_login.ForeColor = Color.White;
             btn_signup.ForeColor = Color.White;

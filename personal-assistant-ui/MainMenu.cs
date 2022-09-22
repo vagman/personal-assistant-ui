@@ -48,7 +48,7 @@ namespace personal_assistant_ui
             btnWasClicked *= -1;
             if(btnWasClicked == -1)
             {
-                button5.BackgroundImage = Properties.Resources.lights_on;
+                button5.BackgroundImage = Resources.lights_on;
                 label6.Font = new Font(label6.Font.Name, 9, FontStyle.Bold);
                 label6.Text = "On";
                 label6.ForeColor = green;
@@ -57,7 +57,7 @@ namespace personal_assistant_ui
             }
             else
             {
-                button5.BackgroundImage = Properties.Resources.lights_off;
+                button5.BackgroundImage = Resources.lights_off;
                 label6.Text = "Off";
                 label6.ForeColor = red;
                 label6.Refresh();

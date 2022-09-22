@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace personal_assistant_ui
 {
@@ -39,6 +40,27 @@ namespace personal_assistant_ui
         }
 
         private void btn_help1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_spray_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShoeRackForm_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void btn_shoe_right_Click(object sender, EventArgs e)
+        {
+            pb_shoes.Load(Resource);
+        }
+
+        private void btn_shoe_left_Click(object sender, EventArgs e)
         {
 
         }
