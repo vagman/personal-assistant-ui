@@ -51,11 +51,11 @@
             // 
             this.label_Title.AutoSize = true;
             this.label_Title.BackColor = System.Drawing.Color.Transparent;
-            this.label_Title.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_Title.ForeColor = System.Drawing.Color.White;
-            this.label_Title.Location = new System.Drawing.Point(141, 29);
+            this.label_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Title.ForeColor = System.Drawing.Color.Black;
+            this.label_Title.Location = new System.Drawing.Point(124, 15);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(122, 33);
+            this.label_Title.Size = new System.Drawing.Size(143, 37);
             this.label_Title.TabIndex = 0;
             this.label_Title.Text = "SETTINGS";
             // 
@@ -126,7 +126,7 @@
             // 
             this.panel_Top.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(69)))));
+            this.panel_Top.BackColor = System.Drawing.Color.LightBlue;
             this.panel_Top.Controls.Add(this.btn_back1);
             this.panel_Top.Controls.Add(this.btn_back);
             this.panel_Top.Controls.Add(this.label_Title);
@@ -139,7 +139,7 @@
             // 
             this.panel_Bottom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_Bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(69)))));
+            this.panel_Bottom.BackColor = System.Drawing.Color.LightBlue;
             this.panel_Bottom.Controls.Add(this.button_Help);
             this.panel_Bottom.Controls.Add(this.pictureBox1);
             this.panel_Bottom.Location = new System.Drawing.Point(-1, 219);
@@ -155,7 +155,7 @@
             this.button_Help.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button_Help.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Help.ForeColor = System.Drawing.Color.White;
+            this.button_Help.ForeColor = System.Drawing.Color.Black;
             this.button_Help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Help.ImageKey = "info.png";
             this.button_Help.ImageList = this.imageList_Buttons;

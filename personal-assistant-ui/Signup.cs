@@ -41,5 +41,21 @@ namespace personal_assistant_ui
         {
             e.Cancel = false;
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btn_back1_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            login.Show();
+            this.Hide();
+        }
     }
 }
