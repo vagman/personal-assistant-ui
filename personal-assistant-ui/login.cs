@@ -1,20 +1,21 @@
+using System;
+using System.IO;
 using System.Windows.Forms;
-
+using System.Speech.Synthesis;
 namespace personal_assistant_ui
 {
     public partial class login : Form
     {
+        SpeechSynthesizer speak;
         public login()
         {
             InitializeComponent();
+            speak = new SpeechSynthesizer();
         }
 
         private void button1_Click(object sender, EventArgs e)
         { }
         private void button2_Click(object sender, EventArgs e)
-        { }
-
-        private void signup_Click(object sender, EventArgs e)
         {
             signup signup = new signup();
             signup.Closed += (s, AssemblyLoadEventArgs) => this.Close();
@@ -24,6 +25,9 @@ namespace personal_assistant_ui
 
         private void login_Click(object sender, EventArgs e)
         {
+            string text = "Welcome to the personal assistant application";
+            speak.SpeakAsync(text);
+
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 MessageBox.Show("Welcome back " + tb_username.Text + "!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
