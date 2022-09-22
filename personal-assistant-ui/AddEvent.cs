@@ -68,7 +68,7 @@ namespace personal_assistant_ui
             using (StreamWriter sw = File.CreateText(path))
             sw.WriteLine("Title: " + titleBox.Text + "\n" + 
                 "Date: " + dateTimePicker1.Value.ToString("dd-MM-yyyy") + "\n" +
-                "Time: " + hoursCB.Text + ":" + minCB.Text + " " + periodCB + "\n" +
+                "Time: " + hoursCB.Text + ":" + minCB.Text + " " + periodCB.Text + "\n" +
                 "Type of task: ");
 
 
@@ -76,8 +76,9 @@ namespace personal_assistant_ui
             
             //sch.Show();
             this.Hide();
-            
-            
+            sch.refreshList();
+
+
 
 
 
@@ -97,7 +98,8 @@ namespace personal_assistant_ui
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            //TODO close the window with the cancel button
+            //TODO check if any text box is not empty show message "Are you sure to cancel?"
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)

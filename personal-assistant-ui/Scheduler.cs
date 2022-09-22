@@ -176,81 +176,41 @@ namespace personal_assistant_ui
             gbox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
 
-            // testtt
+            // OnClick "Show" button enable these tools:
             label2.Visible = true;
+
             nameOfTask.Text = listBox1.SelectedItem.ToString();
+            
             nameOfTask.Visible = true;
             nameOfTask.Enabled = false;
+
+            dateLabel.Visible = true;
+
+            dateTimePickerSch.Visible = true;
+            dateTimePickerSch.Enabled = false;
+
+            timeLabel.Visible = true;
+
+            hoursCB.Visible = true;
+            hoursCB.Enabled = false;
+
+            minCB.Visible = true;
+            minCB.Enabled = false;
+
+            periodCB.Visible = true;
+            periodCB.Enabled = false;
+
+            typeLabel.Visible = true;
+
+            typeBox.Visible = true;
+            typeBox.Enabled = false;
+
+
 
 
 
             // Display my task edit button
             taskEditBtn.Visible = true;
-
-
-
-            /* EDIT BUTTON */
-            // Create button for the gbox
-            Button editBtn = new Button();
-            editBtn.Location = new Point(200, 40);
-            editBtn.Text = "Edit";
-            // Add button to the gbox
-            gbox.Controls.Add(editBtn);
-
-
-
-
-            // MAKE THE EDIT BUTTON FUNCTION AFTER THIRD TIME CLICKED.
-
-            int editBtnWasClicked = 1;
-            string nameOfTaskText = nameOfTask.Text;
-            editBtn.Click += (sender, args) =>
-            {
-                ListBox.SelectedObjectCollection selectedItems = new ListBox.SelectedObjectCollection(listBox1);
-                selectedItems = listBox1.SelectedItems;
-
-                string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
-
-                string fileToRename = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
-                string newFilePath = sourceFolder + @"\";
-
-
-
-
-                editBtnWasClicked *= -1;
-                if (editBtnWasClicked == -1)
-                {
-                    editBtn.Text = "Submit";
-                    //titleTaskBox.Enabled = true;
-                    nameOfTask.Enabled = true;
-
-
-                    //TODO check if name before is the same with name after
-                    if (nameOfTaskText != nameOfTask.Text)
-                    {
-
-
-                        //TODO refresh list and gbox after rename/change fields/file.
-
-                    }
-                }
-                else
-                {
-                    File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
-                    MessageBox.Show("File renamed.");
-                    editBtn.Text = "Edit";
-                    nameOfTask.Enabled = false;
-                    //titleTaskBox.Enabled = false;
-                }
-
-                //TODO: with submit after edit i need to change:
-                //1 - title of task and all the details changed
-                //2 - filename
-
-
-
-            };
-
 
         }
 
@@ -272,6 +232,7 @@ namespace personal_assistant_ui
 
         /* TASK EDIT BUTTON */
         int editBtnWasClicked = 1;
+        
         private void taskEditBtn_Click(object sender, EventArgs e)
         {
             ListBox.SelectedObjectCollection selectedItems = new ListBox.SelectedObjectCollection(listBox1);
@@ -286,10 +247,20 @@ namespace personal_assistant_ui
 
 
             editBtnWasClicked *= -1;
+            
             if (editBtnWasClicked == -1)
             {
+                //TODO if the button clicked twice, the third time it will give an error. 
                 taskEditBtn.Text = "Submit";
+                taskEditBtn.BackColor = Color.LawnGreen;
                 nameOfTask.Enabled = true;
+                dateTimePickerSch.Enabled = true;
+                hoursCB.Enabled = true;
+                minCB.Enabled = true;
+                periodCB.Enabled = true;
+                typeBox.Enabled = true;
+                cancelBtn.Visible = true; // Cancel Button be visible after EditButton clicked.
+                
             }
             else
             {
@@ -303,6 +274,29 @@ namespace personal_assistant_ui
                 taskEditBtn.Text = "Edit";
                 nameOfTask.Enabled = false;
             }
+
+            using (StreamWriter sw = File.CreateText(sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt"))
+            sw.WriteLine("Title: " + nameOfTask.Text + "\n" +
+                "Date: " + dateTimePicker1.Value.ToString("dd-MM-yyyy") + "\n" +
+                "Time: " + hoursCB.Text + ":" + minCB.Text + " " + periodCB.Text + "\n" +
+                "Type of task: ");
+        }
+
+        private void nameOfTask_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            refreshList();
+            gbox.Visible = false;
+            
+            // Turn edit button like the time before clicked.
+            editBtnWasClicked = 1;
+            taskEditBtn.Text = "Edit";
+            taskEditBtn.BackColor = Color.White;
+            cancelBtn.Visible = false;
         }
     }
 }
