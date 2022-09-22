@@ -116,5 +116,21 @@ namespace personal_assistant_ui
         {
 
         }
+
+        private void btn_back1_Click(object sender, EventArgs e)
+        {
+            Scheduler scheduler = new Scheduler();
+            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            scheduler.Show();
+            this.Hide();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Scheduler scheduler = new Scheduler();
+            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            scheduler.Show();
+            this.Hide();
+        }
     }
 }

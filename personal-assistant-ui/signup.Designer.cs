@@ -45,6 +45,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.signupErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_back1 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.signupErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,12 +190,40 @@
             // 
             this.signupErrorProvider.ContainerControl = this;
             // 
+            // btn_back1
+            // 
+            this.btn_back1.AutoSize = true;
+            this.btn_back1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_back1.Location = new System.Drawing.Point(44, 12);
+            this.btn_back1.Name = "btn_back1";
+            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.btn_back1.Size = new System.Drawing.Size(47, 30);
+            this.btn_back1.TabIndex = 20;
+            this.btn_back1.Text = "Back";
+            this.btn_back1.Click += new System.EventHandler(this.btn_back1_Click);
+            // 
+            // btn_back
+            // 
+            this.btn_back.BackgroundImage = global::personal_assistant_ui.Properties.Resources.back;
+            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Location = new System.Drawing.Point(12, 12);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(30, 30);
+            this.btn_back.TabIndex = 19;
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_back1);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
@@ -236,5 +266,7 @@
         private Button button2;
         private Button button3;
         private ErrorProvider signupErrorProvider;
+        private Label btn_back1;
+        private Button btn_back;
     }
 }

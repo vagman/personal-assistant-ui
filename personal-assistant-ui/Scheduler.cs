@@ -298,5 +298,21 @@ namespace personal_assistant_ui
             taskEditBtn.BackColor = Color.White;
             cancelBtn.Visible = false;
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            mainMenu.Show();
+            this.Hide();
+        }
+
+        private void btn_back1_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            mainMenu.Show();
+            this.Hide();
+        }
     }
 }

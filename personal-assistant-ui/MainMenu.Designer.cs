@@ -194,7 +194,7 @@
             this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Location = new System.Drawing.Point(8, 24);
+            this.btn_logout.Location = new System.Drawing.Point(12, 12);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(30, 30);
             this.btn_logout.TabIndex = 15;
@@ -208,7 +208,7 @@
             this.lbl_logout.AutoSize = true;
             this.lbl_logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_logout.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_logout.Location = new System.Drawing.Point(40, 24);
+            this.lbl_logout.Location = new System.Drawing.Point(44, 12);
             this.lbl_logout.Name = "lbl_logout";
             this.lbl_logout.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
             this.lbl_logout.Size = new System.Drawing.Size(68, 30);

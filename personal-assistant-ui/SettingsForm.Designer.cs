@@ -40,6 +40,8 @@
             this.button_Help = new System.Windows.Forms.Button();
             this.imageList_Buttons = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_back1 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             this.panel_Top.SuspendLayout();
             this.panel_Bottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -125,10 +127,12 @@
             this.panel_Top.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(69)))));
+            this.panel_Top.Controls.Add(this.btn_back1);
+            this.panel_Top.Controls.Add(this.btn_back);
             this.panel_Top.Controls.Add(this.label_Title);
             this.panel_Top.Location = new System.Drawing.Point(-1, -3);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(435, 94);
+            this.panel_Top.Size = new System.Drawing.Size(385, 94);
             this.panel_Top.TabIndex = 8;
             // 
             // panel_Bottom
@@ -140,7 +144,7 @@
             this.panel_Bottom.Controls.Add(this.pictureBox1);
             this.panel_Bottom.Location = new System.Drawing.Point(-1, 219);
             this.panel_Bottom.Name = "panel_Bottom";
-            this.panel_Bottom.Size = new System.Drawing.Size(435, 105);
+            this.panel_Bottom.Size = new System.Drawing.Size(385, 78);
             this.panel_Bottom.TabIndex = 9;
             // 
             // button_Help
@@ -179,6 +183,30 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox_Back_Click);
+            // 
+            // btn_back1
+            // 
+            this.btn_back1.AutoSize = true;
+            this.btn_back1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_back1.Location = new System.Drawing.Point(45, 15);
+            this.btn_back1.Name = "btn_back1";
+            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.btn_back1.Size = new System.Drawing.Size(47, 30);
+            this.btn_back1.TabIndex = 22;
+            this.btn_back1.Text = "Back";
+            // 
+            // btn_back
+            // 
+            this.btn_back.BackgroundImage = global::personal_assistant_ui.Properties.Resources.back;
+            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Location = new System.Drawing.Point(13, 15);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(30, 30);
+            this.btn_back.TabIndex = 21;
+            this.btn_back.UseVisualStyleBackColor = true;
             // 
             // SettingsForm
             // 
@@ -222,6 +250,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_Help;
         private System.Windows.Forms.ImageList imageList_Buttons;
-    
+        private Label btn_back1;
+        private Button btn_back;
     }
 }
