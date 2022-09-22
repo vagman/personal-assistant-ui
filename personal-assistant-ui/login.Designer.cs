@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.btn_login = new System.Windows.Forms.Button();
             this.btn_signup = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.btn_help = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_new_user = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loginErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_help1 = new System.Windows.Forms.Label();
+            this.lbl_need_help = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.loginErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,31 +59,34 @@
             // btn_signup
             // 
             this.btn_signup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_signup.Location = new System.Drawing.Point(358, 267);
+            this.btn_signup.Location = new System.Drawing.Point(356, 267);
             this.btn_signup.Name = "btn_signup";
-            this.btn_signup.Size = new System.Drawing.Size(43, 30);
+            this.btn_signup.Size = new System.Drawing.Size(62, 30);
             this.btn_signup.TabIndex = 1;
             this.btn_signup.Text = "here";
             this.btn_signup.UseVisualStyleBackColor = true;
             this.btn_signup.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // lbl_username
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(219, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Username";
+            this.lbl_username.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Location = new System.Drawing.Point(200, 104);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(55, 13);
+            this.lbl_username.TabIndex = 2;
+            this.lbl_username.Text = "Username";
             // 
-            // label2
+            // lbl_password
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(221, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Location = new System.Drawing.Point(200, 136);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(53, 13);
+            this.lbl_password.TabIndex = 3;
+            this.lbl_password.Text = "Password";
             // 
             // tb_username
             // 
@@ -109,21 +112,22 @@
             this.btn_help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_help.BackgroundImage")));
             this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_help.Location = new System.Drawing.Point(649, 353);
+            this.btn_help.Location = new System.Drawing.Point(647, 351);
             this.btn_help.Name = "btn_help";
             this.btn_help.Size = new System.Drawing.Size(27, 27);
             this.btn_help.TabIndex = 7;
             this.btn_help.UseVisualStyleBackColor = true;
             this.btn_help.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label3
+            // lbl_new_user
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(252, 276);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 26);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "New user ? Sign up\r\n\r\n";
+            this.lbl_new_user.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_new_user.AutoSize = true;
+            this.lbl_new_user.Location = new System.Drawing.Point(241, 276);
+            this.lbl_new_user.Name = "lbl_new_user";
+            this.lbl_new_user.Size = new System.Drawing.Size(100, 26);
+            this.lbl_new_user.TabIndex = 8;
+            this.lbl_new_user.Text = "New user ? Sign up\r\n\r\n";
             // 
             // contextMenuStrip1
             // 
@@ -146,17 +150,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // btn_help1
+            // lbl_need_help
             // 
-            this.btn_help1.AutoSize = true;
-            this.btn_help1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_help1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btn_help1.Location = new System.Drawing.Point(567, 356);
-            this.btn_help1.Name = "btn_help1";
-            this.btn_help1.Size = new System.Drawing.Size(89, 20);
-            this.btn_help1.TabIndex = 15;
-            this.btn_help1.Text = "Need help ?";
-            this.btn_help1.Click += new System.EventHandler(this.label5_Click);
+            this.lbl_need_help.AutoSize = true;
+            this.lbl_need_help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_need_help.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbl_need_help.Location = new System.Drawing.Point(552, 351);
+            this.lbl_need_help.Name = "lbl_need_help";
+            this.lbl_need_help.Size = new System.Drawing.Size(89, 20);
+            this.lbl_need_help.TabIndex = 15;
+            this.lbl_need_help.Text = "Need help ?";
+            this.lbl_need_help.Click += new System.EventHandler(this.label5_Click);
             // 
             // login
             // 
@@ -166,13 +170,13 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(686, 390);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_help1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_need_help);
+            this.Controls.Add(this.lbl_new_user);
             this.Controls.Add(this.btn_help);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_username);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_password);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.btn_login);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -191,15 +195,15 @@
 
         private Button btn_login;
         private Button btn_signup;
-        private Label label1;
-        private Label label2;
+        private Label lbl_username;
+        private Label lbl_password;
         private TextBox tb_username;
         private TextBox tb_password;
         private Button btn_help;
-        private Label label3;
+        private Label lbl_new_user;
         private ContextMenuStrip contextMenuStrip1;
         private ErrorProvider loginErrorProvider;
         private Button button1;
-        private Label btn_help1;
+        private Label lbl_need_help;
     }
 }

@@ -36,12 +36,12 @@
             this.comboBox_Theme = new System.Windows.Forms.ComboBox();
             this.comboBox_Language = new System.Windows.Forms.ComboBox();
             this.panel_Top = new System.Windows.Forms.Panel();
+            this.btn_back1 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             this.panel_Bottom = new System.Windows.Forms.Panel();
             this.button_Help = new System.Windows.Forms.Button();
             this.imageList_Buttons = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_back1 = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
             this.panel_Top.SuspendLayout();
             this.panel_Bottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,7 +51,7 @@
             // 
             this.label_Title.AutoSize = true;
             this.label_Title.BackColor = System.Drawing.Color.Transparent;
-            this.label_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_Title.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label_Title.ForeColor = System.Drawing.Color.Black;
             this.label_Title.Location = new System.Drawing.Point(124, 15);
             this.label_Title.Name = "label_Title";
@@ -63,7 +63,7 @@
             // 
             this.label_Theme.AutoSize = true;
             this.label_Theme.BackColor = System.Drawing.Color.Transparent;
-            this.label_Theme.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_Theme.Font = new System.Drawing.Font("Calibri", 14F);
             this.label_Theme.Location = new System.Drawing.Point(25, 115);
             this.label_Theme.Name = "label_Theme";
             this.label_Theme.Size = new System.Drawing.Size(67, 23);
@@ -75,7 +75,7 @@
             this.label_Language.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_Language.AutoSize = true;
             this.label_Language.BackColor = System.Drawing.Color.Transparent;
-            this.label_Language.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_Language.Font = new System.Drawing.Font("Calibri", 14F);
             this.label_Language.Location = new System.Drawing.Point(25, 158);
             this.label_Language.Name = "label_Language";
             this.label_Language.Size = new System.Drawing.Size(88, 23);
@@ -135,6 +135,32 @@
             this.panel_Top.Size = new System.Drawing.Size(385, 94);
             this.panel_Top.TabIndex = 8;
             // 
+            // btn_back1
+            // 
+            this.btn_back1.AutoSize = true;
+            this.btn_back1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_back1.Location = new System.Drawing.Point(45, 15);
+            this.btn_back1.Name = "btn_back1";
+            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.btn_back1.Size = new System.Drawing.Size(47, 30);
+            this.btn_back1.TabIndex = 22;
+            this.btn_back1.Text = "Back";
+            this.btn_back1.Click += new System.EventHandler(this.btn_back1_Click);
+            // 
+            // btn_back
+            // 
+            this.btn_back.BackgroundImage = global::personal_assistant_ui.Properties.Resources.back;
+            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Location = new System.Drawing.Point(13, 15);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(30, 30);
+            this.btn_back.TabIndex = 21;
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // panel_Bottom
             // 
             this.panel_Bottom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -184,30 +210,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox_Back_Click);
             // 
-            // btn_back1
-            // 
-            this.btn_back1.AutoSize = true;
-            this.btn_back1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_back1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_back1.Location = new System.Drawing.Point(45, 15);
-            this.btn_back1.Name = "btn_back1";
-            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.btn_back1.Size = new System.Drawing.Size(47, 30);
-            this.btn_back1.TabIndex = 22;
-            this.btn_back1.Text = "Back";
-            // 
-            // btn_back
-            // 
-            this.btn_back.BackgroundImage = global::personal_assistant_ui.Properties.Resources.back;
-            this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.Location = new System.Drawing.Point(13, 15);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(30, 30);
-            this.btn_back.TabIndex = 21;
-            this.btn_back.UseVisualStyleBackColor = true;
-            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -220,7 +222,7 @@
             this.Controls.Add(this.label_Theme);
             this.Controls.Add(this.panel_Top);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Calibri", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);

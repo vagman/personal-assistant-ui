@@ -9,7 +9,11 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Media;
+using System.Resources;
+using personal_assistant_ui.Properties;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using System.Reflection;
 
 namespace personal_assistant_ui
 
@@ -34,6 +38,13 @@ namespace personal_assistant_ui
         Color red = ColorTranslator.FromHtml("#e84509");
         private void button5_Click(object sender, EventArgs e)
         {
+            // Turn on/off sound of lamp
+            Assembly assembly;
+            Stream soundStream;
+            assembly = Assembly.GetExecutingAssembly();
+            SoundPlayer sp = new SoundPlayer(Resources.turn_on_off_lamp);
+            sp.Play();
+
             btnWasClicked *= -1;
             if(btnWasClicked == -1)
             {

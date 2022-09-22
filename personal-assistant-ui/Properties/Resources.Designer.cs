@@ -179,5 +179,14 @@ namespace personal_assistant_ui.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream turn_on_off_lamp {
+            get {
+                return ResourceManager.GetStream("turn_on_off_lamp", resourceCulture);
+            }
+        }
     }
 }
