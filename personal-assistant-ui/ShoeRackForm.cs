@@ -57,7 +57,7 @@ namespace personal_assistant_ui
 
         private void btn_shoe_right_Click(object sender, EventArgs e)
         {
-            pb_shoes.Load(Resource);
+            
         }
 
         private void btn_shoe_left_Click(object sender, EventArgs e)

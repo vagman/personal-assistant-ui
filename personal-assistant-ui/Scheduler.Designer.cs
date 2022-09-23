@@ -60,10 +60,10 @@
             // 
             // addBtn
             // 
-            this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addBtn.Location = new System.Drawing.Point(757, 60);
+            this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.addBtn.Location = new System.Drawing.Point(624, 48);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 30);
+            this.addBtn.Size = new System.Drawing.Size(89, 33);
             this.addBtn.TabIndex = 0;
             this.addBtn.Text = "Add Task +";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(801, 495);
+            this.button4.Location = new System.Drawing.Point(687, 429);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 31);
+            this.button4.Size = new System.Drawing.Size(27, 27);
             this.button4.TabIndex = 9;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -97,9 +97,9 @@
             this.gbox.Controls.Add(this.taskEditBtn);
             this.gbox.Controls.Add(this.nameOfTask);
             this.gbox.Controls.Add(this.label2);
-            this.gbox.Location = new System.Drawing.Point(261, 96);
+            this.gbox.Location = new System.Drawing.Point(224, 83);
             this.gbox.Name = "gbox";
-            this.gbox.Size = new System.Drawing.Size(571, 394);
+            this.gbox.Size = new System.Drawing.Size(489, 341);
             this.gbox.TabIndex = 11;
             this.gbox.TabStop = false;
             this.gbox.Text = "groupBox1";
@@ -109,9 +109,9 @@
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.Red;
-            this.cancelBtn.Location = new System.Drawing.Point(425, 365);
+            this.cancelBtn.Location = new System.Drawing.Point(366, 305);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(65, 23);
+            this.cancelBtn.Size = new System.Drawing.Size(54, 31);
             this.cancelBtn.TabIndex = 27;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -121,9 +121,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(223, 150);
+            this.label7.Location = new System.Drawing.Point(191, 136);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 15);
+            this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 26;
             this.label7.Text = "Period";
             this.label7.Visible = false;
@@ -131,9 +131,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(148, 150);
+            this.label6.Location = new System.Drawing.Point(124, 136);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 15);
+            this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 25;
             this.label6.Text = "Minutes";
             this.label6.Visible = false;
@@ -141,9 +141,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(73, 150);
+            this.label5.Location = new System.Drawing.Point(60, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 15);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 24;
             this.label5.Text = "Hours";
             this.label5.Visible = false;
@@ -151,9 +151,9 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Location = new System.Drawing.Point(23, 130);
+            this.timeLabel.Location = new System.Drawing.Point(20, 113);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(36, 15);
+            this.timeLabel.Size = new System.Drawing.Size(33, 13);
             this.timeLabel.TabIndex = 23;
             this.timeLabel.Text = "Time:";
             this.timeLabel.Visible = false;
@@ -165,9 +165,9 @@
             this.periodCB.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.periodCB.Location = new System.Drawing.Point(223, 127);
+            this.periodCB.Location = new System.Drawing.Point(191, 110);
             this.periodCB.Name = "periodCB";
-            this.periodCB.Size = new System.Drawing.Size(46, 23);
+            this.periodCB.Size = new System.Drawing.Size(40, 21);
             this.periodCB.TabIndex = 16;
             this.periodCB.Visible = false;
             // 
@@ -235,9 +235,9 @@
             "57",
             "58",
             "59"});
-            this.minCB.Location = new System.Drawing.Point(148, 127);
+            this.minCB.Location = new System.Drawing.Point(127, 110);
             this.minCB.Name = "minCB";
-            this.minCB.Size = new System.Drawing.Size(69, 23);
+            this.minCB.Size = new System.Drawing.Size(60, 21);
             this.minCB.TabIndex = 22;
             this.minCB.Visible = false;
             // 
@@ -258,18 +258,18 @@
             "10",
             "11",
             "12"});
-            this.hoursCB.Location = new System.Drawing.Point(73, 127);
+            this.hoursCB.Location = new System.Drawing.Point(63, 110);
             this.hoursCB.Name = "hoursCB";
-            this.hoursCB.Size = new System.Drawing.Size(69, 23);
+            this.hoursCB.Size = new System.Drawing.Size(60, 21);
             this.hoursCB.TabIndex = 21;
             this.hoursCB.Visible = false;
             // 
             // typeLabel
             // 
             this.typeLabel.AutoSize = true;
-            this.typeLabel.Location = new System.Drawing.Point(23, 178);
+            this.typeLabel.Location = new System.Drawing.Point(16, 164);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(34, 15);
+            this.typeLabel.Size = new System.Drawing.Size(34, 13);
             this.typeLabel.TabIndex = 20;
             this.typeLabel.Text = "Type:";
             this.typeLabel.Visible = false;
@@ -277,9 +277,9 @@
             // dateLabel
             // 
             this.dateLabel.AutoSize = true;
-            this.dateLabel.Location = new System.Drawing.Point(23, 93);
+            this.dateLabel.Location = new System.Drawing.Point(20, 81);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(34, 15);
+            this.dateLabel.Size = new System.Drawing.Size(33, 13);
             this.dateLabel.TabIndex = 19;
             this.dateLabel.Text = "Date:";
             this.dateLabel.Visible = false;
@@ -291,9 +291,9 @@
             "Destination",
             "Automation",
             "Party/Event"});
-            this.typeBox.Location = new System.Drawing.Point(73, 175);
+            this.typeBox.Location = new System.Drawing.Point(59, 162);
             this.typeBox.Name = "typeBox";
-            this.typeBox.Size = new System.Drawing.Size(196, 23);
+            this.typeBox.Size = new System.Drawing.Size(169, 21);
             this.typeBox.TabIndex = 18;
             this.typeBox.Visible = false;
             // 
@@ -301,18 +301,18 @@
             // 
             this.dateTimePickerSch.CustomFormat = "dd-MM-yyyy";
             this.dateTimePickerSch.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerSch.Location = new System.Drawing.Point(73, 90);
+            this.dateTimePickerSch.Location = new System.Drawing.Point(63, 78);
             this.dateTimePickerSch.Name = "dateTimePickerSch";
-            this.dateTimePickerSch.Size = new System.Drawing.Size(196, 23);
+            this.dateTimePickerSch.Size = new System.Drawing.Size(169, 20);
             this.dateTimePickerSch.TabIndex = 17;
             this.dateTimePickerSch.Value = new System.DateTime(2022, 9, 6, 0, 0, 0, 0);
             this.dateTimePickerSch.Visible = false;
             // 
             // taskEditBtn
             // 
-            this.taskEditBtn.Location = new System.Drawing.Point(496, 365);
+            this.taskEditBtn.Location = new System.Drawing.Point(426, 305);
             this.taskEditBtn.Name = "taskEditBtn";
-            this.taskEditBtn.Size = new System.Drawing.Size(69, 23);
+            this.taskEditBtn.Size = new System.Drawing.Size(58, 31);
             this.taskEditBtn.TabIndex = 2;
             this.taskEditBtn.Text = "Edit";
             this.taskEditBtn.UseVisualStyleBackColor = true;
@@ -321,9 +321,9 @@
             // 
             // nameOfTask
             // 
-            this.nameOfTask.Location = new System.Drawing.Point(73, 49);
+            this.nameOfTask.Location = new System.Drawing.Point(63, 42);
             this.nameOfTask.Name = "nameOfTask";
-            this.nameOfTask.Size = new System.Drawing.Size(196, 23);
+            this.nameOfTask.Size = new System.Drawing.Size(169, 20);
             this.nameOfTask.TabIndex = 1;
             this.nameOfTask.Visible = false;
             this.nameOfTask.TextChanged += new System.EventHandler(this.nameOfTask_TextChanged);
@@ -331,9 +331,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 57);
+            this.label2.Location = new System.Drawing.Point(20, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 15);
+            this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Title: ";
             this.label2.Visible = false;
@@ -341,10 +341,9 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(12, 96);
+            this.listBox1.Location = new System.Drawing.Point(10, 83);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(243, 394);
+            this.listBox1.Size = new System.Drawing.Size(209, 342);
             this.listBox1.TabIndex = 12;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -352,9 +351,9 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(155, 60);
+            this.dateTimePicker1.Location = new System.Drawing.Point(145, 52);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(86, 20);
             this.dateTimePicker1.TabIndex = 13;
             this.dateTimePicker1.Value = new System.DateTime(2022, 9, 7, 1, 48, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -365,9 +364,9 @@
             this.button1.BackgroundImage = global::personal_assistant_ui.Properties.Resources.trash;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(12, 502);
+            this.button1.Location = new System.Drawing.Point(13, 441);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 24);
+            this.button1.Size = new System.Drawing.Size(23, 21);
             this.button1.TabIndex = 14;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
@@ -375,9 +374,9 @@
             // 
             // showTaskBtn
             // 
-            this.showTaskBtn.Location = new System.Drawing.Point(209, 503);
+            this.showTaskBtn.Location = new System.Drawing.Point(167, 436);
             this.showTaskBtn.Name = "showTaskBtn";
-            this.showTaskBtn.Size = new System.Drawing.Size(46, 23);
+            this.showTaskBtn.Size = new System.Drawing.Size(52, 30);
             this.showTaskBtn.TabIndex = 15;
             this.showTaskBtn.Text = "Show";
             this.showTaskBtn.UseVisualStyleBackColor = true;
@@ -385,9 +384,9 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(145, 503);
+            this.refreshBtn.Location = new System.Drawing.Point(103, 436);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(58, 23);
+            this.refreshBtn.Size = new System.Drawing.Size(58, 30);
             this.refreshBtn.TabIndex = 16;
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.UseVisualStyleBackColor = true;
@@ -396,9 +395,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 66);
+            this.label1.Location = new System.Drawing.Point(10, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 15);
+            this.label1.Size = new System.Drawing.Size(129, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Select date to view tasks:";
             // 
@@ -406,11 +405,11 @@
             // 
             this.btn_back1.AutoSize = true;
             this.btn_back1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_back1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_back1.Location = new System.Drawing.Point(44, 12);
+            this.btn_back1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_back1.Location = new System.Drawing.Point(38, 10);
             this.btn_back1.Name = "btn_back1";
-            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.btn_back1.Size = new System.Drawing.Size(47, 30);
+            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 4, 4, 4);
+            this.btn_back1.Size = new System.Drawing.Size(46, 28);
             this.btn_back1.TabIndex = 20;
             this.btn_back1.Text = "Back";
             this.btn_back1.Click += new System.EventHandler(this.btn_back1_Click);
@@ -421,19 +420,19 @@
             this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.Location = new System.Drawing.Point(12, 12);
+            this.btn_back.Location = new System.Drawing.Point(10, 10);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(30, 30);
+            this.btn_back.Size = new System.Drawing.Size(26, 26);
             this.btn_back.TabIndex = 19;
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // Scheduler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(844, 538);
+            this.ClientSize = new System.Drawing.Size(723, 466);
             this.Controls.Add(this.btn_back1);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label1);
