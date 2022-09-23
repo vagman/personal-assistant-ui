@@ -17,6 +17,8 @@ using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using System.IO;
 using System.Drawing.Printing;
+using System.Configuration;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace personal_assistant_ui
 {
@@ -24,6 +26,7 @@ namespace personal_assistant_ui
     {
         public static string workingDirectory = Environment.CurrentDirectory;
         public static string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+
 
 
 
@@ -98,6 +101,7 @@ namespace personal_assistant_ui
             // Show on form load, all the existed tasks
             listBox1.Items.Clear();
             string sourceDir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
+            //MUST EXIST A FOLDER WITH DATE'S NAME IN TASK'S FOLDER
             string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
             listBox1.Items.AddRange(txtFiles);
         }
@@ -165,43 +169,67 @@ namespace personal_assistant_ui
             string text = File.ReadAllText(fileToRead);
 
 
+            /* READ FROM TASK.TXT FILE AND PASS THE VALUES FROM LINES TO TOOLS ON SCHEDULER*/
+            
+            //Create array to store each line's value to an index
+            string[] lines = File.ReadAllLines(fileToRead);
+            //First line of .txt file is for Title of task
 
+            //Second line of .txt file is for Datetime
+            string date = lines[1];
+            //Pass value from second line (from .txt) to dateTimePickerSch
+            dateTimePickerSch.Value = DateTime.ParseExact(date, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            //MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
+
+            //Third line of .txt file is for Hours
+            hoursCB.Text = lines[2];
+            //Fourth line of .txt file is for Minutes
+            minCB.Text = lines[3];
+            //Fifth line of .txt file is for Period of time
+            periodCB.Text = lines[4];
+
+            //Sixth line of .txt file is for Type of task
+            typeBox.Text = lines[5];
+            
+            
 
             // GroupBox
 
             gbox.Text = "Task: " + listBox1.SelectedItem.ToString() + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
             gbox.Name = "My Task";
             gbox.Visible = true;
-            gbox.AutoSize = true;
-            gbox.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-
-
-            // OnClick "Show" button enable these tools:
-            label2.Visible = true;
-
-            nameOfTask.Text = listBox1.SelectedItem.ToString();
+            gbox.AutoSize = false;
             
+
+
+            /* OnClick "Show" button enable these tools: */
+
+            //Title of task
+            label2.Visible = true;
+            //TextBox of task
+            nameOfTask.Text = listBox1.SelectedItem.ToString();
             nameOfTask.Visible = true;
             nameOfTask.Enabled = false;
-
+            
+            //Date of task
             dateLabel.Visible = true;
-
             dateTimePickerSch.Visible = true;
             dateTimePickerSch.Enabled = false;
 
+            //Time of task
             timeLabel.Visible = true;
-
+            //Hours
             hoursCB.Visible = true;
             hoursCB.Enabled = false;
-
+            //Minutes
             minCB.Visible = true;
             minCB.Enabled = false;
-
+            //Period
             periodCB.Visible = true;
             periodCB.Enabled = false;
 
+            //Type of task
             typeLabel.Visible = true;
-
             typeBox.Visible = true;
             typeBox.Enabled = false;
 
@@ -241,7 +269,7 @@ namespace personal_assistant_ui
             string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
 
             string fileToRename = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
-            string newFilePath = sourceFolder + @"\";
+            string newFilePath = projectDirectory + @"\Tasks\" + dateTimePickerSch.Value.ToString("dd-MM-yyyy") + @"\";
 
             string nameOfTaskText = nameOfTask.Text;
 
@@ -255,6 +283,7 @@ namespace personal_assistant_ui
                 taskEditBtn.BackColor = Color.LawnGreen;
                 nameOfTask.Enabled = true;
                 dateTimePickerSch.Enabled = true;
+
                 hoursCB.Enabled = true;
                 minCB.Enabled = true;
                 periodCB.Enabled = true;
@@ -264,22 +293,81 @@ namespace personal_assistant_ui
             }
             else
             {
-                File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
-                MessageBox.Show("File renamed.");
-                refreshList();
-        
+                //Read all lines from .txt file of the task
+                string[] lines = File.ReadAllLines(fileToRename);
+
+                //If the user change datetime:
+                if(lines[1] != dateTimePickerSch.Value.ToString("dd-MM-yyyy"))
+                {
+                    //Create folder with name the datetime user typed
+                    if (!Directory.Exists(sourceFolder))
+                    {
+                        Directory.CreateDirectory(sourceFolder);
+                        //Move file to the new folder
+                        File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
+
+                        //Change datetime if changed
+                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy");
+                        MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
+                        //File.WriteAllLines(fileToRename, lines); //Write the changes
+                    }
+                    else
+                    {
+                        //TODO
+                        //create the file to another folder
+                        File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
+
+                        //Change datetime if changed
+                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy");
+                        MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
+                        //File.WriteAllLines(fileToRename, lines); //Write the changes
+                    }
+
+                    
+                }
                 
+
+
+
+
+
+
+                //At the end, Rename the file of the task (also renamed the title of task)
+                File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
+
+
+                MessageBox.Show("File renamed." + listBox1.SelectedItem.ToString() + nameOfTask.Text);
+
+                //update current file name (after rename) 
+                fileToRename = newFilePath + nameOfTask.Text + ".txt";
+                gbox.Text = "Task: " + nameOfTask.Text + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
+
+                
+
+                refreshList();
+
+                //select the listbox's renamed, right after rename
+                int index = listBox1.FindString(nameOfTask.Text);
+                listBox1.SelectedIndex = index;
+                
+
+
+
+
+
+
                 //TODO change the title of the gbox after the rename
                 //gbox.Text = listBox1.SelectedItem.ToString();
                 taskEditBtn.Text = "Edit";
                 nameOfTask.Enabled = false;
+                taskEditBtn.BackColor = Color.White;
+                cancelBtn.Visible = false;
+                dateTimePickerSch.Enabled = false;
+                hoursCB.Enabled = false;
+                minCB.Enabled = false;
+                periodCB.Enabled = false;
+                typeBox.Enabled = false;
             }
-
-            using (StreamWriter sw = File.CreateText(sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt"))
-            sw.WriteLine("Title: " + nameOfTask.Text + "\n" +
-                "Date: " + dateTimePicker1.Value.ToString("dd-MM-yyyy") + "\n" +
-                "Time: " + hoursCB.Text + ":" + minCB.Text + " " + periodCB.Text + "\n" +
-                "Type of task: ");
         }
 
         private void nameOfTask_TextChanged(object sender, EventArgs e)
@@ -313,6 +401,12 @@ namespace personal_assistant_ui
             mainMenu.Closed += (s, AssemblyLoadEventArgs) => this.Close();
             mainMenu.Show();
             this.Hide();
+        }
+
+        private void dateTimePickerSch_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePickerSch.Format = DateTimePickerFormat.Custom;
+            dateTimePickerSch.CustomFormat = "dd-MM-yyyy";
         }
     }
 }

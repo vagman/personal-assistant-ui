@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace personal_assistant_ui
 {
@@ -20,10 +21,11 @@ namespace personal_assistant_ui
         public static int cnt = 0;
         public static int positionX = 100;
         public static int positionY = 100;
+
         // Get the path of current project
         public static string workingDirectory = Environment.CurrentDirectory;
         public static string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-        //Label[] taskLabel = new Label[100];
+        
 
         public AddEvent()
         {
@@ -44,6 +46,7 @@ namespace personal_assistant_ui
         }
 
         
+        /*Submit Button*/
         private void button1_Click(object sender, EventArgs e)
         {
             Scheduler sch = new Scheduler();
@@ -65,18 +68,20 @@ namespace personal_assistant_ui
                 //TODO verification for deletation
                 File.Delete(path);
             }
-            using (StreamWriter sw = File.CreateText(path))
-            sw.WriteLine("Title: " + titleBox.Text + "\n" + 
-                "Date: " + dateTimePicker1.Value.ToString("dd-MM-yyyy") + "\n" +
-                "Time: " + hoursCB.Text + ":" + minCB.Text + " " + periodCB.Text + "\n" +
-                "Type of task: ");
+            using (StreamWriter sw = File.CreateText(path)) { 
+                sw.WriteLine(titleBox.Text);
+                sw.WriteLine(dateTimePicker1.Value.ToString("dd-MM-yyyy"));
+                sw.WriteLine(hoursCB.Text);
+                sw.WriteLine(minCB.Text);
+                sw.WriteLine(periodCB.Text);
+                sw.WriteLine(comboBox1.Text);
 
+            }
 
             
-            
-            //sch.Show();
-            this.Hide();
             sch.refreshList();
+            this.Hide();
+            
 
 
 
@@ -131,6 +136,29 @@ namespace personal_assistant_ui
             scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close();
             scheduler.Show();
             this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Get user's choice from comboBox (Type of task)
+            object curItem = comboBox1.SelectedItem;
+            object curItemText = comboBox1.GetItemText(curItem);
+
+            int index = comboBox1.FindString(comboBox1.Text);
+            comboBox1.SelectedIndex = index;
+
+            if(index == 0)
+            {
+                MessageBox.Show("First option");
+            }
+            else if(index == 1)
+            {
+                MessageBox.Show("Second option");
+            }
+            else if(index == 2)
+            {
+                MessageBox.Show("Third option");
+            }
         }
     }
 }
