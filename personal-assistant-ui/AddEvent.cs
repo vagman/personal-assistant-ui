@@ -30,6 +30,7 @@ namespace personal_assistant_ui
         public AddEvent()
         {
             InitializeComponent();
+            this.dateTimePicker1.Value = DateTime.Now;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

@@ -2,7 +2,8 @@
 // 1) on submit from AddEvent form refresh the current listbox (on specific date)
 // 2) fix edit button on third time clicked.
 // 3) fix edit button to edit name of the .txt file and its content
-
+// 4) change pick a date (dateTimePicker1) to current day, and create that folder to the Tasks's folder on app first run
+// 5) after dateTime changed
 
 
 using System;
@@ -19,6 +20,7 @@ using System.IO;
 using System.Drawing.Printing;
 using System.Configuration;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.LinkLabel;
 
 namespace personal_assistant_ui
 {
@@ -35,6 +37,14 @@ namespace personal_assistant_ui
         public Scheduler()
         {
             InitializeComponent();
+
+            this.dateTimePicker1.Value = DateTime.Now; //Give dateTimePicker1 today's value of date
+            string todaysTaskFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
+            if (!Directory.Exists(todaysTaskFolder)) //If todaysTaskFolder doesnt exist then create it
+            {
+                Directory.CreateDirectory(todaysTaskFolder);
+            }
+            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -102,7 +112,7 @@ namespace personal_assistant_ui
             listBox1.Items.Clear();
             string sourceDir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
             //MUST EXIST A FOLDER WITH DATE'S NAME IN TASK'S FOLDER
-            string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
+            string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();   //folder named from dateTimePicker1's value is required for the app to run
             listBox1.Items.AddRange(txtFiles);
         }
 
@@ -128,10 +138,12 @@ namespace personal_assistant_ui
             if (listBox1.SelectedIndex != -1)
             {
                 button1.Visible = true;
+                showTaskBtn.Visible = true;
             }
             else
             {
                 button1.Visible = false;
+                showTaskBtn.Visible = false;
                 button1.Refresh();
             }
         }
@@ -145,7 +157,6 @@ namespace personal_assistant_ui
             string fileToDelete = listBox1.SelectedItem.ToString() + ".txt";
             string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
 
-
             if (listBox1.SelectedIndex != -1)
             {
                 //TODO VERIFICATION FOR DELETATION
@@ -155,7 +166,8 @@ namespace personal_assistant_ui
                 for (int i = selectedItems.Count - 1; i >= 0; i--)
                     listBox1.Items.Remove(selectedItems[i]);
                 File.Delete(Path.Combine(sourceFolder, fileToDelete));
-
+                gbox.Visible = false; //Hide the groupbox after deletation
+                refreshList(); //Refresh task list after the delete
             }
             else
                 MessageBox.Show("error");
@@ -163,9 +175,11 @@ namespace personal_assistant_ui
 
         private void showTaskBtn_Click(object sender, EventArgs e)
         {
-            string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
-            string fileToRead = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
 
+            string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
+            //string newSourceFolder = projectDirectory + @"\Tasks\" + dateTimePickerSch.Value.ToString("dd-MM-yyyy"); //the path takes the value from dateTimePickerSch not from dateTimePicker1
+
+            string fileToRead = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
             string text = File.ReadAllText(fileToRead);
 
 
@@ -252,12 +266,13 @@ namespace personal_assistant_ui
             string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
             listBox1.Items.AddRange(txtFiles);
         }
+        // Refresh Button
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             refreshList();
         }
 
-
+        
         /* TASK EDIT BUTTON */
         int editBtnWasClicked = 1;
         
@@ -266,17 +281,20 @@ namespace personal_assistant_ui
             ListBox.SelectedObjectCollection selectedItems = new ListBox.SelectedObjectCollection(listBox1);
             selectedItems = listBox1.SelectedItems;
 
-            string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
+            string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy"); //Source folder before any change
+            string newSourceFolder = projectDirectory + @"\Tasks\" + dateTimePickerSch.Value.ToString("dd-MM-yyyy"); //Take the value of dateTimePickerSch instead of dateTimePicker1
 
-            string fileToRename = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
-            string newFilePath = projectDirectory + @"\Tasks\" + dateTimePickerSch.Value.ToString("dd-MM-yyyy") + @"\";
+            string fileToRename = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt"; //Old(current) file path
+            string newFile = newSourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt"; //New file path, if dateTimePickerSch changed and not equals to dateTimePicker1 value
+
+            string newFilePath = newSourceFolder + @"\"; //takes the new datetime from dateTimePickerSch 
 
             string nameOfTaskText = nameOfTask.Text;
 
 
             editBtnWasClicked *= -1;
             
-            if (editBtnWasClicked == -1)
+            if (editBtnWasClicked == -1) //Edit button renamed to 'Submit' after clicked
             {
                 //TODO if the button clicked twice, the third time it will give an error. 
                 taskEditBtn.Text = "Submit";
@@ -289,41 +307,62 @@ namespace personal_assistant_ui
                 periodCB.Enabled = true;
                 typeBox.Enabled = true;
                 cancelBtn.Visible = true; // Cancel Button be visible after EditButton clicked.
-                
+
+                hideBtn.Visible = false; //When 'Edit' button clicked the clearBtn dissappear and the work of this button goes to 'Cancel' Button
             }
             else
             {
                 //Read all lines from .txt file of the task
                 string[] lines = File.ReadAllLines(fileToRename);
 
-                //If the user change datetime:
-                if(lines[1] != dateTimePickerSch.Value.ToString("dd-MM-yyyy"))
-                {
-                    //Create folder with name the datetime user typed
-                    if (!Directory.Exists(sourceFolder))
-                    {
-                        Directory.CreateDirectory(sourceFolder);
-                        //Move file to the new folder
-                        File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
 
-                        //Change datetime if changed
-                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy");
+                //Change title,datetime,hours,min,period,type if changed
+                
+                lines[2] = hoursCB.Text; //Hours
+                lines[3] = minCB.Text; //Minutes
+                lines[4] = periodCB.Text; //Period
+                lines[5] = typeBox.Text; //Type of task
+                File.WriteAllLines(fileToRename, lines); //Write the changes
+
+                //If the user change datetime:
+                if (lines[1] != dateTimePickerSch.Value.ToString("dd-MM-yyyy")) //If dateTimePicker1 != dateTimePickerSch
+                {
+
+                    //Create folder with name the datetime user typed
+                    if (!Directory.Exists(newSourceFolder)) //if the path "projectDirectory...("dd-MM-yyyy"))) doesnt exist then:
+                    {
+                        //Change datetime
+                        
+                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy"); //Date
+                        
                         MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
-                        //File.WriteAllLines(fileToRename, lines); //Write the changes
+                        File.WriteAllLines(fileToRename, lines); //Write the changes
+                        Directory.CreateDirectory(newSourceFolder);
+
+                        //Move file after the changes to the new folder
+                        File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
+                        gbox.Visible = false;
+                        
                     }
                     else
                     {
-                        //TODO
-                        //create the file to another folder
-                        File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
-
-                        //Change datetime if changed
-                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy");
+                        //Change datetime
+                        
+                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy"); //Date
+                        
                         MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
-                        //File.WriteAllLines(fileToRename, lines); //Write the changes
+                        File.WriteAllLines(fileToRename, lines); //Write the changes
+                        MessageBox.Show("Directory is exists");
+                        //TODO
+                        //Move file after the changes to the new folder
+
+                        File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
+                        gbox.Visible = false;
+
+
                     }
 
-                    
+
                 }
                 
 
@@ -332,8 +371,16 @@ namespace personal_assistant_ui
 
 
 
-                //At the end, Rename the file of the task (also renamed the title of task)
-                File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
+                try
+                {
+                    //At the end, Rename the file of the task (also renamed the title of task)
+                    File.Move(newFile, (newFilePath + nameOfTask.Text + ".txt"));
+                }
+                catch
+                {
+                    MessageBox.Show("Task moved to: " + dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
+                }
+                
 
 
                 MessageBox.Show("File renamed." + listBox1.SelectedItem.ToString() + nameOfTask.Text);
@@ -407,6 +454,18 @@ namespace personal_assistant_ui
         {
             dateTimePickerSch.Format = DateTimePickerFormat.Custom;
             dateTimePickerSch.CustomFormat = "dd-MM-yyyy";
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e) //its the hideBtn
+        {
+            refreshList();
+            gbox.Visible = false;
+
+            // Turn edit button like the time before clicked.
+            editBtnWasClicked = 1;
+            taskEditBtn.Text = "Edit";
+            taskEditBtn.BackColor = Color.White;
+            cancelBtn.Visible = false;
         }
     }
 }

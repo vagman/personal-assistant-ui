@@ -55,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_back1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
+            this.hideBtn = new System.Windows.Forms.Button();
             this.gbox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,10 +83,12 @@
             // 
             // gbox
             // 
+            this.gbox.Controls.Add(this.hideBtn);
             this.gbox.Controls.Add(this.cancelBtn);
             this.gbox.Controls.Add(this.label7);
             this.gbox.Controls.Add(this.label6);
             this.gbox.Controls.Add(this.label5);
+            this.gbox.Controls.Add(this.button1);
             this.gbox.Controls.Add(this.timeLabel);
             this.gbox.Controls.Add(this.periodCB);
             this.gbox.Controls.Add(this.minCB);
@@ -362,34 +365,37 @@
             // button1
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button1.BackgroundImage = global::personal_assistant_ui.Properties.Resources.trash;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(10, 435);
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Image = global::personal_assistant_ui.Properties.Resources.trash;
+            this.button1.Location = new System.Drawing.Point(6, 296);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(21, 21);
+            this.button1.Size = new System.Drawing.Size(79, 40);
             this.button1.TabIndex = 14;
+            this.button1.Text = "Delete Task";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // showTaskBtn
             // 
-            this.showTaskBtn.Location = new System.Drawing.Point(168, 436);
+            this.showTaskBtn.Location = new System.Drawing.Point(90, 436);
             this.showTaskBtn.Name = "showTaskBtn";
-            this.showTaskBtn.Size = new System.Drawing.Size(50, 20);
+            this.showTaskBtn.Size = new System.Drawing.Size(78, 20);
             this.showTaskBtn.TabIndex = 15;
-            this.showTaskBtn.Text = "Show";
+            this.showTaskBtn.Text = "Show Details";
             this.showTaskBtn.UseVisualStyleBackColor = true;
+            this.showTaskBtn.Visible = false;
             this.showTaskBtn.Click += new System.EventHandler(this.showTaskBtn_Click);
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(101, 436);
+            this.refreshBtn.Location = new System.Drawing.Point(10, 436);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(61, 20);
+            this.refreshBtn.Size = new System.Drawing.Size(74, 20);
             this.refreshBtn.TabIndex = 16;
-            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.Text = "Refresh List";
             this.refreshBtn.UseVisualStyleBackColor = true;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
@@ -428,6 +434,16 @@
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
+            // hideBtn
+            // 
+            this.hideBtn.Location = new System.Drawing.Point(6, 272);
+            this.hideBtn.Name = "hideBtn";
+            this.hideBtn.Size = new System.Drawing.Size(73, 18);
+            this.hideBtn.TabIndex = 21;
+            this.hideBtn.Text = "Hide Details";
+            this.hideBtn.UseVisualStyleBackColor = true;
+            this.hideBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,7 +455,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.showTaskBtn);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.gbox);
@@ -485,5 +500,6 @@
         private Button cancelBtn;
         private Label btn_back1;
         private Button btn_back;
+        private Button hideBtn;
     }
 }
