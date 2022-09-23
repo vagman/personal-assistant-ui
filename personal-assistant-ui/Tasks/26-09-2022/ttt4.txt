@@ -1,4 +1,0 @@
-Title: ttt
-Date: 26-09-2022
-Time: : System.Windows.Forms.ComboBox, Items.Count: 2
-Type of task: 

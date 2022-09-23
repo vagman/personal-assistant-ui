@@ -65,7 +65,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(128, 20);
             this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 9, 6, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2022, 9, 22, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // comboBox1
@@ -79,6 +79,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -125,6 +126,7 @@
             this.button2.Location = new System.Drawing.Point(86, 234);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(57, 30);
+
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
@@ -135,6 +137,7 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(21, 244);
             this.button4.Location = new System.Drawing.Point(42, 237);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(27, 27);
@@ -248,7 +251,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 123);
+            this.label4.Location = new System.Drawing.Point(21, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 12;

@@ -55,15 +55,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_back1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
+            this.hideBtn = new System.Windows.Forms.Button();
             this.gbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // addBtn
             // 
             this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.addBtn.Location = new System.Drawing.Point(624, 48);
+            this.addBtn.Location = new System.Drawing.Point(633, 52);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(89, 33);
+            this.addBtn.Size = new System.Drawing.Size(80, 26);
             this.addBtn.TabIndex = 0;
             this.addBtn.Text = "Add Task +";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -82,10 +83,12 @@
             // 
             // gbox
             // 
+            this.gbox.Controls.Add(this.hideBtn);
             this.gbox.Controls.Add(this.cancelBtn);
             this.gbox.Controls.Add(this.label7);
             this.gbox.Controls.Add(this.label6);
             this.gbox.Controls.Add(this.label5);
+            this.gbox.Controls.Add(this.button1);
             this.gbox.Controls.Add(this.timeLabel);
             this.gbox.Controls.Add(this.periodCB);
             this.gbox.Controls.Add(this.minCB);
@@ -305,8 +308,9 @@
             this.dateTimePickerSch.Name = "dateTimePickerSch";
             this.dateTimePickerSch.Size = new System.Drawing.Size(169, 20);
             this.dateTimePickerSch.TabIndex = 17;
-            this.dateTimePickerSch.Value = new System.DateTime(2022, 9, 6, 0, 0, 0, 0);
+            this.dateTimePickerSch.Value = new System.DateTime(2022, 9, 22, 0, 0, 0, 0);
             this.dateTimePickerSch.Visible = false;
+            this.dateTimePickerSch.ValueChanged += new System.EventHandler(this.dateTimePickerSch_ValueChanged);
             // 
             // taskEditBtn
             // 
@@ -368,6 +372,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 21);
             this.button1.TabIndex = 14;
+            this.button1.Text = "Delete Task";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -378,8 +385,9 @@
             this.showTaskBtn.Name = "showTaskBtn";
             this.showTaskBtn.Size = new System.Drawing.Size(52, 30);
             this.showTaskBtn.TabIndex = 15;
-            this.showTaskBtn.Text = "Show";
+            this.showTaskBtn.Text = "Show Details";
             this.showTaskBtn.UseVisualStyleBackColor = true;
+            this.showTaskBtn.Visible = false;
             this.showTaskBtn.Click += new System.EventHandler(this.showTaskBtn_Click);
             // 
             // refreshBtn
@@ -388,7 +396,7 @@
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(58, 30);
             this.refreshBtn.TabIndex = 16;
-            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.Text = "Refresh List";
             this.refreshBtn.UseVisualStyleBackColor = true;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
@@ -427,6 +435,16 @@
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
+            // hideBtn
+            // 
+            this.hideBtn.Location = new System.Drawing.Point(6, 272);
+            this.hideBtn.Name = "hideBtn";
+            this.hideBtn.Size = new System.Drawing.Size(73, 18);
+            this.hideBtn.TabIndex = 21;
+            this.hideBtn.Text = "Hide Details";
+            this.hideBtn.UseVisualStyleBackColor = true;
+            this.hideBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // Scheduler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,7 +456,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.showTaskBtn);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.gbox);
@@ -484,5 +501,6 @@
         private Button cancelBtn;
         private Label btn_back1;
         private Button btn_back;
+        private Button hideBtn;
     }
 }
