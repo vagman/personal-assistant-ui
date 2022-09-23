@@ -39,9 +39,6 @@ namespace personal_assistant_ui
         private void button5_Click(object sender, EventArgs e)
         {
             // Turn on/off sound of lamp
-            Assembly assembly;
-            Stream soundStream;
-            assembly = Assembly.GetExecutingAssembly();
             SoundPlayer sp = new SoundPlayer(Resources.turn_on_off_lamp);
             sp.Play();
 
