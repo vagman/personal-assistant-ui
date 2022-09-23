@@ -102,7 +102,7 @@
             this.gbox.Controls.Add(this.label2);
             this.gbox.Location = new System.Drawing.Point(224, 83);
             this.gbox.Name = "gbox";
-            this.gbox.Size = new System.Drawing.Size(489, 340);
+            this.gbox.Size = new System.Drawing.Size(489, 341);
             this.gbox.TabIndex = 11;
             this.gbox.TabStop = false;
             this.gbox.Text = "groupBox1";
@@ -112,9 +112,9 @@
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.Red;
-            this.cancelBtn.Location = new System.Drawing.Point(364, 316);
+            this.cancelBtn.Location = new System.Drawing.Point(366, 305);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(56, 20);
+            this.cancelBtn.Size = new System.Drawing.Size(54, 31);
             this.cancelBtn.TabIndex = 27;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -124,7 +124,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(191, 130);
+            this.label7.Location = new System.Drawing.Point(191, 136);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 26;
@@ -134,7 +134,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(127, 130);
+            this.label6.Location = new System.Drawing.Point(124, 136);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 25;
@@ -144,7 +144,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 130);
+            this.label5.Location = new System.Drawing.Point(60, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 24;
@@ -270,7 +270,7 @@
             // typeLabel
             // 
             this.typeLabel.AutoSize = true;
-            this.typeLabel.Location = new System.Drawing.Point(20, 154);
+            this.typeLabel.Location = new System.Drawing.Point(16, 164);
             this.typeLabel.Name = "typeLabel";
             this.typeLabel.Size = new System.Drawing.Size(34, 13);
             this.typeLabel.TabIndex = 20;
@@ -294,7 +294,7 @@
             "Destination",
             "Automation",
             "Party/Event"});
-            this.typeBox.Location = new System.Drawing.Point(63, 152);
+            this.typeBox.Location = new System.Drawing.Point(59, 162);
             this.typeBox.Name = "typeBox";
             this.typeBox.Size = new System.Drawing.Size(169, 21);
             this.typeBox.TabIndex = 18;
@@ -314,9 +314,9 @@
             // 
             // taskEditBtn
             // 
-            this.taskEditBtn.Location = new System.Drawing.Point(425, 316);
+            this.taskEditBtn.Location = new System.Drawing.Point(426, 305);
             this.taskEditBtn.Name = "taskEditBtn";
-            this.taskEditBtn.Size = new System.Drawing.Size(59, 20);
+            this.taskEditBtn.Size = new System.Drawing.Size(58, 31);
             this.taskEditBtn.TabIndex = 2;
             this.taskEditBtn.Text = "Edit";
             this.taskEditBtn.UseVisualStyleBackColor = true;
@@ -357,7 +357,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(145, 52);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(74, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(86, 20);
             this.dateTimePicker1.TabIndex = 13;
             this.dateTimePicker1.Value = new System.DateTime(2022, 9, 7, 1, 48, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -365,11 +365,12 @@
             // button1
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Image = global::personal_assistant_ui.Properties.Resources.trash;
-            this.button1.Location = new System.Drawing.Point(6, 296);
+            this.button1.BackgroundImage = global::personal_assistant_ui.Properties.Resources.trash;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(13, 441);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 40);
+            this.button1.Size = new System.Drawing.Size(23, 21);
             this.button1.TabIndex = 14;
             this.button1.Text = "Delete Task";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -380,9 +381,9 @@
             // 
             // showTaskBtn
             // 
-            this.showTaskBtn.Location = new System.Drawing.Point(90, 436);
+            this.showTaskBtn.Location = new System.Drawing.Point(167, 436);
             this.showTaskBtn.Name = "showTaskBtn";
-            this.showTaskBtn.Size = new System.Drawing.Size(78, 20);
+            this.showTaskBtn.Size = new System.Drawing.Size(52, 30);
             this.showTaskBtn.TabIndex = 15;
             this.showTaskBtn.Text = "Show Details";
             this.showTaskBtn.UseVisualStyleBackColor = true;
@@ -391,9 +392,9 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(10, 436);
+            this.refreshBtn.Location = new System.Drawing.Point(103, 436);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(74, 20);
+            this.refreshBtn.Size = new System.Drawing.Size(58, 30);
             this.refreshBtn.TabIndex = 16;
             this.refreshBtn.Text = "Refresh List";
             this.refreshBtn.UseVisualStyleBackColor = true;

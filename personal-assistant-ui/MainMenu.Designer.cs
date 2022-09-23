@@ -52,9 +52,9 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(112, 124);
+            this.button1.Location = new System.Drawing.Point(96, 107);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 104);
+            this.button1.Size = new System.Drawing.Size(97, 90);
             this.button1.TabIndex = 0;
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             this.btn_smart_shoe_rack.BackgroundImage = global::personal_assistant_ui.Properties.Resources.shoe_rack;
             this.btn_smart_shoe_rack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_smart_shoe_rack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_smart_shoe_rack.Location = new System.Drawing.Point(416, 124);
+            this.btn_smart_shoe_rack.Location = new System.Drawing.Point(357, 107);
             this.btn_smart_shoe_rack.Name = "btn_smart_shoe_rack";
-            this.btn_smart_shoe_rack.Size = new System.Drawing.Size(113, 104);
+            this.btn_smart_shoe_rack.Size = new System.Drawing.Size(97, 90);
             this.btn_smart_shoe_rack.TabIndex = 1;
             this.btn_smart_shoe_rack.UseVisualStyleBackColor = true;
             this.btn_smart_shoe_rack.Click += new System.EventHandler(this.button2_Click);
@@ -77,9 +77,9 @@
             this.btn_pet_feeder.BackgroundImage = global::personal_assistant_ui.Properties.Resources.pet_feeder;
             this.btn_pet_feeder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_pet_feeder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_pet_feeder.Location = new System.Drawing.Point(562, 124);
+            this.btn_pet_feeder.Location = new System.Drawing.Point(482, 107);
             this.btn_pet_feeder.Name = "btn_pet_feeder";
-            this.btn_pet_feeder.Size = new System.Drawing.Size(113, 104);
+            this.btn_pet_feeder.Size = new System.Drawing.Size(97, 90);
             this.btn_pet_feeder.TabIndex = 2;
             this.btn_pet_feeder.UseVisualStyleBackColor = true;
             this.btn_pet_feeder.Click += new System.EventHandler(this.button3_Click);
@@ -89,9 +89,9 @@
             this.btn_help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_help.BackgroundImage")));
             this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_help.Location = new System.Drawing.Point(755, 405);
+            this.btn_help.Location = new System.Drawing.Point(647, 351);
             this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(33, 33);
+            this.btn_help.Size = new System.Drawing.Size(28, 29);
             this.btn_help.TabIndex = 3;
             this.btn_help.UseVisualStyleBackColor = true;
             // 
@@ -100,9 +100,9 @@
             this.button5.BackgroundImage = global::personal_assistant_ui.Properties.Resources.lights_off;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(267, 124);
+            this.button5.Location = new System.Drawing.Point(229, 107);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 104);
+            this.button5.Size = new System.Drawing.Size(97, 90);
             this.button5.TabIndex = 4;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -111,8 +111,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(123, 231);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label1.Location = new System.Drawing.Point(105, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 5;
@@ -123,8 +123,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(271, 231);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label2.Location = new System.Drawing.Point(232, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 6;
@@ -135,8 +135,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(409, 231);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label3.Location = new System.Drawing.Point(351, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 7;
@@ -147,8 +147,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(551, 230);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.label4.Location = new System.Drawing.Point(472, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 20);
             this.label4.TabIndex = 8;
@@ -158,9 +158,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(356, 235);
+            this.label6.Location = new System.Drawing.Point(305, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 15);
             this.label6.TabIndex = 10;
@@ -170,8 +170,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(279, 40);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(239, 35);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(206, 32);
             this.label7.TabIndex = 11;
@@ -181,8 +181,8 @@
             // 
             this.btn_help1.AutoSize = true;
             this.btn_help1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_help1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_help1.Location = new System.Drawing.Point(660, 410);
+            this.btn_help1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.btn_help1.Location = new System.Drawing.Point(552, 354);
             this.btn_help1.Name = "btn_help1";
             this.btn_help1.Size = new System.Drawing.Size(89, 20);
             this.btn_help1.TabIndex = 14;
@@ -194,9 +194,9 @@
             this.btn_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Location = new System.Drawing.Point(12, 12);
+            this.btn_logout.Location = new System.Drawing.Point(10, 10);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(30, 30);
+            this.btn_logout.Size = new System.Drawing.Size(26, 26);
             this.btn_logout.TabIndex = 15;
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.button2_Click_1);
@@ -207,11 +207,11 @@
             // 
             this.lbl_logout.AutoSize = true;
             this.lbl_logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_logout.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_logout.Location = new System.Drawing.Point(44, 12);
+            this.lbl_logout.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_logout.Location = new System.Drawing.Point(38, 10);
             this.lbl_logout.Name = "lbl_logout";
-            this.lbl_logout.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.lbl_logout.Size = new System.Drawing.Size(68, 30);
+            this.lbl_logout.Padding = new System.Windows.Forms.Padding(0, 4, 4, 4);
+            this.lbl_logout.Size = new System.Drawing.Size(67, 28);
             this.lbl_logout.TabIndex = 16;
             this.lbl_logout.Text = "Log out";
             this.lbl_logout.Click += new System.EventHandler(this.label8_Click);
@@ -222,19 +222,19 @@
             // 
             this.btn_settings.BackgroundImage = global::personal_assistant_ui.Properties.Resources.settings;
             this.btn_settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_settings.Location = new System.Drawing.Point(738, 14);
+            this.btn_settings.Location = new System.Drawing.Point(633, 12);
             this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Size = new System.Drawing.Size(50, 50);
+            this.btn_settings.Size = new System.Drawing.Size(43, 43);
             this.btn_settings.TabIndex = 17;
             this.btn_settings.UseVisualStyleBackColor = true;
             this.btn_settings.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(686, 390);
             this.Controls.Add(this.btn_settings);
             this.Controls.Add(this.lbl_logout);
             this.Controls.Add(this.btn_logout);

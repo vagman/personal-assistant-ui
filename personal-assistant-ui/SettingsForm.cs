@@ -25,6 +25,7 @@ namespace personal_assistant_ui
             label_Theme.Text = "Theme:";
             label_Language.Text = "Language:";
             button_Help.Text = "Help";
+            btn_back1.Text = "Back";
 
             comboBox_Theme.Items.Clear();
             comboBox_Theme.Items.Add("Light"); comboBox_Theme.Items.Add("Dark");
@@ -47,6 +48,7 @@ namespace personal_assistant_ui
             label_Theme.Text = "Θέμα:";
             label_Language.Text = "Γλώσσα:";
             button_Help.Text = "Βοήθεια";
+            btn_back1.Text = "Πίσω";
 
             comboBox_Theme.Items.Clear();
             comboBox_Theme.Items.Add("Φωτεινό"); comboBox_Theme.Items.Add("Σκοτεινό");
@@ -170,6 +172,22 @@ namespace personal_assistant_ui
             {
                 comboBox_Theme.SelectedIndex = 0;
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            MainMenu mainmenu = new MainMenu();
+            mainmenu.Closed += (s, AssemblyLoadEventArgs) => Close();
+            mainmenu.Show();
+            Hide();
+        }
+
+        private void btn_back1_Click(object sender, EventArgs e)
+        {
+            MainMenu mainmenu = new MainMenu();
+            mainmenu.Closed += (s, AssemblyLoadEventArgs) => Close();
+            mainmenu.Show();
+            Hide();
         }
     }
 }
