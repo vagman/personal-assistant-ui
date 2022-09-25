@@ -32,10 +32,12 @@
             this.addBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.gbox = new System.Windows.Forms.GroupBox();
+            this.hideBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.periodCB = new System.Windows.Forms.ComboBox();
             this.minCB = new System.Windows.Forms.ComboBox();
@@ -49,13 +51,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             this.showTaskBtn = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_back1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
-            this.hideBtn = new System.Windows.Forms.Button();
             this.gbox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,16 @@
             this.gbox.Visible = false;
             this.gbox.Enter += new System.EventHandler(this.gbox_Enter);
             // 
+            // hideBtn
+            // 
+            this.hideBtn.Location = new System.Drawing.Point(6, 275);
+            this.hideBtn.Name = "hideBtn";
+            this.hideBtn.Size = new System.Drawing.Size(73, 18);
+            this.hideBtn.TabIndex = 21;
+            this.hideBtn.Text = "Hide Details";
+            this.hideBtn.UseVisualStyleBackColor = true;
+            this.hideBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.Red;
@@ -150,6 +160,23 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Hours";
             this.label5.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button1.BackgroundImage = global::personal_assistant_ui.Properties.Resources.trash;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(6, 299);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 36);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Delete Task";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // timeLabel
             // 
@@ -357,27 +384,10 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(145, 52);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(86, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(74, 20);
             this.dateTimePicker1.TabIndex = 13;
             this.dateTimePicker1.Value = new System.DateTime(2022, 9, 7, 1, 48, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // button1
-            // 
-            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button1.BackgroundImage = global::personal_assistant_ui.Properties.Resources.trash;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(13, 441);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 21);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Delete Task";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // showTaskBtn
             // 
@@ -434,16 +444,6 @@
             this.btn_back.TabIndex = 19;
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
-            // 
-            // hideBtn
-            // 
-            this.hideBtn.Location = new System.Drawing.Point(6, 272);
-            this.hideBtn.Name = "hideBtn";
-            this.hideBtn.Size = new System.Drawing.Size(73, 18);
-            this.hideBtn.TabIndex = 21;
-            this.hideBtn.Text = "Hide Details";
-            this.hideBtn.UseVisualStyleBackColor = true;
-            this.hideBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // Scheduler
             // 
