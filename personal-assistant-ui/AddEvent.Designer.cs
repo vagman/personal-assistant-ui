@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.hoursCB = new System.Windows.Forms.ComboBox();
             this.minCB = new System.Windows.Forms.ComboBox();
             this.periodCB = new System.Windows.Forms.ComboBox();
@@ -46,14 +45,26 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_back1 = new System.Windows.Forms.Label();
+            this.distanceLbl = new System.Windows.Forms.Label();
+            this.suggestionBox = new System.Windows.Forms.ComboBox();
+            this.destinationSuggText = new System.Windows.Forms.Label();
+            this.needCoffee = new System.Windows.Forms.CheckBox();
+            this.mapImage = new System.Windows.Forms.PictureBox();
             this.btn_back = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.distanceInKm = new System.Windows.Forms.Label();
+            this.durationLbl = new System.Windows.Forms.Label();
+            this.durationInMin = new System.Windows.Forms.Label();
+            this.readyToPickDestinations = new System.Windows.Forms.ComboBox();
+            this.recommendShoe = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.mapImage)).BeginInit();
             this.SuspendLayout();
             // 
             // titleBox
             // 
             this.titleBox.Location = new System.Drawing.Point(106, 63);
             this.titleBox.Name = "titleBox";
-            this.titleBox.Size = new System.Drawing.Size(128, 20);
+            this.titleBox.Size = new System.Drawing.Size(108, 20);
             this.titleBox.TabIndex = 0;
             this.titleBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -126,23 +137,10 @@
             this.button2.Location = new System.Drawing.Point(86, 234);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(57, 30);
-
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(21, 244);
-            this.button4.Location = new System.Drawing.Point(42, 237);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 27);
-            this.button4.TabIndex = 8;
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // hoursCB
             // 
@@ -297,6 +295,62 @@
             this.btn_back1.Text = "Back";
             this.btn_back1.Click += new System.EventHandler(this.btn_back1_Click);
             // 
+            // distanceLbl
+            // 
+            this.distanceLbl.AutoSize = true;
+            this.distanceLbl.Location = new System.Drawing.Point(283, 91);
+            this.distanceLbl.Name = "distanceLbl";
+            this.distanceLbl.Size = new System.Drawing.Size(52, 13);
+            this.distanceLbl.TabIndex = 22;
+            this.distanceLbl.Text = "Distance:";
+            this.distanceLbl.Visible = false;
+            // 
+            // suggestionBox
+            // 
+            this.suggestionBox.FormattingEnabled = true;
+            this.suggestionBox.Location = new System.Drawing.Point(286, 63);
+            this.suggestionBox.Name = "suggestionBox";
+            this.suggestionBox.Size = new System.Drawing.Size(207, 21);
+            this.suggestionBox.TabIndex = 23;
+            this.suggestionBox.Visible = false;
+            this.suggestionBox.SelectedIndexChanged += new System.EventHandler(this.suggestionBox_SelectedIndexChanged);
+            // 
+            // destinationSuggText
+            // 
+            this.destinationSuggText.AutoSize = true;
+            this.destinationSuggText.Location = new System.Drawing.Point(283, 47);
+            this.destinationSuggText.Name = "destinationSuggText";
+            this.destinationSuggText.Size = new System.Drawing.Size(210, 13);
+            this.destinationSuggText.TabIndex = 24;
+            this.destinationSuggText.Text = "How do you want to get to the destination?";
+            this.destinationSuggText.Visible = false;
+            // 
+            // needCoffee
+            // 
+            this.needCoffee.AutoSize = true;
+            this.needCoffee.Location = new System.Drawing.Point(286, 176);
+            this.needCoffee.Name = "needCoffee";
+            this.needCoffee.Size = new System.Drawing.Size(170, 17);
+            this.needCoffee.TabIndex = 25;
+            this.needCoffee.Text = "Do you want to take a coffee?";
+            this.needCoffee.UseVisualStyleBackColor = true;
+            this.needCoffee.Visible = false;
+            this.needCoffee.CheckedChanged += new System.EventHandler(this.needCoffee_CheckedChanged);
+            // 
+            // mapImage
+            // 
+            this.mapImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mapImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mapImage.ErrorImage = null;
+            this.mapImage.InitialImage = null;
+            this.mapImage.Location = new System.Drawing.Point(537, 34);
+            this.mapImage.Name = "mapImage";
+            this.mapImage.Size = new System.Drawing.Size(213, 182);
+            this.mapImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mapImage.TabIndex = 26;
+            this.mapImage.TabStop = false;
+            this.mapImage.Visible = false;
+            // 
             // btn_back
             // 
             this.btn_back.BackgroundImage = global::personal_assistant_ui.Properties.Resources.back;
@@ -310,11 +364,86 @@
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(42, 237);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(27, 27);
+            this.button4.TabIndex = 8;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // distanceInKm
+            // 
+            this.distanceInKm.AutoSize = true;
+            this.distanceInKm.Location = new System.Drawing.Point(357, 91);
+            this.distanceInKm.Name = "distanceInKm";
+            this.distanceInKm.Size = new System.Drawing.Size(35, 13);
+            this.distanceInKm.TabIndex = 27;
+            this.distanceInKm.Text = "label8";
+            this.distanceInKm.Visible = false;
+            // 
+            // durationLbl
+            // 
+            this.durationLbl.AutoSize = true;
+            this.durationLbl.Location = new System.Drawing.Point(283, 129);
+            this.durationLbl.Name = "durationLbl";
+            this.durationLbl.Size = new System.Drawing.Size(50, 13);
+            this.durationLbl.TabIndex = 28;
+            this.durationLbl.Text = "Duration:";
+            this.durationLbl.Visible = false;
+            // 
+            // durationInMin
+            // 
+            this.durationInMin.AutoSize = true;
+            this.durationInMin.Location = new System.Drawing.Point(357, 128);
+            this.durationInMin.Name = "durationInMin";
+            this.durationInMin.Size = new System.Drawing.Size(35, 13);
+            this.durationInMin.TabIndex = 29;
+            this.durationInMin.Text = "label9";
+            this.durationInMin.Visible = false;
+            // 
+            // readyToPickDestinations
+            // 
+            this.readyToPickDestinations.DropDownWidth = 70;
+            this.readyToPickDestinations.FormattingEnabled = true;
+            this.readyToPickDestinations.Items.AddRange(new object[] {
+            "University",
+            "Home",
+            "Coffee Shop",
+            "Gym"});
+            this.readyToPickDestinations.Location = new System.Drawing.Point(215, 62);
+            this.readyToPickDestinations.Name = "readyToPickDestinations";
+            this.readyToPickDestinations.Size = new System.Drawing.Size(19, 21);
+            this.readyToPickDestinations.TabIndex = 30;
+            this.readyToPickDestinations.SelectedIndexChanged += new System.EventHandler(this.readyToPickDestinations_SelectedIndexChanged);
+            // 
+            // recommendShoe
+            // 
+            this.recommendShoe.AutoSize = true;
+            this.recommendShoe.Location = new System.Drawing.Point(286, 214);
+            this.recommendShoe.Name = "recommendShoe";
+            this.recommendShoe.Size = new System.Drawing.Size(175, 13);
+            this.recommendShoe.TabIndex = 31;
+            this.recommendShoe.Text = "Recommended shoe for this task is:";
+            // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 287);
+            this.ClientSize = new System.Drawing.Size(775, 287);
+            this.Controls.Add(this.recommendShoe);
+            this.Controls.Add(this.readyToPickDestinations);
+            this.Controls.Add(this.durationInMin);
+            this.Controls.Add(this.durationLbl);
+            this.Controls.Add(this.distanceInKm);
+            this.Controls.Add(this.mapImage);
+            this.Controls.Add(this.needCoffee);
+            this.Controls.Add(this.destinationSuggText);
+            this.Controls.Add(this.suggestionBox);
+            this.Controls.Add(this.distanceLbl);
             this.Controls.Add(this.btn_back1);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label7);
@@ -338,6 +467,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create an Event";
             this.Load += new System.EventHandler(this.AddEvent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.mapImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +494,15 @@
         private Label label7;
         private Label btn_back1;
         private Button btn_back;
+        private Label distanceLbl;
+        private ComboBox suggestionBox;
+        private Label destinationSuggText;
+        private CheckBox needCoffee;
+        private PictureBox mapImage;
+        private Label distanceInKm;
+        private Label durationLbl;
+        private Label durationInMin;
+        private ComboBox readyToPickDestinations;
+        private Label recommendShoe;
     }
 }
