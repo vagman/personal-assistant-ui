@@ -54,16 +54,25 @@ namespace personal_assistant_ui
         }
 
         int shoeCount = 0;
+        int btnCount = 0;
         private void btn_shoe_right_Click(object sender, EventArgs e)
         {
             if (shoeCount < 2)
             {
+                btnCount = 0;
+                lbl_no_shoes.Visible = false;
                 shoeCount++;
                 pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe" + shoeCount);
             }
+
             if (shoeCount == 2)
             {
-                lbl_no_shoes.Visible = true;
+                btnCount++;
+                if (btnCount > 1)
+                {
+                    lbl_no_shoes.Visible = true;
+                }
+                
             }
 
             switch(shoeCount)
@@ -90,12 +99,18 @@ namespace personal_assistant_ui
         {
             if (shoeCount > 0)
             {
+                btnCount = 0;
+                lbl_no_shoes.Visible = false;
                 shoeCount--;
                 pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe" + shoeCount);
             } 
-            if (shoeCount <= 1) 
+            if (shoeCount == 0) 
             {
-                lbl_no_shoes.Visible = true;
+                btnCount++;
+                if (btnCount > 1)
+                {
+                    lbl_no_shoes.Visible = true;
+                }
             }
 
             switch (shoeCount)
