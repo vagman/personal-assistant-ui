@@ -541,8 +541,9 @@ namespace personal_assistant_ui
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string helpCHM_path = Directory.GetCurrentDirectory() + "\\Help Files\\Personal Assistant (User Manual).chm";
-            Help.ShowHelp(this, helpCHM_path, HelpNavigator.TopicId, "1");
+
+            string path = Directory.GetParent(workingDirectory).Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "1");
         }
     }
 }
