@@ -31,6 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Scheduler));
             this.addBtn = new System.Windows.Forms.Button();
             this.gbox = new System.Windows.Forms.GroupBox();
+            this.needCoffee = new System.Windows.Forms.CheckBox();
+            this.durationInMin = new System.Windows.Forms.Label();
+            this.distanceInKm = new System.Windows.Forms.Label();
+            this.durationLbl = new System.Windows.Forms.Label();
+            this.distanceLbl = new System.Windows.Forms.Label();
+            this.suggestionBox = new System.Windows.Forms.ComboBox();
+            this.destinationSuggText = new System.Windows.Forms.Label();
             this.hideBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,13 +63,6 @@
             this.btn_back1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.destinationSuggText = new System.Windows.Forms.Label();
-            this.suggestionBox = new System.Windows.Forms.ComboBox();
-            this.distanceLbl = new System.Windows.Forms.Label();
-            this.durationLbl = new System.Windows.Forms.Label();
-            this.distanceInKm = new System.Windows.Forms.Label();
-            this.durationInMin = new System.Windows.Forms.Label();
-            this.needCoffee = new System.Windows.Forms.CheckBox();
             this.gbox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +111,83 @@
             this.gbox.Text = "groupBox1";
             this.gbox.Visible = false;
             this.gbox.Enter += new System.EventHandler(this.gbox_Enter);
+            // 
+            // needCoffee
+            // 
+            this.needCoffee.AutoSize = true;
+            this.needCoffee.Location = new System.Drawing.Point(19, 276);
+            this.needCoffee.Name = "needCoffee";
+            this.needCoffee.Size = new System.Drawing.Size(170, 17);
+            this.needCoffee.TabIndex = 34;
+            this.needCoffee.Text = "Do you want to take a coffee?";
+            this.needCoffee.UseVisualStyleBackColor = true;
+            // 
+            // durationInMin
+            // 
+            this.durationInMin.AutoSize = true;
+            this.durationInMin.Location = new System.Drawing.Point(180, 254);
+            this.durationInMin.Name = "durationInMin";
+            this.durationInMin.Size = new System.Drawing.Size(35, 13);
+            this.durationInMin.TabIndex = 33;
+            this.durationInMin.Text = "label9";
+            this.durationInMin.Visible = false;
+            // 
+            // distanceInKm
+            // 
+            this.distanceInKm.AutoSize = true;
+            this.distanceInKm.Location = new System.Drawing.Point(78, 254);
+            this.distanceInKm.Name = "distanceInKm";
+            this.distanceInKm.Size = new System.Drawing.Size(35, 13);
+            this.distanceInKm.TabIndex = 32;
+            this.distanceInKm.Text = "label8";
+            this.distanceInKm.Visible = false;
+            // 
+            // durationLbl
+            // 
+            this.durationLbl.AutoSize = true;
+            this.durationLbl.Location = new System.Drawing.Point(124, 254);
+            this.durationLbl.Name = "durationLbl";
+            this.durationLbl.Size = new System.Drawing.Size(50, 13);
+            this.durationLbl.TabIndex = 31;
+            this.durationLbl.Text = "Duration:";
+            this.durationLbl.Visible = false;
+            // 
+            // distanceLbl
+            // 
+            this.distanceLbl.AutoSize = true;
+            this.distanceLbl.Location = new System.Drawing.Point(20, 254);
+            this.distanceLbl.Name = "distanceLbl";
+            this.distanceLbl.Size = new System.Drawing.Size(52, 13);
+            this.distanceLbl.TabIndex = 30;
+            this.distanceLbl.Text = "Distance:";
+            this.distanceLbl.Visible = false;
+            // 
+            // suggestionBox
+            // 
+            this.suggestionBox.FormattingEnabled = true;
+            this.suggestionBox.Items.AddRange(new object[] {
+            "Ηλεκτρικός",
+            "Λεωφορείο",
+            "Αυτοκίνητο",
+            "Ποδήλατο",
+            "Πόδια",
+            "Συνδιασμός"});
+            this.suggestionBox.Location = new System.Drawing.Point(19, 220);
+            this.suggestionBox.Name = "suggestionBox";
+            this.suggestionBox.Size = new System.Drawing.Size(207, 21);
+            this.suggestionBox.TabIndex = 29;
+            this.suggestionBox.Visible = false;
+            this.suggestionBox.SelectedIndexChanged += new System.EventHandler(this.suggestionBox_SelectedIndexChanged);
+            // 
+            // destinationSuggText
+            // 
+            this.destinationSuggText.AutoSize = true;
+            this.destinationSuggText.Location = new System.Drawing.Point(16, 204);
+            this.destinationSuggText.Name = "destinationSuggText";
+            this.destinationSuggText.Size = new System.Drawing.Size(210, 13);
+            this.destinationSuggText.TabIndex = 28;
+            this.destinationSuggText.Text = "How do you want to get to the destination?";
+            this.destinationSuggText.Visible = false;
             // 
             // hideBtn
             // 
@@ -324,13 +401,13 @@
             this.typeBox.FormattingEnabled = true;
             this.typeBox.Items.AddRange(new object[] {
             "Destination",
-            "Automation",
-            "Party/Event"});
+            "Automation"});
             this.typeBox.Location = new System.Drawing.Point(59, 162);
             this.typeBox.Name = "typeBox";
             this.typeBox.Size = new System.Drawing.Size(169, 21);
             this.typeBox.TabIndex = 18;
             this.typeBox.Visible = false;
+            this.typeBox.SelectedIndexChanged += new System.EventHandler(this.typeBox_SelectedIndexChanged);
             // 
             // dateTimePickerSch
             // 
@@ -462,82 +539,6 @@
             this.button4.TabIndex = 9;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // destinationSuggText
-            // 
-            this.destinationSuggText.AutoSize = true;
-            this.destinationSuggText.Location = new System.Drawing.Point(16, 204);
-            this.destinationSuggText.Name = "destinationSuggText";
-            this.destinationSuggText.Size = new System.Drawing.Size(210, 13);
-            this.destinationSuggText.TabIndex = 28;
-            this.destinationSuggText.Text = "How do you want to get to the destination?";
-            this.destinationSuggText.Visible = false;
-            // 
-            // suggestionBox
-            // 
-            this.suggestionBox.FormattingEnabled = true;
-            this.suggestionBox.Items.AddRange(new object[] {
-            "Ηλεκτρικός",
-            "Λεωφορείο",
-            "Αυτοκίνητο",
-            "Ποδήλατο",
-            "Πόδια",
-            "Συνδιασμός"});
-            this.suggestionBox.Location = new System.Drawing.Point(19, 220);
-            this.suggestionBox.Name = "suggestionBox";
-            this.suggestionBox.Size = new System.Drawing.Size(207, 21);
-            this.suggestionBox.TabIndex = 29;
-            this.suggestionBox.Visible = false;
-            // 
-            // distanceLbl
-            // 
-            this.distanceLbl.AutoSize = true;
-            this.distanceLbl.Location = new System.Drawing.Point(20, 254);
-            this.distanceLbl.Name = "distanceLbl";
-            this.distanceLbl.Size = new System.Drawing.Size(52, 13);
-            this.distanceLbl.TabIndex = 30;
-            this.distanceLbl.Text = "Distance:";
-            this.distanceLbl.Visible = false;
-            // 
-            // durationLbl
-            // 
-            this.durationLbl.AutoSize = true;
-            this.durationLbl.Location = new System.Drawing.Point(124, 254);
-            this.durationLbl.Name = "durationLbl";
-            this.durationLbl.Size = new System.Drawing.Size(50, 13);
-            this.durationLbl.TabIndex = 31;
-            this.durationLbl.Text = "Duration:";
-            this.durationLbl.Visible = false;
-            // 
-            // distanceInKm
-            // 
-            this.distanceInKm.AutoSize = true;
-            this.distanceInKm.Location = new System.Drawing.Point(78, 254);
-            this.distanceInKm.Name = "distanceInKm";
-            this.distanceInKm.Size = new System.Drawing.Size(35, 13);
-            this.distanceInKm.TabIndex = 32;
-            this.distanceInKm.Text = "label8";
-            this.distanceInKm.Visible = false;
-            // 
-            // durationInMin
-            // 
-            this.durationInMin.AutoSize = true;
-            this.durationInMin.Location = new System.Drawing.Point(180, 254);
-            this.durationInMin.Name = "durationInMin";
-            this.durationInMin.Size = new System.Drawing.Size(35, 13);
-            this.durationInMin.TabIndex = 33;
-            this.durationInMin.Text = "label9";
-            this.durationInMin.Visible = false;
-            // 
-            // needCoffee
-            // 
-            this.needCoffee.AutoSize = true;
-            this.needCoffee.Location = new System.Drawing.Point(19, 276);
-            this.needCoffee.Name = "needCoffee";
-            this.needCoffee.Size = new System.Drawing.Size(170, 17);
-            this.needCoffee.TabIndex = 34;
-            this.needCoffee.Text = "Do you want to take a coffee?";
-            this.needCoffee.UseVisualStyleBackColor = true;
             // 
             // Scheduler
             // 

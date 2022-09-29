@@ -158,8 +158,13 @@ namespace personal_assistant_ui
             int index = comboBox1.FindString(comboBox1.Text);
             comboBox1.SelectedIndex = index;
 
-
-            switch(index)
+            mapImage.Visible = false;
+            needCoffee.Visible = false;
+            distanceLbl.Visible = false;
+            distanceInKm.Visible = false;
+            durationInMin.Visible = false;
+            durationLbl.Visible = false;
+            switch (index)
             {
                 case 0:
                     MessageBox.Show("First option");
@@ -172,6 +177,8 @@ namespace personal_assistant_ui
                     }
 
                     suggestionBox.Items.Clear();
+                    suggestionBox.ResetText(); //Clear text from the suggestion box (if the user selected destination first and selected an item from there)
+                    suggestionBox.SelectedIndex = -1;
                     suggestionBox.Items.Add("Ηλεκτρικός");
                     suggestionBox.Items.Add("Λεωφορείο");
                     suggestionBox.Items.Add("Αυτοκίνητο");
@@ -181,6 +188,7 @@ namespace personal_assistant_ui
 
                     suggestionBox.Visible = true;
                     destinationSuggText.Visible = true;
+                    destinationSuggText.Text = "How do you want to get to the destination?";
                     break;
                 case 1:
                     Size = new Size(600, 326);
@@ -192,6 +200,8 @@ namespace personal_assistant_ui
                     }
 
                     suggestionBox.Items.Clear();
+                    suggestionBox.ResetText(); //Clear text from the suggestion box (if the user selected destination first and selected an item from there)
+                    suggestionBox.SelectedIndex = -1;
                     suggestionBox.Items.Add("Smart Lamp");
                     suggestionBox.Items.Add("Shoe rack");
                     suggestionBox.Items.Add("Pet feeder");
@@ -199,15 +209,9 @@ namespace personal_assistant_ui
                     destinationSuggText.Text = "What automation you want to set?";
                     destinationSuggText.Visible = true;
                     suggestionBox.Visible = true;
+                    
                     break;
-                case 2:
-                    MessageBox.Show("Third option");
-                    if (button1.Location != new Point(449, 233))
-                    {
-                        button1.Location = new Point(button1.Location.X + 300, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 300, button2.Location.Y); // move cancel button
-                    }
-                    break;
+                
             }
         }
 
@@ -219,72 +223,118 @@ namespace personal_assistant_ui
             int indexSuggestion = suggestionBox.FindString(suggestionBox.Text);
             suggestionBox.SelectedIndex = indexSuggestion;
 
+
             switch(indexSuggestion)
             {
                 case 0:
-                    MessageBox.Show("ilektrikos");
-                    distanceLbl.Visible = true;
-                    Size = new Size(791, 326);
-                    if(button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
-                    {
-                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
-                    }
-
-                    //Generate a random distance (double number)
-
                     Random rnd = new Random();
-                    float kilometers = (float)(rnd.NextDouble() * 5);
-                    distanceInKm.Text = kilometers.ToString("0.0") + " Km";
-                    distanceInKm.Visible = true;
+                    float kilometers = 0f;
+                    float minutes = 0f;
 
-                    //Generate a random duration (double number)
+                    if (suggestionBox.Text == "Smart Lamp")
+                    {
+                        MessageBox.Show("SMART LAMP");
+                    }
+                    else
+                    {
+                        MessageBox.Show("ilektrikos");
+                        distanceLbl.Visible = true;
+                        Size = new Size(791, 326);
+                        if (button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        {
+                            button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                            button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        }
 
-                    float minutes = (float)(rnd.NextDouble() * 100);
-                    durationInMin.Text = minutes.ToString("0.0") + " Min";
-                    durationLbl.Visible = true;
-                    durationInMin.Visible = true;
-                    needCoffee.Visible = true;
+                        //Generate a random distance (double number)
+
+                        rnd = new Random();
+                        kilometers = (float)(rnd.NextDouble() * 5);
+                        distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                        distanceInKm.Visible = true;
+                        distanceLbl.Visible = true;
+
+                        //Generate a random duration (double number)
+
+                        minutes = (float)(rnd.NextDouble() * 100);
+                        durationInMin.Text = minutes.ToString("0.0") + " Min";
+                        durationLbl.Visible = true;
+                        durationInMin.Visible = true;
+                        needCoffee.Visible = true;
+                    }
+                    
                     break;
 
 
                 case 1:
-                    Size = new Size(791, 326);
-                    MessageBox.Show("Second option");
-
-                    if (button1.Location != new Point(640, 233))
+                    if (suggestionBox.Text == "Shoe rack")
                     {
-                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        MessageBox.Show("SMART shoe");
                     }
-                    needCoffee.Visible = true;
+                    else
+                    {
+                        MessageBox.Show("ilektrikos");
+                        distanceLbl.Visible = true;
+                        Size = new Size(791, 326);
+                        if (button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        {
+                            button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                            button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        }
+
+                        //Generate a random distance (double number)
+
+                        rnd = new Random();
+                        kilometers = (float)(rnd.NextDouble() * 5);
+                        distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                        distanceInKm.Visible = true;
+                        distanceLbl.Visible = true;
+
+                        //Generate a random duration (double number)
+
+                        minutes = (float)(rnd.NextDouble() * 100);
+                        durationInMin.Text = minutes.ToString("0.0") + " Min";
+                        durationLbl.Visible = true;
+                        durationInMin.Visible = true;
+                        
+                        needCoffee.Visible = true;
+                    }
                     break;
                 case 2:
-                    Size = new Size(791, 326);
-                    if (button1.Location != new Point(640, 233))
+                    if (suggestionBox.Text == "Pet feeder")
                     {
-                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        MessageBox.Show("SMART feeder");
                     }
-                    MessageBox.Show("autokinito");
-                    mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car");
-                    mapImage.Visible = true;
-                    mapImage.BackgroundImageLayout = ImageLayout.Stretch;
-                    needCoffee.Visible = true;
-                    //Generate a random distance (double number)
+                    else
+                    {
+                        MessageBox.Show("ilektrikos");
+                        distanceLbl.Visible = true;
+                        Size = new Size(791, 326);
+                        if (button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        {
+                            button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                            button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        }
+                        mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car");
+                        mapImage.Visible = true;
+                        mapImage.BackgroundImageLayout = ImageLayout.Stretch;
+                        //Generate a random distance (double number)
 
-                    rnd = new Random();
-                    kilometers = (float)(rnd.NextDouble() * 5);
-                    distanceInKm.Text = kilometers.ToString("0.0") + " Km";
-                    distanceInKm.Visible = true;
+                        rnd = new Random();
+                        kilometers = (float)(rnd.NextDouble() * 5);
+                        distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                        distanceInKm.Visible = true;
+                        distanceLbl.Visible = true;
 
-                    //Generate a random duration (double number)
+                        //Generate a random duration (double number)
 
-                    minutes = (float)(rnd.NextDouble() * 100);
-                    durationInMin.Text = minutes.ToString("0.0") + " Min";
-                    durationLbl.Visible = true;
-                    durationInMin.Visible = true;
+                        minutes = (float)(rnd.NextDouble() * 100);
+                        durationInMin.Text = minutes.ToString("0.0") + " Min";
+                        durationLbl.Visible = true;
+                        durationInMin.Visible = true;
 
+                        needCoffee.Visible = true;
+                    }
                     break;
                 case 3:
                     Size = new Size(791, 326);
@@ -300,6 +350,7 @@ namespace personal_assistant_ui
                     kilometers = (float)(rnd.NextDouble() * 5);
                     distanceInKm.Text = kilometers.ToString("0.0") + " Km";
                     distanceInKm.Visible = true;
+                    distanceLbl.Visible = true;
 
                     //Generate a random duration (double number)
 
@@ -324,6 +375,7 @@ namespace personal_assistant_ui
                     kilometers = (float)(rnd.NextDouble() * 5);
                     distanceInKm.Text = kilometers.ToString("0.0") + " Km";
                     distanceInKm.Visible = true;
+                    distanceLbl.Visible = true;
 
                     //Generate a random duration (double number)
 
@@ -331,7 +383,6 @@ namespace personal_assistant_ui
                     durationInMin.Text = minutes.ToString("0.0") + " Min";
                     durationLbl.Visible = true;
                     durationInMin.Visible = true;
-
                     break;
                 case 5:
                     Size = new Size(791, 326);
@@ -347,6 +398,7 @@ namespace personal_assistant_ui
                     kilometers = (float)(rnd.NextDouble() * 5);
                     distanceInKm.Text = kilometers.ToString("0.0") + " Km";
                     distanceInKm.Visible = true;
+                    distanceLbl.Visible = true;
 
                     //Generate a random duration (double number)
 
