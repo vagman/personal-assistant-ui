@@ -38,19 +38,18 @@ namespace personal_assistant_ui
         {
 
         }
-
+        
         private void btn_spray_Click(object sender, EventArgs e)
         {
             SprayingLoadingForm sprayForm = new SprayingLoadingForm();
             sprayForm.Closed += (s, AssemblyLoadEventArgs) => Close();
-            sprayForm.Show();
+            sprayForm.Owner = this;
             this.Enabled = false;
+            sprayForm.Show();
         }
 
         private void ShoeRackForm_Load(object sender, EventArgs e)
         {
-           
-
         }
 
         int shoeCount = 0;
@@ -72,7 +71,6 @@ namespace personal_assistant_ui
                 {
                     lbl_no_shoes.Visible = true;
                 }
-                
             }
 
             switch(shoeCount)

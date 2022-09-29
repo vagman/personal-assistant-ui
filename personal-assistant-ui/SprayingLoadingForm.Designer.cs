@@ -43,6 +43,7 @@
             this.progress_bar_spraying.Name = "progress_bar_spraying";
             this.progress_bar_spraying.Size = new System.Drawing.Size(462, 38);
             this.progress_bar_spraying.TabIndex = 0;
+            this.progress_bar_spraying.UseWaitCursor = true;
             // 
             // timer_spraying
             // 
@@ -84,11 +85,12 @@
             this.lbl_spraying_done.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_spraying_done.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_spraying_done.ForeColor = System.Drawing.Color.Green;
-            this.lbl_spraying_done.Location = new System.Drawing.Point(96, 106);
+            this.lbl_spraying_done.Location = new System.Drawing.Point(90, 71);
             this.lbl_spraying_done.Name = "lbl_spraying_done";
             this.lbl_spraying_done.Size = new System.Drawing.Size(345, 26);
             this.lbl_spraying_done.TabIndex = 21;
             this.lbl_spraying_done.Text = "Spraying your shoes was succesful!";
+            this.lbl_spraying_done.UseWaitCursor = true;
             this.lbl_spraying_done.Visible = false;
             // 
             // SprayingLoadingForm
@@ -96,7 +98,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(580, 201);
+            this.ClientSize = new System.Drawing.Size(546, 176);
             this.Controls.Add(this.lbl_spraying_done);
             this.Controls.Add(this.btn_back1);
             this.Controls.Add(this.btn_back);
@@ -107,6 +109,8 @@
             this.Name = "SprayingLoadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Spraying Shoes";
+            this.UseWaitCursor = true;
+            this.Load += new System.EventHandler(this.SprayingLoadingForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

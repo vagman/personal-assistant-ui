@@ -21,32 +21,38 @@ namespace personal_assistant_ui
 
         private void timer_spraying_Tick(object sender, EventArgs e)
         {
-            if (progress_bar_spraying.Value <= progress_bar_spraying.Maximum - 25) // maximum: 90
+            if (progress_bar_spraying.Value <= progress_bar_spraying.Maximum - 25) // loading <= 90%..
             {
                 progress_bar_spraying.Value += 25;
                 SoundPlayer sp = new SoundPlayer(Resources.spray_shoes);
                 sp.Play();
-            } else
+            } else // loading is 100%..
             {
                 progress_bar_spraying.Visible = false;
                 lbl_spraying_done.Visible = true;
                 btn_back.Visible = true;
                 btn_back1.Visible = true;
+                this.UseWaitCursor = false;
             }
         }
 
         private void btn_back1_Click(object sender, EventArgs e)
         {
-            ShoeRackForm srform = new ShoeRackForm();
-            srform.Enabled = true;
+            this.Closed += (s, AssemblyLoadEventArgs) => Close();
+            this.Hide();
+            (this.Owner as ShoeRackForm).Enabled = true;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            ShoeRackForm srform = new ShoeRackForm();
-            srform.Closed += (s, AssemblyLoadEventArgs) => Close();
-            srform.Show();
-            Hide();
+            this.Closed += (s, AssemblyLoadEventArgs) => Close();
+            this.Hide();
+            (this.Owner as ShoeRackForm).Enabled = true;
+        }
+
+        private void SprayingLoadingForm_Load(object sender, EventArgs e)
+        {
+            this.UseWaitCursor = true; 
         }
     }
 }
