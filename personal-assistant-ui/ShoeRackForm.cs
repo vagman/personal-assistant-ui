@@ -18,11 +18,6 @@ namespace personal_assistant_ui
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             MainMenu mainmenu = new MainMenu();
@@ -46,7 +41,10 @@ namespace personal_assistant_ui
 
         private void btn_spray_Click(object sender, EventArgs e)
         {
-
+            SprayingLoadingForm sprayForm = new SprayingLoadingForm();
+            sprayForm.Closed += (s, AssemblyLoadEventArgs) => Close();
+            sprayForm.Show();
+            this.Enabled = false;
         }
 
         private void ShoeRackForm_Load(object sender, EventArgs e)
@@ -61,9 +59,11 @@ namespace personal_assistant_ui
             if (shoeCount < 2)
             {
                 shoeCount++;
-                string imgName = "shoe" + shoeCount;
-                lbl_shoe_use.Text = imgName;
-                pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject(imgName);
+                pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe" + shoeCount);
+            }
+            if (shoeCount == 2)
+            {
+                lbl_no_shoes.Visible = true;
             }
 
             switch(shoeCount)
@@ -91,11 +91,42 @@ namespace personal_assistant_ui
             if (shoeCount > 0)
             {
                 shoeCount--;
-                string imgName = "shoe" + shoeCount; 
-                lbl_shoe_use.Text = imgName;
-                pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject(imgName);
+                pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe" + shoeCount);
+            } 
+            if (shoeCount <= 1) 
+            {
+                lbl_no_shoes.Visible = true;
             }
-            
+
+            switch (shoeCount)
+            {
+                case 0:
+                    lbl_shoe_name.Text = "Nike Air Presto";
+                    lbl_shoe_size.Text = "49";
+                    lbl_shoe_use.Text = "Training & Gym";
+                    break;
+                case 1:
+                    lbl_shoe_name.Text = "Nike AirMax Old School";
+                    lbl_shoe_size.Text = "46.5";
+                    lbl_shoe_use.Text = "Casual";
+                    break;
+                case 2:
+                    lbl_shoe_name.Text = "Nike AirMax v2.0";
+                    lbl_shoe_size.Text = "47.5";
+                    lbl_shoe_use.Text = "Interview/Meeting";
+                    break;
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

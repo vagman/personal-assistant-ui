@@ -48,13 +48,14 @@ namespace personal_assistant_ui
             this.btn_back1 = new System.Windows.Forms.Label();
             this.pb_shoes = new System.Windows.Forms.PictureBox();
             this.btn_back = new System.Windows.Forms.Button();
-            this.btn_help = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbl_shoe_name = new System.Windows.Forms.Label();
             this.lbl_shoe_use = new System.Windows.Forms.Label();
             this.lbl_shoe_sz = new System.Windows.Forms.Label();
             this.lbl_shoe_size = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbl_no_shoes = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_shoes)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +94,7 @@ namespace personal_assistant_ui
             this.comboBox1.Size = new System.Drawing.Size(223, 21);
             this.comboBox1.TabIndex = 32;
             this.comboBox1.Text = "Monday 26/9/2022 (Tommorow)";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btn_spray
             // 
@@ -252,18 +254,6 @@ namespace personal_assistant_ui
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_help
-            // 
-            this.btn_help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_help.BackgroundImage")));
-            this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_help.Location = new System.Drawing.Point(757, 407);
-            this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(31, 31);
-            this.btn_help.TabIndex = 4;
-            this.btn_help.UseVisualStyleBackColor = true;
-            this.btn_help.Click += new System.EventHandler(this.button4_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -321,12 +311,38 @@ namespace personal_assistant_ui
             this.lbl_shoe_size.TabIndex = 31;
             this.lbl_shoe_size.Text = "49";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(753, 403);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 35);
+            this.button1.TabIndex = 32;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lbl_no_shoes
+            // 
+            this.lbl_no_shoes.AutoSize = true;
+            this.lbl_no_shoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_no_shoes.ForeColor = System.Drawing.Color.Red;
+            this.lbl_no_shoes.Location = new System.Drawing.Point(444, 23);
+            this.lbl_no_shoes.Name = "lbl_no_shoes";
+            this.lbl_no_shoes.Size = new System.Drawing.Size(228, 16);
+            this.lbl_no_shoes.TabIndex = 33;
+            this.lbl_no_shoes.Text = "You don\'t have any other shoes.";
+            this.lbl_no_shoes.Visible = false;
+            // 
             // ShoeRackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_no_shoes);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_shoe_size);
             this.Controls.Add(this.lbl_shoe_sz);
             this.Controls.Add(this.lbl_shoe_use);
@@ -338,7 +354,6 @@ namespace personal_assistant_ui
             this.Controls.Add(this.btn_back1);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_help);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShoeRackForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -353,8 +368,6 @@ namespace personal_assistant_ui
         }
 
         #endregion
-
-        private Button btn_help;
         private GroupBox groupBox1;
         private Button btn_back;
         private Label btn_help1;
@@ -378,5 +391,7 @@ namespace personal_assistant_ui
         private Label lbl_shoe_use;
         private Label lbl_shoe_sz;
         private Label lbl_shoe_size;
+        private Button button1;
+        private Label lbl_no_shoes;
     }
 }

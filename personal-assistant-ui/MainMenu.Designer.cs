@@ -77,6 +77,7 @@
             this.btn_pet_feeder.BackgroundImage = global::personal_assistant_ui.Properties.Resources.pet_feeder;
             this.btn_pet_feeder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_pet_feeder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pet_feeder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pet_feeder.Location = new System.Drawing.Point(482, 107);
             this.btn_pet_feeder.Name = "btn_pet_feeder";
             this.btn_pet_feeder.Size = new System.Drawing.Size(97, 90);
@@ -89,9 +90,9 @@
             this.btn_help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_help.BackgroundImage")));
             this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_help.Location = new System.Drawing.Point(647, 351);
+            this.btn_help.Location = new System.Drawing.Point(641, 343);
             this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(28, 29);
+            this.btn_help.Size = new System.Drawing.Size(35, 35);
             this.btn_help.TabIndex = 3;
             this.btn_help.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +183,7 @@
             this.btn_help1.AutoSize = true;
             this.btn_help1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_help1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btn_help1.Location = new System.Drawing.Point(552, 354);
+            this.btn_help1.Location = new System.Drawing.Point(546, 349);
             this.btn_help1.Name = "btn_help1";
             this.btn_help1.Size = new System.Drawing.Size(89, 20);
             this.btn_help1.TabIndex = 14;
