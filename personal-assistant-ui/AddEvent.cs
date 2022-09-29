@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography;
 
 namespace personal_assistant_ui
 {
@@ -76,6 +77,11 @@ namespace personal_assistant_ui
                 sw.WriteLine(minCB.Text);
                 sw.WriteLine(periodCB.Text);
                 sw.WriteLine(comboBox1.Text);
+                sw.WriteLine(suggestionBox.Text);
+                sw.WriteLine(distanceInKm.Text);
+                sw.WriteLine(durationInMin.Text);
+                sw.WriteLine(needCoffee.Checked.ToString());
+                
 
             }
 
@@ -120,7 +126,8 @@ namespace personal_assistant_ui
 
         private void AddEvent_Load(object sender, EventArgs e)
         {
-
+            Size = new Size(300, 326);
+            FormBorderStyle = FormBorderStyle.FixedSingle; //dont allow the user to change size of the window form
         }
 
         private void btn_back1_Click(object sender, EventArgs e)
@@ -148,17 +155,240 @@ namespace personal_assistant_ui
             int index = comboBox1.FindString(comboBox1.Text);
             comboBox1.SelectedIndex = index;
 
-            if(index == 0)
+
+            switch(index)
             {
-                MessageBox.Show("First option");
+                case 0:
+                    MessageBox.Show("First option");
+                    Size = new Size(600, 326); //Grow size of window if the user select first option of the combobox
+                                               //the new location will be 449,233
+                    if (button1.Location != new Point(449, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 300, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 300, button2.Location.Y); // move cancel button
+                    }
+
+                    suggestionBox.Items.Add("Ηλεκτρικός");
+                    suggestionBox.Items.Add("Λεωφορείο");
+                    suggestionBox.Items.Add("Αυτοκίνητο");
+                    suggestionBox.Items.Add("Ποδήλατο");
+                    suggestionBox.Items.Add("Πόδια");
+                    suggestionBox.Items.Add("Συνδιασμός");
+
+                    suggestionBox.Visible = true;
+                    destinationSuggText.Visible = true;
+                    break;
+                case 1:
+                    Size = new Size(600, 326);
+                    MessageBox.Show("Second option");
+                    if (button1.Location != new Point(449, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 300, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 300, button2.Location.Y); // move cancel button
+                    }
+
+                    suggestionBox.Items.Clear();
+                    suggestionBox.Items.Add("Smart Lamp");
+                    suggestionBox.Items.Add("Shoe rack");
+                    suggestionBox.Items.Add("Pet feeder");
+
+                    destinationSuggText.Text = "What automation you want to set?";
+                    destinationSuggText.Visible = true;
+                    suggestionBox.Visible = true;
+                    break;
+                case 2:
+                    MessageBox.Show("Third option");
+                    if (button1.Location != new Point(449, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 300, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 300, button2.Location.Y); // move cancel button
+                    }
+                    break;
             }
-            else if(index == 1)
+        }
+
+        private void suggestionBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            object currentSuggestion = suggestionBox.SelectedItem;
+            object currentSuggestionText = suggestionBox.GetItemText(currentSuggestion);
+
+            int indexSuggestion = suggestionBox.FindString(suggestionBox.Text);
+            suggestionBox.SelectedIndex = indexSuggestion;
+
+            switch(indexSuggestion)
             {
-                MessageBox.Show("Second option");
+                case 0:
+                    MessageBox.Show("ilektrikos");
+                    distanceLbl.Visible = true;
+                    Size = new Size(791, 326);
+                    if(button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                    {
+                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                    }
+
+                    //Generate a random distance (double number)
+
+                    Random rnd = new Random();
+                    float kilometers = (float)(rnd.NextDouble() * 5);
+                    distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                    distanceInKm.Visible = true;
+
+                    //Generate a random duration (double number)
+
+                    float minutes = (float)(rnd.NextDouble() * 100);
+                    durationInMin.Text = minutes.ToString("0.0") + " Min";
+                    durationLbl.Visible = true;
+                    durationInMin.Visible = true;
+                    needCoffee.Visible = true;
+                    break;
+
+
+                case 1:
+                    Size = new Size(791, 326);
+                    MessageBox.Show("Second option");
+
+                    if (button1.Location != new Point(640, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                    }
+                    needCoffee.Visible = true;
+                    break;
+                case 2:
+                    Size = new Size(791, 326);
+                    if (button1.Location != new Point(640, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                    }
+                    MessageBox.Show("autokinito");
+                    mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car");
+                    mapImage.Visible = true;
+                    mapImage.BackgroundImageLayout = ImageLayout.Stretch;
+                    needCoffee.Visible = true;
+                    //Generate a random distance (double number)
+
+                    rnd = new Random();
+                    kilometers = (float)(rnd.NextDouble() * 5);
+                    distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                    distanceInKm.Visible = true;
+
+                    //Generate a random duration (double number)
+
+                    minutes = (float)(rnd.NextDouble() * 100);
+                    durationInMin.Text = minutes.ToString("0.0") + " Min";
+                    durationLbl.Visible = true;
+                    durationInMin.Visible = true;
+
+                    break;
+                case 3:
+                    Size = new Size(791, 326);
+                    if (button1.Location != new Point(640, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                    }
+                    needCoffee.Visible = true;
+                    //Generate a random distance (double number)
+
+                    rnd = new Random();
+                    kilometers = (float)(rnd.NextDouble() * 5);
+                    distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                    distanceInKm.Visible = true;
+
+                    //Generate a random duration (double number)
+
+                    minutes = (float)(rnd.NextDouble() * 100);
+                    durationInMin.Text = minutes.ToString("0.0") + " Min";
+                    durationLbl.Visible = true;
+                    durationInMin.Visible = true;
+
+                    break;
+                case 4:
+                    Size = new Size(791, 326);
+                    if (button1.Location != new Point(640, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                    }
+                    needCoffee.Visible = true;
+
+                    //Generate a random distance (double number)
+
+                    rnd = new Random();
+                    kilometers = (float)(rnd.NextDouble() * 5);
+                    distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                    distanceInKm.Visible = true;
+
+                    //Generate a random duration (double number)
+
+                    minutes = (float)(rnd.NextDouble() * 100);
+                    durationInMin.Text = minutes.ToString("0.0") + " Min";
+                    durationLbl.Visible = true;
+                    durationInMin.Visible = true;
+
+                    break;
+                case 5:
+                    Size = new Size(791, 326);
+                    if (button1.Location != new Point(640, 233))
+                    {
+                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
+                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                    }
+                    needCoffee.Visible = true;
+                    //Generate a random distance (double number)
+
+                    rnd = new Random();
+                    kilometers = (float)(rnd.NextDouble() * 5);
+                    distanceInKm.Text = kilometers.ToString("0.0") + " Km";
+                    distanceInKm.Visible = true;
+
+                    //Generate a random duration (double number)
+
+                    minutes = (float)(rnd.NextDouble() * 100);
+                    durationInMin.Text = minutes.ToString("0.0") + " Min";
+                    durationLbl.Visible = true;
+                    durationInMin.Visible = true;
+
+                    break;
             }
-            else if(index == 2)
+            
+        }
+
+        private void readyToPickDestinations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            object curItem = readyToPickDestinations.SelectedItem;
+            object curItemText = readyToPickDestinations.GetItemText(curItem);
+
+            int index = readyToPickDestinations.FindString(readyToPickDestinations.Text);
+            readyToPickDestinations.SelectedIndex = index;
+
+            switch(index) {
+                case 0:
+                    titleBox.Text = "University";
+                    break;
+                case 1:
+                    titleBox.Text = "Home";
+                    break;
+                case 2:
+                    titleBox.Text = "Coffee Shop";
+                    break;
+                case 3:
+                    titleBox.Text = "Gym";
+                    break;
+            }
+        }
+
+        private void needCoffee_CheckedChanged(object sender, EventArgs e)
+        {
+            if (needCoffee.Checked)
             {
-                MessageBox.Show("Third option");
+                mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("carCoffee");
+            }
+            else
+            {
+                mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car");
             }
         }
     }

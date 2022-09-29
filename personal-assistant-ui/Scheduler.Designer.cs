@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Scheduler));
             this.addBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.gbox = new System.Windows.Forms.GroupBox();
             this.hideBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
@@ -56,13 +55,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_back1 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.destinationSuggText = new System.Windows.Forms.Label();
+            this.suggestionBox = new System.Windows.Forms.ComboBox();
+            this.distanceLbl = new System.Windows.Forms.Label();
+            this.durationLbl = new System.Windows.Forms.Label();
+            this.distanceInKm = new System.Windows.Forms.Label();
+            this.durationInMin = new System.Windows.Forms.Label();
+            this.needCoffee = new System.Windows.Forms.CheckBox();
             this.gbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // addBtn
             // 
             this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.addBtn.Location = new System.Drawing.Point(633, 52);
+            this.addBtn.Location = new System.Drawing.Point(633, 12);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(80, 26);
             this.addBtn.TabIndex = 0;
@@ -70,19 +77,15 @@
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(687, 429);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 27);
-            this.button4.TabIndex = 9;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // gbox
             // 
+            this.gbox.Controls.Add(this.needCoffee);
+            this.gbox.Controls.Add(this.durationInMin);
+            this.gbox.Controls.Add(this.distanceInKm);
+            this.gbox.Controls.Add(this.durationLbl);
+            this.gbox.Controls.Add(this.distanceLbl);
+            this.gbox.Controls.Add(this.suggestionBox);
+            this.gbox.Controls.Add(this.destinationSuggText);
             this.gbox.Controls.Add(this.hideBtn);
             this.gbox.Controls.Add(this.cancelBtn);
             this.gbox.Controls.Add(this.label7);
@@ -111,11 +114,12 @@
             // 
             // hideBtn
             // 
-            this.hideBtn.Location = new System.Drawing.Point(6, 275);
+            this.hideBtn.Location = new System.Drawing.Point(95, 299);
             this.hideBtn.Name = "hideBtn";
-            this.hideBtn.Size = new System.Drawing.Size(73, 18);
+            this.hideBtn.Size = new System.Drawing.Size(52, 36);
             this.hideBtn.TabIndex = 21;
             this.hideBtn.Text = "Hide Details";
+            this.hideBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.hideBtn.UseVisualStyleBackColor = true;
             this.hideBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
@@ -164,12 +168,12 @@
             // button1
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button1.BackgroundImage = global::personal_assistant_ui.Properties.Resources.trash;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Image = global::personal_assistant_ui.Properties.Resources.trash;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(6, 299);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 36);
+            this.button1.Size = new System.Drawing.Size(89, 36);
             this.button1.TabIndex = 14;
             this.button1.Text = "Delete Task";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -391,9 +395,9 @@
             // 
             // showTaskBtn
             // 
-            this.showTaskBtn.Location = new System.Drawing.Point(167, 436);
+            this.showTaskBtn.Location = new System.Drawing.Point(90, 436);
             this.showTaskBtn.Name = "showTaskBtn";
-            this.showTaskBtn.Size = new System.Drawing.Size(52, 30);
+            this.showTaskBtn.Size = new System.Drawing.Size(86, 30);
             this.showTaskBtn.TabIndex = 15;
             this.showTaskBtn.Text = "Show Details";
             this.showTaskBtn.UseVisualStyleBackColor = true;
@@ -402,9 +406,10 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(103, 436);
+            this.refreshBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.refreshBtn.Location = new System.Drawing.Point(10, 436);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(58, 30);
+            this.refreshBtn.Size = new System.Drawing.Size(74, 30);
             this.refreshBtn.TabIndex = 16;
             this.refreshBtn.Text = "Refresh List";
             this.refreshBtn.UseVisualStyleBackColor = true;
@@ -444,6 +449,94 @@
             this.btn_back.TabIndex = 19;
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(687, 429);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(27, 27);
+            this.button4.TabIndex = 9;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // destinationSuggText
+            // 
+            this.destinationSuggText.AutoSize = true;
+            this.destinationSuggText.Location = new System.Drawing.Point(16, 204);
+            this.destinationSuggText.Name = "destinationSuggText";
+            this.destinationSuggText.Size = new System.Drawing.Size(210, 13);
+            this.destinationSuggText.TabIndex = 28;
+            this.destinationSuggText.Text = "How do you want to get to the destination?";
+            this.destinationSuggText.Visible = false;
+            // 
+            // suggestionBox
+            // 
+            this.suggestionBox.FormattingEnabled = true;
+            this.suggestionBox.Items.AddRange(new object[] {
+            "Ηλεκτρικός",
+            "Λεωφορείο",
+            "Αυτοκίνητο",
+            "Ποδήλατο",
+            "Πόδια",
+            "Συνδιασμός"});
+            this.suggestionBox.Location = new System.Drawing.Point(19, 220);
+            this.suggestionBox.Name = "suggestionBox";
+            this.suggestionBox.Size = new System.Drawing.Size(207, 21);
+            this.suggestionBox.TabIndex = 29;
+            this.suggestionBox.Visible = false;
+            // 
+            // distanceLbl
+            // 
+            this.distanceLbl.AutoSize = true;
+            this.distanceLbl.Location = new System.Drawing.Point(20, 254);
+            this.distanceLbl.Name = "distanceLbl";
+            this.distanceLbl.Size = new System.Drawing.Size(52, 13);
+            this.distanceLbl.TabIndex = 30;
+            this.distanceLbl.Text = "Distance:";
+            this.distanceLbl.Visible = false;
+            // 
+            // durationLbl
+            // 
+            this.durationLbl.AutoSize = true;
+            this.durationLbl.Location = new System.Drawing.Point(124, 254);
+            this.durationLbl.Name = "durationLbl";
+            this.durationLbl.Size = new System.Drawing.Size(50, 13);
+            this.durationLbl.TabIndex = 31;
+            this.durationLbl.Text = "Duration:";
+            this.durationLbl.Visible = false;
+            // 
+            // distanceInKm
+            // 
+            this.distanceInKm.AutoSize = true;
+            this.distanceInKm.Location = new System.Drawing.Point(78, 254);
+            this.distanceInKm.Name = "distanceInKm";
+            this.distanceInKm.Size = new System.Drawing.Size(35, 13);
+            this.distanceInKm.TabIndex = 32;
+            this.distanceInKm.Text = "label8";
+            this.distanceInKm.Visible = false;
+            // 
+            // durationInMin
+            // 
+            this.durationInMin.AutoSize = true;
+            this.durationInMin.Location = new System.Drawing.Point(180, 254);
+            this.durationInMin.Name = "durationInMin";
+            this.durationInMin.Size = new System.Drawing.Size(35, 13);
+            this.durationInMin.TabIndex = 33;
+            this.durationInMin.Text = "label9";
+            this.durationInMin.Visible = false;
+            // 
+            // needCoffee
+            // 
+            this.needCoffee.AutoSize = true;
+            this.needCoffee.Location = new System.Drawing.Point(19, 276);
+            this.needCoffee.Name = "needCoffee";
+            this.needCoffee.Size = new System.Drawing.Size(170, 17);
+            this.needCoffee.TabIndex = 34;
+            this.needCoffee.Text = "Do you want to take a coffee?";
+            this.needCoffee.UseVisualStyleBackColor = true;
             // 
             // Scheduler
             // 
@@ -502,5 +595,12 @@
         private Label btn_back1;
         private Button btn_back;
         private Button hideBtn;
+        private Label destinationSuggText;
+        private ComboBox suggestionBox;
+        private Label distanceLbl;
+        private Label durationLbl;
+        private Label distanceInKm;
+        private Label durationInMin;
+        private CheckBox needCoffee;
     }
 }
