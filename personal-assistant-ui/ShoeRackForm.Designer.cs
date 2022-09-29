@@ -33,7 +33,7 @@ namespace personal_assistant_ui
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShoeRackForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_no_shoes = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_date = new System.Windows.Forms.ComboBox();
             this.btn_spray = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@ namespace personal_assistant_ui
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lbl_no_shoes);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cb_date);
             this.groupBox1.Controls.Add(this.btn_spray);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -94,20 +94,20 @@ namespace personal_assistant_ui
             this.lbl_no_shoes.Text = "You don\'t have any other shoes.\nPlease try using the other arrow.";
             this.lbl_no_shoes.Visible = false;
             // 
-            // comboBox1
+            // cb_date
             // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_date.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cb_date.FormattingEnabled = true;
+            this.cb_date.Items.AddRange(new object[] {
             "Tuesday 27/9/2022",
             "Wendsay 28/9/2022",
             "Friday 29/9/2022"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 318);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 21);
-            this.comboBox1.TabIndex = 32;
-            this.comboBox1.Text = "Monday 26/9/2022 (Tommorow)";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cb_date.Location = new System.Drawing.Point(6, 318);
+            this.cb_date.Name = "cb_date";
+            this.cb_date.Size = new System.Drawing.Size(223, 21);
+            this.cb_date.TabIndex = 32;
+            this.cb_date.Text = "Monday 26/9/2022 (Tommorow)";
+            this.cb_date.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btn_spray
             // 
@@ -386,7 +386,7 @@ namespace personal_assistant_ui
         private Label label8;
         private Label label7;
         private Label label6;
-        private ComboBox comboBox1;
+        private ComboBox cb_date;
         private PictureBox pb_shoes;
         private Label label9;
         private Label label10;

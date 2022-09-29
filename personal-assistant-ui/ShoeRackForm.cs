@@ -139,7 +139,27 @@ namespace personal_assistant_ui
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            switch (cb_date.SelectedIndex)
+            {
+                case 0:
+                    pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe1");
+                    lbl_shoe_name.Text = "Nike AirMax Old School";
+                    lbl_shoe_size.Text = "46.5";
+                    lbl_shoe_use.Text = "Casual";
+                    break;
+                case 1:
+                    pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe0");
+                    lbl_shoe_name.Text = "Nike Air Presto";
+                    lbl_shoe_size.Text = "49";
+                    lbl_shoe_use.Text = "Training & Gym";
+                    break;
+                case 2:
+                    pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe2");
+                    lbl_shoe_name.Text = "Nike AirMax v2.0";
+                    lbl_shoe_size.Text = "47.5";
+                    lbl_shoe_use.Text = "Interview/Meeting";
+                    break;
+            }
         }
     }
 }
