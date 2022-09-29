@@ -59,7 +59,7 @@ namespace personal_assistant_ui
 
             cnt++; //To change task number: Task[cnt] (Task1, Task2, ...)
 
-
+            
             string dir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
             if(!Directory.Exists(dir))
             {
