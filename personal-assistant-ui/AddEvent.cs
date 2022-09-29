@@ -1,4 +1,7 @@
-﻿using System;
+﻿//TODO: on 'Back' close AddEvent form and open a single form of scheduler
+//TODO: make the cancel button works
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,7 +59,7 @@ namespace personal_assistant_ui
 
             cnt++; //To change task number: Task[cnt] (Task1, Task2, ...)
 
-
+            
             string dir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
             if(!Directory.Exists(dir))
             {
@@ -168,6 +171,7 @@ namespace personal_assistant_ui
                         button2.Location = new Point(button2.Location.X + 300, button2.Location.Y); // move cancel button
                     }
 
+                    suggestionBox.Items.Clear();
                     suggestionBox.Items.Add("Ηλεκτρικός");
                     suggestionBox.Items.Add("Λεωφορείο");
                     suggestionBox.Items.Add("Αυτοκίνητο");

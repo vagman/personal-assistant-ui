@@ -84,8 +84,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Destination",
-            "Automation",
-            "Party/Event"});
+            "Automation"});
             this.comboBox1.Location = new System.Drawing.Point(106, 172);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 21);
@@ -413,7 +412,8 @@
             "University",
             "Home",
             "Coffee Shop",
-            "Gym"});
+            "Gym",
+            "Party/Event"});
             this.readyToPickDestinations.Location = new System.Drawing.Point(215, 62);
             this.readyToPickDestinations.Name = "readyToPickDestinations";
             this.readyToPickDestinations.Size = new System.Drawing.Size(19, 21);

@@ -121,6 +121,7 @@
             this.hideBtn.Text = "Hide Details";
             this.hideBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.hideBtn.UseVisualStyleBackColor = true;
+            this.hideBtn.Visible = false;
             this.hideBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // cancelBtn
