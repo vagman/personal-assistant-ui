@@ -187,4 +187,19 @@
   <data name="shoe3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\shoe3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="calm_cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\calm_cat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat_needs_help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\cat_needs_help.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="groumpy_cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\groumpy_cat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_20percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\20percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_90percent_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\90percent..jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

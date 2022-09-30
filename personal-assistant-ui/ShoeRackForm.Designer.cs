@@ -35,7 +35,6 @@ namespace personal_assistant_ui
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_no_shoes = new System.Windows.Forms.Label();
-            this.cb_date = new System.Windows.Forms.ComboBox();
             this.btn_spray = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@ namespace personal_assistant_ui
             this.lbl_buy_new_shoes = new System.Windows.Forms.Label();
             this.lbl_link_skroutz = new System.Windows.Forms.LinkLabel();
             this.lbl_buy_new_shoes1 = new System.Windows.Forms.Label();
+            this.cb_date = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_shoes)).BeginInit();
             this.SuspendLayout();
@@ -124,23 +124,6 @@ namespace personal_assistant_ui
             this.lbl_no_shoes.TabIndex = 33;
             this.lbl_no_shoes.Text = "You don\'t have any other shoes.\nPlease try using the other arrow.";
             this.lbl_no_shoes.Visible = false;
-            // 
-            // cb_date
-            // 
-            this.cb_date.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cb_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_date.FormattingEnabled = true;
-            this.cb_date.Items.AddRange(new object[] {
-            "Tuesday 27/9/2022",
-            "Wendsay 28/9/2022",
-            "Friday 29/9/2022",
-            "Saturday 30/9/2022"});
-            this.cb_date.Location = new System.Drawing.Point(6, 327);
-            this.cb_date.Name = "cb_date";
-            this.cb_date.Size = new System.Drawing.Size(231, 24);
-            this.cb_date.TabIndex = 32;
-            this.cb_date.Text = "Monday 26/9/2022 (Tommorow)";
-            this.cb_date.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btn_spray
             // 
@@ -410,6 +393,23 @@ namespace personal_assistant_ui
             this.lbl_buy_new_shoes1.Text = "or your local shoe shop\nto buy a pair of new ones.";
             this.lbl_buy_new_shoes1.Visible = false;
             // 
+            // cb_date
+            // 
+            this.cb_date.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cb_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_date.FormattingEnabled = true;
+            this.cb_date.Items.AddRange(new object[] {
+            "Tuesday 27/9/2022",
+            "Wendsay 28/9/2022",
+            "Friday 29/9/2022",
+            "Saturday 30/9/2022"});
+            this.cb_date.Location = new System.Drawing.Point(6, 327);
+            this.cb_date.Name = "cb_date";
+            this.cb_date.Size = new System.Drawing.Size(231, 24);
+            this.cb_date.TabIndex = 32;
+            this.cb_date.Text = "Monday 26/9/2022 (Tommorow)";
+            this.cb_date.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // ShoeRackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -460,7 +460,6 @@ namespace personal_assistant_ui
         private Label label8;
         private Label label7;
         private Label label6;
-        private ComboBox cb_date;
         private PictureBox pb_shoes;
         private Label label9;
         private Label label10;
@@ -475,5 +474,6 @@ namespace personal_assistant_ui
         private Label lbl_buy_new_shoes;
         private LinkLabel lbl_link_skroutz;
         private Label lbl_buy_new_shoes1;
+        private ComboBox cb_date;
     }
 }

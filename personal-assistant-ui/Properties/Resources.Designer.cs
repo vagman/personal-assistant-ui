@@ -63,6 +63,26 @@ namespace personal_assistant_ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20percent {
+            get {
+                object obj = ResourceManager.GetObject("_20percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _90percent_ {
+            get {
+                object obj = ResourceManager.GetObject("_90percent_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back {
             get {
                 object obj = ResourceManager.GetObject("back", resourceCulture);
@@ -76,6 +96,16 @@ namespace personal_assistant_ui.Properties {
         internal static System.Drawing.Bitmap bus {
             get {
                 object obj = ResourceManager.GetObject("bus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calm_cat {
+            get {
+                object obj = ResourceManager.GetObject("calm_cat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,6 +133,16 @@ namespace personal_assistant_ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cat_needs_help {
+            get {
+                object obj = ResourceManager.GetObject("cat_needs_help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap daily_planner {
             get {
                 object obj = ResourceManager.GetObject("daily-planner", resourceCulture);
@@ -116,6 +156,16 @@ namespace personal_assistant_ui.Properties {
         internal static System.IO.UnmanagedMemoryStream dog_food {
             get {
                 return ResourceManager.GetStream("dog_food", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap groumpy_cat {
+            get {
+                object obj = ResourceManager.GetObject("groumpy_cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
