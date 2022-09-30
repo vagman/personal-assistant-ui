@@ -56,12 +56,16 @@ namespace personal_assistant_ui
             this.lbl_shoe_sz = new System.Windows.Forms.Label();
             this.lbl_shoe_size = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_shoes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.lbl_no_shoes);
             this.groupBox1.Controls.Add(this.cb_date);
             this.groupBox1.Controls.Add(this.btn_spray);
@@ -77,7 +81,7 @@ namespace personal_assistant_ui
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 45);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 362);
+            this.groupBox1.Size = new System.Drawing.Size(486, 397);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Smart Shoe Rack Controls";
@@ -87,7 +91,7 @@ namespace personal_assistant_ui
             this.lbl_no_shoes.AutoSize = true;
             this.lbl_no_shoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_no_shoes.ForeColor = System.Drawing.Color.Red;
-            this.lbl_no_shoes.Location = new System.Drawing.Point(87, 152);
+            this.lbl_no_shoes.Location = new System.Drawing.Point(274, 136);
             this.lbl_no_shoes.Name = "lbl_no_shoes";
             this.lbl_no_shoes.Size = new System.Drawing.Size(191, 26);
             this.lbl_no_shoes.TabIndex = 33;
@@ -97,14 +101,15 @@ namespace personal_assistant_ui
             // cb_date
             // 
             this.cb_date.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cb_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_date.FormattingEnabled = true;
             this.cb_date.Items.AddRange(new object[] {
             "Tuesday 27/9/2022",
             "Wendsay 28/9/2022",
             "Friday 29/9/2022"});
-            this.cb_date.Location = new System.Drawing.Point(6, 318);
+            this.cb_date.Location = new System.Drawing.Point(6, 327);
             this.cb_date.Name = "cb_date";
-            this.cb_date.Size = new System.Drawing.Size(223, 21);
+            this.cb_date.Size = new System.Drawing.Size(231, 24);
             this.cb_date.TabIndex = 32;
             this.cb_date.Text = "Monday 26/9/2022 (Tommorow)";
             this.cb_date.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -112,6 +117,7 @@ namespace personal_assistant_ui
             // btn_spray
             // 
             this.btn_spray.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_spray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_spray.Location = new System.Drawing.Point(10, 88);
             this.btn_spray.Name = "btn_spray";
             this.btn_spray.Size = new System.Drawing.Size(133, 36);
@@ -151,10 +157,10 @@ namespace personal_assistant_ui
             // 
             // btn_shoe_right
             // 
-            this.btn_shoe_right.BackgroundImage = global::personal_assistant_ui.Properties.Resources.right;
             this.btn_shoe_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_shoe_right.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_shoe_right.Location = new System.Drawing.Point(366, 178);
+            this.btn_shoe_right.Image = ((System.Drawing.Image)(resources.GetObject("btn_shoe_right.Image")));
+            this.btn_shoe_right.Location = new System.Drawing.Point(383, 178);
             this.btn_shoe_right.Name = "btn_shoe_right";
             this.btn_shoe_right.Size = new System.Drawing.Size(36, 36);
             this.btn_shoe_right.TabIndex = 27;
@@ -163,10 +169,10 @@ namespace personal_assistant_ui
             // 
             // btn_shoe_left
             // 
-            this.btn_shoe_left.BackgroundImage = global::personal_assistant_ui.Properties.Resources.left;
             this.btn_shoe_left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_shoe_left.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_shoe_left.Location = new System.Drawing.Point(314, 178);
+            this.btn_shoe_left.Image = ((System.Drawing.Image)(resources.GetObject("btn_shoe_left.Image")));
+            this.btn_shoe_left.Location = new System.Drawing.Point(319, 178);
             this.btn_shoe_left.Name = "btn_shoe_left";
             this.btn_shoe_left.Size = new System.Drawing.Size(36, 36);
             this.btn_shoe_left.TabIndex = 26;
@@ -227,7 +233,7 @@ namespace personal_assistant_ui
             this.btn_help1.AutoSize = true;
             this.btn_help1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_help1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btn_help1.Location = new System.Drawing.Point(662, 411);
+            this.btn_help1.Location = new System.Drawing.Point(696, 422);
             this.btn_help1.Name = "btn_help1";
             this.btn_help1.Size = new System.Drawing.Size(89, 20);
             this.btn_help1.TabIndex = 19;
@@ -249,20 +255,20 @@ namespace personal_assistant_ui
             // 
             // pb_shoes
             // 
-            this.pb_shoes.Image = global::personal_assistant_ui.Properties.Resources.shoe0;
-            this.pb_shoes.Location = new System.Drawing.Point(481, 55);
+            this.pb_shoes.Image = ((System.Drawing.Image)(resources.GetObject("pb_shoes.Image")));
+            this.pb_shoes.Location = new System.Drawing.Point(543, 61);
             this.pb_shoes.Name = "pb_shoes";
-            this.pb_shoes.Size = new System.Drawing.Size(194, 234);
+            this.pb_shoes.Size = new System.Drawing.Size(192, 234);
             this.pb_shoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_shoes.TabIndex = 20;
             this.pb_shoes.TabStop = false;
             // 
             // btn_back
             // 
-            this.btn_back.BackgroundImage = global::personal_assistant_ui.Properties.Resources.back;
             this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Image = ((System.Drawing.Image)(resources.GetObject("btn_back.Image")));
             this.btn_back.Location = new System.Drawing.Point(11, 9);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(30, 30);
@@ -273,57 +279,60 @@ namespace personal_assistant_ui
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label9.Location = new System.Drawing.Point(478, 310);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(540, 316);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 13);
+            this.label9.Size = new System.Drawing.Size(82, 16);
             this.label9.TabIndex = 26;
             this.label9.Text = "Shoe name: ";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label10.Location = new System.Drawing.Point(478, 357);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(540, 363);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 13);
+            this.label10.Size = new System.Drawing.Size(104, 16);
             this.label10.TabIndex = 27;
             this.label10.Text = "Suggested use: ";
             // 
             // lbl_shoe_name
             // 
             this.lbl_shoe_name.AutoSize = true;
-            this.lbl_shoe_name.Location = new System.Drawing.Point(562, 310);
+            this.lbl_shoe_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shoe_name.Location = new System.Drawing.Point(624, 316);
             this.lbl_shoe_name.Name = "lbl_shoe_name";
-            this.lbl_shoe_name.Size = new System.Drawing.Size(77, 13);
+            this.lbl_shoe_name.Size = new System.Drawing.Size(96, 16);
             this.lbl_shoe_name.TabIndex = 28;
             this.lbl_shoe_name.Text = "Nike Air Presto";
             // 
             // lbl_shoe_use
             // 
             this.lbl_shoe_use.AutoSize = true;
-            this.lbl_shoe_use.Location = new System.Drawing.Point(583, 357);
+            this.lbl_shoe_use.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shoe_use.Location = new System.Drawing.Point(645, 363);
             this.lbl_shoe_use.Name = "lbl_shoe_use";
-            this.lbl_shoe_use.Size = new System.Drawing.Size(72, 13);
+            this.lbl_shoe_use.Size = new System.Drawing.Size(90, 16);
             this.lbl_shoe_use.TabIndex = 29;
             this.lbl_shoe_use.Text = "Training & Gym";
             // 
             // lbl_shoe_sz
             // 
             this.lbl_shoe_sz.AutoSize = true;
-            this.lbl_shoe_sz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.lbl_shoe_sz.Location = new System.Drawing.Point(478, 333);
+            this.lbl_shoe_sz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shoe_sz.Location = new System.Drawing.Point(540, 339);
             this.lbl_shoe_sz.Name = "lbl_shoe_sz";
-            this.lbl_shoe_sz.Size = new System.Drawing.Size(39, 13);
+            this.lbl_shoe_sz.Size = new System.Drawing.Size(39, 16);
             this.lbl_shoe_sz.TabIndex = 30;
             this.lbl_shoe_sz.Text = "Size: ";
             // 
             // lbl_shoe_size
             // 
             this.lbl_shoe_size.AutoSize = true;
-            this.lbl_shoe_size.Location = new System.Drawing.Point(523, 333);
+            this.lbl_shoe_size.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shoe_size.Location = new System.Drawing.Point(585, 339);
             this.lbl_shoe_size.Name = "lbl_shoe_size";
-            this.lbl_shoe_size.Size = new System.Drawing.Size(19, 13);
+            this.lbl_shoe_size.Size = new System.Drawing.Size(21, 16);
             this.lbl_shoe_size.TabIndex = 31;
             this.lbl_shoe_size.Text = "49";
             // 
@@ -332,19 +341,43 @@ namespace personal_assistant_ui
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(753, 403);
+            this.button1.Location = new System.Drawing.Point(787, 414);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 35);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(379, 217);
+            this.label11.Name = "label11";
+            this.label11.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.label11.Size = new System.Drawing.Size(48, 30);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Next";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(299, 217);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.label12.Size = new System.Drawing.Size(74, 30);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Previous";
+            // 
             // ShoeRackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 461);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_shoe_size);
             this.Controls.Add(this.lbl_shoe_sz);
@@ -396,5 +429,7 @@ namespace personal_assistant_ui
         private Label lbl_shoe_size;
         private Button button1;
         private Label lbl_no_shoes;
+        private Label label12;
+        private Label label11;
     }
 }

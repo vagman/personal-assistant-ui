@@ -46,15 +46,15 @@ namespace personal_assistant_ui
             if(btnWasClicked == -1)
             {
                 button5.BackgroundImage = Resources.lights_on;
-                label6.Font = new Font(label6.Font.Name, 9, FontStyle.Bold);
+                label6.Font = new Font(label6.Font.Name, 12, FontStyle.Bold);
                 label6.Text = "On";
                 label6.ForeColor = green;
                 label6.Refresh();
-                
             }
             else
             {
                 button5.BackgroundImage = Resources.lights_off;
+                label6.Font = new Font(label6.Font.Name, 12, FontStyle.Bold);
                 label6.Text = "Off";
                 label6.ForeColor = red;
                 label6.Refresh();

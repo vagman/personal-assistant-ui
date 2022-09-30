@@ -44,7 +44,7 @@ namespace personal_assistant_ui
             SprayingLoadingForm sprayForm = new SprayingLoadingForm();
             sprayForm.Closed += (s, AssemblyLoadEventArgs) => Close();
             sprayForm.Owner = this;
-            this.Enabled = false;
+            Enabled = false;
             sprayForm.Show();
         }
 
@@ -78,7 +78,7 @@ namespace personal_assistant_ui
                 case 0:
                     lbl_shoe_name.Text = "Nike Air Presto";
                     lbl_shoe_size.Text = "49";
-                    lbl_shoe_use.Text = "Training & Gym";
+                    lbl_shoe_use.Text = "Training / Gym";
                     break;
                 case 1:
                     lbl_shoe_name.Text = "Nike AirMax Old School";
@@ -88,7 +88,7 @@ namespace personal_assistant_ui
                 case 2:
                     lbl_shoe_name.Text = "Nike AirMax v2.0";
                     lbl_shoe_size.Text = "47.5";
-                    lbl_shoe_use.Text = "Interview/Meeting";
+                    lbl_shoe_use.Text = "Interview / Meeting";
                     break;
             }
         }
@@ -116,7 +116,7 @@ namespace personal_assistant_ui
                 case 0:
                     lbl_shoe_name.Text = "Nike Air Presto";
                     lbl_shoe_size.Text = "49";
-                    lbl_shoe_use.Text = "Training & Gym";
+                    lbl_shoe_use.Text = "Training / Gym";
                     break;
                 case 1:
                     lbl_shoe_name.Text = "Nike AirMax Old School";
@@ -126,7 +126,7 @@ namespace personal_assistant_ui
                 case 2:
                     lbl_shoe_name.Text = "Nike AirMax v2.0";
                     lbl_shoe_size.Text = "47.5";
-                    lbl_shoe_use.Text = "Interview/Meeting";
+                    lbl_shoe_use.Text = "Interview / Meeting";
                     break;
             }
 
@@ -151,13 +151,13 @@ namespace personal_assistant_ui
                     pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe0");
                     lbl_shoe_name.Text = "Nike Air Presto";
                     lbl_shoe_size.Text = "49";
-                    lbl_shoe_use.Text = "Training & Gym";
+                    lbl_shoe_use.Text = "Training / Gym";
                     break;
                 case 2:
                     pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe2");
                     lbl_shoe_name.Text = "Nike AirMax v2.0";
                     lbl_shoe_size.Text = "47.5";
-                    lbl_shoe_use.Text = "Interview/Meeting";
+                    lbl_shoe_use.Text = "Interview / Meeting";
                     break;
             }
         }

@@ -30,9 +30,12 @@ namespace personal_assistant_ui
             {
                 progress_bar_spraying.Visible = false;
                 lbl_spraying_done.Visible = true;
+                checkMarkImage.Visible = true;
                 btn_back.Visible = true;
                 btn_back1.Visible = true;
+                lbl_spraying_time.Visible = false;
                 this.UseWaitCursor = false;
+                this.Cursor = Cursors.Arrow;
             }
         }
 
@@ -52,7 +55,7 @@ namespace personal_assistant_ui
 
         private void SprayingLoadingForm_Load(object sender, EventArgs e)
         {
-            this.UseWaitCursor = true; 
+            this.UseWaitCursor = true;
         }
     }
 }
