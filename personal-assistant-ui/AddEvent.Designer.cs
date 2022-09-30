@@ -406,6 +406,7 @@
             // 
             // readyToPickDestinations
             // 
+            this.readyToPickDestinations.BackColor = System.Drawing.SystemColors.HotTrack;
             this.readyToPickDestinations.DropDownWidth = 70;
             this.readyToPickDestinations.FormattingEnabled = true;
             this.readyToPickDestinations.Items.AddRange(new object[] {
@@ -428,6 +429,7 @@
             this.recommendShoe.Size = new System.Drawing.Size(175, 13);
             this.recommendShoe.TabIndex = 31;
             this.recommendShoe.Text = "Recommended shoe for this task is:";
+            this.recommendShoe.Visible = false;
             // 
             // AddEvent
             // 

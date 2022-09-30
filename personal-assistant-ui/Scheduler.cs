@@ -28,12 +28,6 @@ namespace personal_assistant_ui
     {
         public static string workingDirectory = Environment.CurrentDirectory;
         public static string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-
-
-
-
-
-
         public Scheduler()
         {
             InitializeComponent();
@@ -44,7 +38,6 @@ namespace personal_assistant_ui
             {
                 Directory.CreateDirectory(todaysTaskFolder);
             }
-            
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -62,11 +55,9 @@ namespace personal_assistant_ui
             {
                 return false;
             }
-
         }
         public void showDayTasks()
         {
-
             string sourceDir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
             if (IsDirectoryEmpty(sourceDir))
             {
@@ -88,24 +79,9 @@ namespace personal_assistant_ui
                     string title = "Error";
                     MessageBox.Show(message, title);
                 }
-                try
-                {
-
-                }
-                catch
-                {
-
-
-                    // show message if there is no task 
-                    //string message = "There is no task that day! Click on the help icon to learn more";
-                    //string title = "Error";
-                    //MessageBox.Show(message, title);
-                }
             }
-
-
-
         }
+
         private void Scheduler_Load(object sender, EventArgs e)
         {
             // Show on form load, all the existed tasks
@@ -121,16 +97,9 @@ namespace personal_assistant_ui
             AddEvent addEventFrm = new AddEvent();
             addEventFrm.ShowDialog();
             //this.Close();
-
         }
 
-
-        private void gbox_Enter(object sender, EventArgs e)
-        {
-
-
-
-        }
+        
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -150,7 +119,6 @@ namespace personal_assistant_ui
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             ListBox.SelectedObjectCollection selectedItems = new ListBox.SelectedObjectCollection(listBox1);
             selectedItems = listBox1.SelectedItems;
 
@@ -177,7 +145,6 @@ namespace personal_assistant_ui
         int isShowBtnClicked = 1;
         private void showTaskBtn_Click(object sender, EventArgs e)
         {
-            
             isShowBtnClicked *= -1;
 
             if(isShowBtnClicked == -1)
@@ -301,13 +268,21 @@ namespace personal_assistant_ui
                 taskEditBtn.Text = "Edit";
                 taskEditBtn.BackColor = Color.White;
                 cancelBtn.Visible = false;
+                //select the same item  from listbox after press hide
+                int index = listBox1.FindString(nameOfTask.Text);
+                listBox1.SelectedIndex = index;
             }
 
             
-
+            if(typeBox.Text == "Automation")
+            {
+                needCoffee.Visible = false;
+                durationInMin.Visible = false;
+                distanceInKm.Visible = false;
+                distanceLbl.Visible = false;
+                durationLbl.Visible = false;
+            }
         }
-
-
 
         /* METHOD TO REFRESH LISTBOX */
         public void refreshList()
@@ -423,15 +398,7 @@ namespace personal_assistant_ui
 
 
                     }
-
-
                 }
-                
-
-
-
-
-
 
                 try
                 {
@@ -443,7 +410,6 @@ namespace personal_assistant_ui
                     MessageBox.Show("Task moved to: " + dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
                 }
                 
-
 
                 MessageBox.Show("File renamed." + listBox1.SelectedItem.ToString() + nameOfTask.Text);
 
@@ -459,9 +425,6 @@ namespace personal_assistant_ui
                 int index = listBox1.FindString(nameOfTask.Text);
                 listBox1.SelectedIndex = index;
                 
-
-
-
 
 
 
@@ -485,13 +448,12 @@ namespace personal_assistant_ui
             }
         }
 
-        private void nameOfTask_TextChanged(object sender, EventArgs e)
-        {
+        
 
-        }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            
             refreshList();
             gbox.Visible = false;
             
@@ -502,6 +464,7 @@ namespace personal_assistant_ui
             cancelBtn.Visible = false;
 
             showTaskBtn.Text = "Show Details";
+            
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -543,8 +506,54 @@ namespace personal_assistant_ui
         {
 
             string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
-            MessageBox.Show(path);
+            //MessageBox.Show(path);
             Help.ShowHelp(this, path, HelpNavigator.TopicId, "1");
         }
+
+        
+  
+
+        private void typeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (typeBox.Text == "Automation")
+            {
+                suggestionBox.Items.Clear();
+                suggestionBox.ResetText(); //Clear text from the suggestion box (if the user selected destination first and selected an item from there)
+                suggestionBox.SelectedIndex = -1;
+                suggestionBox.Items.Add("Smart Lamp");
+                suggestionBox.Items.Add("Shoe rack");
+                suggestionBox.Items.Add("Pet feeder");
+                needCoffee.Visible = false;
+                destinationSuggText.Text = "What automation you want to set ? ";
+                durationInMin.Visible = false;
+                distanceInKm.Visible = false;
+                distanceLbl.Visible = false;
+                durationLbl.Visible = false;
+            }
+            else
+            {
+                suggestionBox.Items.Clear();
+                suggestionBox.ResetText(); //Clear text from the suggestion box (if the user selected destination first and selected an item from there)
+                suggestionBox.SelectedIndex = -1;
+                suggestionBox.Items.Add("Ηλεκτρικός");
+                suggestionBox.Items.Add("Λεωφορείο");
+                suggestionBox.Items.Add("Αυτοκίνητο");
+                suggestionBox.Items.Add("Ποδήλατο");
+                suggestionBox.Items.Add("Πόδια");
+                suggestionBox.Items.Add("Συνδιασμός");
+                destinationSuggText.Text = "How do you want to get to the destination?";
+
+                needCoffee.Visible = true;
+                distanceLbl.Visible = true;
+                destinationSuggText.Visible = true;
+                durationInMin.Visible = true;
+                distanceInKm.Visible = true;
+                durationLbl.Visible = true;
+            }
+        }
+
+        private void gbox_Enter(object sender, EventArgs e) { }
+        private void nameOfTask_TextChanged(object sender, EventArgs e) { }
+        private void suggestionBox_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }

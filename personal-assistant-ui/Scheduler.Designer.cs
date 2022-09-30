@@ -177,6 +177,7 @@
             this.suggestionBox.Size = new System.Drawing.Size(207, 21);
             this.suggestionBox.TabIndex = 29;
             this.suggestionBox.Visible = false;
+            this.suggestionBox.SelectedIndexChanged += new System.EventHandler(this.suggestionBox_SelectedIndexChanged);
             // 
             // destinationSuggText
             // 
@@ -399,13 +400,13 @@
             this.typeBox.FormattingEnabled = true;
             this.typeBox.Items.AddRange(new object[] {
             "Destination",
-            "Automation",
-            "Party/Event"});
+            "Automation"});
             this.typeBox.Location = new System.Drawing.Point(59, 162);
             this.typeBox.Name = "typeBox";
             this.typeBox.Size = new System.Drawing.Size(169, 21);
             this.typeBox.TabIndex = 18;
             this.typeBox.Visible = false;
+            this.typeBox.SelectedIndexChanged += new System.EventHandler(this.typeBox_SelectedIndexChanged);
             // 
             // dateTimePickerSch
             // 
