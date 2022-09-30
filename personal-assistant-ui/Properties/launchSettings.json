@@ -3,6 +3,10 @@
     "personal-assistant-ui": {
       "commandName": "Project",
       "workingDirectory": "C:\\Users\\kgial\\source\\repos\\personal-assistant-ui\\personal-assistant-ui\\bin\\Debug"
+    },
+    "Profile 1": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Vaggelis\\source\\repos\\personal-assistant-ui\\personal-assistant-ui\\bin\\Debug"
     }
   }
 }

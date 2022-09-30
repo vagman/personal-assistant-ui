@@ -247,7 +247,6 @@
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Image = global::personal_assistant_ui.Properties.Resources.trash;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(6, 299);
             this.button1.Name = "button1";
@@ -517,7 +516,7 @@
             // 
             // btn_back
             // 
-            this.btn_back.BackgroundImage = global::personal_assistant_ui.Properties.Resources.back;
+            this.btn_back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_back.BackgroundImage")));
             this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

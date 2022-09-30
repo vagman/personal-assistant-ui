@@ -27,9 +27,6 @@ namespace personal_assistant_ui
             btn_login.Text = "Είσοδος";
             btn_signup.Text = "Εδώ";
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        { }
         private void button2_Click(object sender, EventArgs e)
         {
             signup signup = new signup();
