@@ -39,7 +39,6 @@
             this.lbl_new_user = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.loginErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.lbl_need_help = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_help = new System.Windows.Forms.Button();
@@ -66,7 +65,7 @@
             // 
             this.btn_signup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_signup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_signup.Location = new System.Drawing.Point(448, 364);
+            this.btn_signup.Location = new System.Drawing.Point(486, 360);
             this.btn_signup.Name = "btn_signup";
             this.btn_signup.Size = new System.Drawing.Size(62, 30);
             this.btn_signup.TabIndex = 1;
@@ -123,7 +122,7 @@
             this.lbl_new_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_new_user.AutoSize = true;
             this.lbl_new_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_new_user.Location = new System.Drawing.Point(296, 369);
+            this.lbl_new_user.Location = new System.Drawing.Point(334, 365);
             this.lbl_new_user.Name = "lbl_new_user";
             this.lbl_new_user.Size = new System.Drawing.Size(146, 40);
             this.lbl_new_user.TabIndex = 8;
@@ -139,16 +138,6 @@
             this.loginErrorProvider.BlinkRate = 0;
             this.loginErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.loginErrorProvider.ContainerControl = this;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 429);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 20);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lbl_need_help
             // 
@@ -226,7 +215,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_need_help);
             this.Controls.Add(this.lbl_new_user);
             this.Controls.Add(this.btn_help);
@@ -261,7 +249,6 @@
         private Label lbl_new_user;
         private ContextMenuStrip contextMenuStrip1;
         private ErrorProvider loginErrorProvider;
-        private Button button1;
         private Label lbl_need_help;
         private PictureBox pictureBox1;
         private Label label7;
