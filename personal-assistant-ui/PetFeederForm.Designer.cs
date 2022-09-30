@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_help1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.group_box_pet_feeder_controls.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             // 
             // group_box_pet_feeder_controls
             // 
+            this.group_box_pet_feeder_controls.Controls.Add(this.label2);
             this.group_box_pet_feeder_controls.Controls.Add(this.label1);
             this.group_box_pet_feeder_controls.Location = new System.Drawing.Point(12, 52);
             this.group_box_pet_feeder_controls.Name = "group_box_pet_feeder_controls";
@@ -78,7 +80,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(6, 25);
+            this.label1.Location = new System.Drawing.Point(6, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 20);
             this.label1.TabIndex = 22;
@@ -105,6 +107,16 @@
             this.btn_help1.Size = new System.Drawing.Size(92, 21);
             this.btn_help1.TabIndex = 33;
             this.btn_help1.Text = "Need help ?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(6, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Food - Water";
             // 
             // PetFeederForm
             // 
@@ -138,5 +150,6 @@
         private Label label1;
         private Button button1;
         private Label btn_help1;
+        private Label label2;
     }
 }

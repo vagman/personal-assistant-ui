@@ -32,6 +32,8 @@ namespace personal_assistant_ui
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShoeRackForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.lbl_no_shoes = new System.Windows.Forms.Label();
             this.cb_date = new System.Windows.Forms.ComboBox();
             this.btn_spray = new System.Windows.Forms.Button();
@@ -56,8 +58,9 @@ namespace personal_assistant_ui
             this.lbl_shoe_sz = new System.Windows.Forms.Label();
             this.lbl_shoe_size = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_buy_new_shoes = new System.Windows.Forms.Label();
+            this.lbl_link_skroutz = new System.Windows.Forms.LinkLabel();
+            this.lbl_buy_new_shoes1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_shoes)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +89,30 @@ namespace personal_assistant_ui
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Smart Shoe Rack Controls";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(299, 217);
+            this.label12.Name = "label12";
+            this.label12.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.label12.Size = new System.Drawing.Size(74, 30);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Previous";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(379, 217);
+            this.label11.Name = "label11";
+            this.label11.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.label11.Size = new System.Drawing.Size(48, 30);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Next";
+            // 
             // lbl_no_shoes
             // 
             this.lbl_no_shoes.AutoSize = true;
@@ -106,7 +133,8 @@ namespace personal_assistant_ui
             this.cb_date.Items.AddRange(new object[] {
             "Tuesday 27/9/2022",
             "Wendsay 28/9/2022",
-            "Friday 29/9/2022"});
+            "Friday 29/9/2022",
+            "Saturday 30/9/2022"});
             this.cb_date.Location = new System.Drawing.Point(6, 327);
             this.cb_date.Name = "cb_date";
             this.cb_date.Size = new System.Drawing.Size(231, 24);
@@ -348,29 +376,39 @@ namespace personal_assistant_ui
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label11
+            // lbl_buy_new_shoes
             // 
-            this.label11.AutoSize = true;
-            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(379, 217);
-            this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.label11.Size = new System.Drawing.Size(48, 30);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Next";
+            this.lbl_buy_new_shoes.AutoSize = true;
+            this.lbl_buy_new_shoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buy_new_shoes.Location = new System.Drawing.Point(563, 10);
+            this.lbl_buy_new_shoes.Name = "lbl_buy_new_shoes";
+            this.lbl_buy_new_shoes.Size = new System.Drawing.Size(32, 16);
+            this.lbl_buy_new_shoes.TabIndex = 33;
+            this.lbl_buy_new_shoes.Text = "Visit";
+            this.lbl_buy_new_shoes.Visible = false;
             // 
-            // label12
+            // lbl_link_skroutz
             // 
-            this.label12.AutoSize = true;
-            this.label12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(299, 217);
-            this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.label12.Size = new System.Drawing.Size(74, 30);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "Previous";
+            this.lbl_link_skroutz.AutoSize = true;
+            this.lbl_link_skroutz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_link_skroutz.Location = new System.Drawing.Point(598, 9);
+            this.lbl_link_skroutz.Name = "lbl_link_skroutz";
+            this.lbl_link_skroutz.Size = new System.Drawing.Size(51, 16);
+            this.lbl_link_skroutz.TabIndex = 34;
+            this.lbl_link_skroutz.TabStop = true;
+            this.lbl_link_skroutz.Text = "Skroutz";
+            this.lbl_link_skroutz.Visible = false;
+            // 
+            // lbl_buy_new_shoes1
+            // 
+            this.lbl_buy_new_shoes1.AutoSize = true;
+            this.lbl_buy_new_shoes1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buy_new_shoes1.Location = new System.Drawing.Point(563, 26);
+            this.lbl_buy_new_shoes1.Name = "lbl_buy_new_shoes1";
+            this.lbl_buy_new_shoes1.Size = new System.Drawing.Size(157, 32);
+            this.lbl_buy_new_shoes1.TabIndex = 35;
+            this.lbl_buy_new_shoes1.Text = "or your local shoe shop\nto buy a pair of new ones.";
+            this.lbl_buy_new_shoes1.Visible = false;
             // 
             // ShoeRackForm
             // 
@@ -378,6 +416,9 @@ namespace personal_assistant_ui
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.lbl_buy_new_shoes1);
+            this.Controls.Add(this.lbl_link_skroutz);
+            this.Controls.Add(this.lbl_buy_new_shoes);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_shoe_size);
             this.Controls.Add(this.lbl_shoe_sz);
@@ -431,5 +472,8 @@ namespace personal_assistant_ui
         private Label lbl_no_shoes;
         private Label label12;
         private Label label11;
+        private Label lbl_buy_new_shoes;
+        private LinkLabel lbl_link_skroutz;
+        private Label lbl_buy_new_shoes1;
     }
 }

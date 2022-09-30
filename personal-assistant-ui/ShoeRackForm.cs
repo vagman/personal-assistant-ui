@@ -56,7 +56,7 @@ namespace personal_assistant_ui
         int btnCount = 0;
         private void btn_shoe_right_Click(object sender, EventArgs e)
         {
-            if (shoeCount < 2)
+            if (shoeCount < 3)
             {
                 btnCount = 0;
                 lbl_no_shoes.Visible = false;
@@ -64,7 +64,7 @@ namespace personal_assistant_ui
                 pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe" + shoeCount);
             }
 
-            if (shoeCount == 2)
+            if (shoeCount == 3)
             {
                 btnCount++;
                 if (btnCount > 1)
@@ -79,16 +79,34 @@ namespace personal_assistant_ui
                     lbl_shoe_name.Text = "Nike Air Presto";
                     lbl_shoe_size.Text = "49";
                     lbl_shoe_use.Text = "Training / Gym";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
                     break;
                 case 1:
                     lbl_shoe_name.Text = "Nike AirMax Old School";
                     lbl_shoe_size.Text = "46.5";
                     lbl_shoe_use.Text = "Casual";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
                     break;
                 case 2:
                     lbl_shoe_name.Text = "Nike AirMax v2.0";
                     lbl_shoe_size.Text = "47.5";
                     lbl_shoe_use.Text = "Interview / Meeting";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
+                    break;
+                case 3:
+                    pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe3");
+                    lbl_shoe_name.Text = "Oops! Unavaialble shoe.";
+                    lbl_shoe_size.Text = "Oops! Unavaialble shoe.";
+                    lbl_shoe_use.Text = "Oops! Unavaialble shoe.";
+                    lbl_buy_new_shoes.Visible = true;
+                    lbl_buy_new_shoes1.Visible = true;
+                    lbl_link_skroutz.Visible = true;
                     break;
             }
         }
@@ -117,19 +135,36 @@ namespace personal_assistant_ui
                     lbl_shoe_name.Text = "Nike Air Presto";
                     lbl_shoe_size.Text = "49";
                     lbl_shoe_use.Text = "Training / Gym";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
                     break;
                 case 1:
                     lbl_shoe_name.Text = "Nike AirMax Old School";
                     lbl_shoe_size.Text = "46.5";
                     lbl_shoe_use.Text = "Casual";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
                     break;
                 case 2:
                     lbl_shoe_name.Text = "Nike AirMax v2.0";
                     lbl_shoe_size.Text = "47.5";
                     lbl_shoe_use.Text = "Interview / Meeting";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
+                    break;
+                case 3:
+                    pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe3");
+                    lbl_shoe_name.Text = "Oops! Unavaialble shoe.";
+                    lbl_shoe_size.Text = "Oops! Unavaialble shoe.";
+                    lbl_shoe_use.Text = "Oops! Unavaialble shoe.";
+                    lbl_buy_new_shoes.Visible = true;
+                    lbl_buy_new_shoes1.Visible = true;
+                    lbl_link_skroutz.Visible = true;
                     break;
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -146,18 +181,36 @@ namespace personal_assistant_ui
                     lbl_shoe_name.Text = "Nike AirMax Old School";
                     lbl_shoe_size.Text = "46.5";
                     lbl_shoe_use.Text = "Casual";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
                     break;
                 case 1:
                     pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe0");
                     lbl_shoe_name.Text = "Nike Air Presto";
                     lbl_shoe_size.Text = "49";
                     lbl_shoe_use.Text = "Training / Gym";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
                     break;
                 case 2:
                     pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe2");
                     lbl_shoe_name.Text = "Nike AirMax v2.0";
                     lbl_shoe_size.Text = "47.5";
                     lbl_shoe_use.Text = "Interview / Meeting";
+                    lbl_buy_new_shoes.Visible = false;
+                    lbl_buy_new_shoes1.Visible = false;
+                    lbl_link_skroutz.Visible = false;
+                    break;
+                case 3:
+                    pb_shoes.Image = (Image)Properties.Resources.ResourceManager.GetObject("shoe3");
+                    lbl_shoe_name.Text = "Oops! Unavaialble shoe.";
+                    lbl_shoe_size.Text = "Oops! Unavaialble shoe.";
+                    lbl_shoe_use.Text = "Oops! Unavaialble shoe.";
+                    lbl_buy_new_shoes.Visible = true;
+                    lbl_buy_new_shoes1.Visible = true;
+                    lbl_link_skroutz.Visible = true;
                     break;
             }
         }
