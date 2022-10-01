@@ -35,8 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_submit = new personal_assistant_ui.RoundedButton();
+            this.btn_cancel = new personal_assistant_ui.RoundedButton();
             this.hoursCB = new System.Windows.Forms.ComboBox();
             this.minCB = new System.Windows.Forms.ComboBox();
             this.periodCB = new System.Windows.Forms.ComboBox();
@@ -62,88 +62,99 @@
             // 
             // titleBox
             // 
-            this.titleBox.Location = new System.Drawing.Point(106, 63);
+            this.titleBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleBox.Location = new System.Drawing.Point(92, 50);
             this.titleBox.Name = "titleBox";
-            this.titleBox.Size = new System.Drawing.Size(108, 20);
+            this.titleBox.Size = new System.Drawing.Size(128, 24);
             this.titleBox.TabIndex = 0;
             this.titleBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 91);
+            this.dateTimePicker1.Location = new System.Drawing.Point(92, 91);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 24);
             this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.Value = new System.DateTime(2022, 9, 22, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Destination",
             "Automation"});
-            this.comboBox1.Location = new System.Drawing.Point(106, 172);
+            this.comboBox1.Location = new System.Drawing.Point(92, 206);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 21);
+            this.comboBox1.Size = new System.Drawing.Size(128, 27);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 91);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(41, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Date:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 172);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(31, 214);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(41, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Type:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 63);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(31, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(37, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Title:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button1
+            // btn_submit
             // 
-            this.button1.BackColor = System.Drawing.Color.LawnGreen;
-            this.button1.Location = new System.Drawing.Point(149, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_submit.BackColor = System.Drawing.Color.LawnGreen;
+            this.btn_submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_submit.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_submit.Location = new System.Drawing.Point(130, 249);
+            this.btn_submit.Name = "btn_submit";
+            this.btn_submit.Size = new System.Drawing.Size(123, 50);
+            this.btn_submit.TabIndex = 6;
+            this.btn_submit.Text = "Submit";
+            this.btn_submit.UseVisualStyleBackColor = false;
+            this.btn_submit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btn_cancel
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(86, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(57, 30);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_cancel.BackColor = System.Drawing.Color.LightBlue;
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.Location = new System.Drawing.Point(34, 249);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(82, 50);
+            this.btn_cancel.TabIndex = 7;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.button2_Click);
             // 
             // hoursCB
             // 
             this.hoursCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.hoursCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hoursCB.FormattingEnabled = true;
             this.hoursCB.Items.AddRange(new object[] {
             "1",
@@ -158,14 +169,15 @@
             "10",
             "11",
             "12"});
-            this.hoursCB.Location = new System.Drawing.Point(106, 121);
+            this.hoursCB.Location = new System.Drawing.Point(92, 139);
             this.hoursCB.Name = "hoursCB";
-            this.hoursCB.Size = new System.Drawing.Size(36, 21);
+            this.hoursCB.Size = new System.Drawing.Size(36, 27);
             this.hoursCB.TabIndex = 10;
             // 
             // minCB
             // 
             this.minCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.minCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minCB.FormattingEnabled = true;
             this.minCB.Items.AddRange(new object[] {
             "01",
@@ -227,57 +239,62 @@
             "57",
             "58",
             "59"});
-            this.minCB.Location = new System.Drawing.Point(146, 121);
+            this.minCB.Location = new System.Drawing.Point(144, 139);
             this.minCB.Name = "minCB";
-            this.minCB.Size = new System.Drawing.Size(43, 21);
+            this.minCB.Size = new System.Drawing.Size(43, 27);
             this.minCB.TabIndex = 11;
             // 
             // periodCB
             // 
             this.periodCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.periodCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.periodCB.FormattingEnabled = true;
             this.periodCB.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.periodCB.Location = new System.Drawing.Point(194, 121);
+            this.periodCB.Location = new System.Drawing.Point(203, 138);
             this.periodCB.Name = "periodCB";
-            this.periodCB.Size = new System.Drawing.Size(40, 21);
+            this.periodCB.Size = new System.Drawing.Size(40, 27);
             this.periodCB.TabIndex = 1;
             this.periodCB.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 109);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(31, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(41, 19);
             this.label4.TabIndex = 12;
             this.label4.Text = "Time:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(105, 145);
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(88, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(46, 19);
             this.label5.TabIndex = 13;
             this.label5.Text = "Hours";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(146, 145);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(140, 168);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.Size = new System.Drawing.Size(59, 19);
             this.label6.TabIndex = 14;
             this.label6.Text = "Minutes";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(196, 145);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(205, 168);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.Size = new System.Drawing.Size(48, 19);
             this.label7.TabIndex = 15;
             this.label7.Text = "Period";
             // 
@@ -297,19 +314,21 @@
             // distanceLbl
             // 
             this.distanceLbl.AutoSize = true;
-            this.distanceLbl.Location = new System.Drawing.Point(283, 91);
+            this.distanceLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.distanceLbl.Location = new System.Drawing.Point(281, 121);
             this.distanceLbl.Name = "distanceLbl";
-            this.distanceLbl.Size = new System.Drawing.Size(52, 13);
+            this.distanceLbl.Size = new System.Drawing.Size(65, 19);
             this.distanceLbl.TabIndex = 22;
             this.distanceLbl.Text = "Distance:";
             this.distanceLbl.Visible = false;
             // 
             // suggestionBox
             // 
+            this.suggestionBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suggestionBox.FormattingEnabled = true;
-            this.suggestionBox.Location = new System.Drawing.Point(286, 63);
+            this.suggestionBox.Location = new System.Drawing.Point(279, 91);
             this.suggestionBox.Name = "suggestionBox";
-            this.suggestionBox.Size = new System.Drawing.Size(207, 21);
+            this.suggestionBox.Size = new System.Drawing.Size(207, 27);
             this.suggestionBox.TabIndex = 23;
             this.suggestionBox.Visible = false;
             this.suggestionBox.SelectedIndexChanged += new System.EventHandler(this.suggestionBox_SelectedIndexChanged);
@@ -317,19 +336,21 @@
             // destinationSuggText
             // 
             this.destinationSuggText.AutoSize = true;
-            this.destinationSuggText.Location = new System.Drawing.Point(283, 47);
+            this.destinationSuggText.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.destinationSuggText.Location = new System.Drawing.Point(281, 46);
             this.destinationSuggText.Name = "destinationSuggText";
-            this.destinationSuggText.Size = new System.Drawing.Size(210, 13);
+            this.destinationSuggText.Size = new System.Drawing.Size(159, 38);
             this.destinationSuggText.TabIndex = 24;
-            this.destinationSuggText.Text = "How do you want to get to the destination?";
+            this.destinationSuggText.Text = "How do you want to get\nto the destination?";
             this.destinationSuggText.Visible = false;
             // 
             // needCoffee
             // 
             this.needCoffee.AutoSize = true;
-            this.needCoffee.Location = new System.Drawing.Point(286, 176);
+            this.needCoffee.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.needCoffee.Location = new System.Drawing.Point(279, 180);
             this.needCoffee.Name = "needCoffee";
-            this.needCoffee.Size = new System.Drawing.Size(170, 17);
+            this.needCoffee.Size = new System.Drawing.Size(214, 23);
             this.needCoffee.TabIndex = 25;
             this.needCoffee.Text = "Do you want to take a coffee?";
             this.needCoffee.UseVisualStyleBackColor = true;
@@ -342,7 +363,7 @@
             this.mapImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mapImage.ErrorImage = null;
             this.mapImage.InitialImage = null;
-            this.mapImage.Location = new System.Drawing.Point(537, 34);
+            this.mapImage.Location = new System.Drawing.Point(564, 46);
             this.mapImage.Name = "mapImage";
             this.mapImage.Size = new System.Drawing.Size(213, 182);
             this.mapImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -368,18 +389,19 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(42, 237);
+            this.button4.Location = new System.Drawing.Point(787, 264);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 27);
+            this.button4.Size = new System.Drawing.Size(35, 35);
             this.button4.TabIndex = 8;
             this.button4.UseVisualStyleBackColor = true;
             // 
             // distanceInKm
             // 
             this.distanceInKm.AutoSize = true;
-            this.distanceInKm.Location = new System.Drawing.Point(357, 91);
+            this.distanceInKm.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.distanceInKm.Location = new System.Drawing.Point(355, 121);
             this.distanceInKm.Name = "distanceInKm";
-            this.distanceInKm.Size = new System.Drawing.Size(35, 13);
+            this.distanceInKm.Size = new System.Drawing.Size(45, 19);
             this.distanceInKm.TabIndex = 27;
             this.distanceInKm.Text = "label8";
             this.distanceInKm.Visible = false;
@@ -387,9 +409,10 @@
             // durationLbl
             // 
             this.durationLbl.AutoSize = true;
-            this.durationLbl.Location = new System.Drawing.Point(283, 129);
+            this.durationLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationLbl.Location = new System.Drawing.Point(281, 149);
             this.durationLbl.Name = "durationLbl";
-            this.durationLbl.Size = new System.Drawing.Size(50, 13);
+            this.durationLbl.Size = new System.Drawing.Size(66, 19);
             this.durationLbl.TabIndex = 28;
             this.durationLbl.Text = "Duration:";
             this.durationLbl.Visible = false;
@@ -397,9 +420,10 @@
             // durationInMin
             // 
             this.durationInMin.AutoSize = true;
-            this.durationInMin.Location = new System.Drawing.Point(357, 128);
+            this.durationInMin.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationInMin.Location = new System.Drawing.Point(355, 148);
             this.durationInMin.Name = "durationInMin";
-            this.durationInMin.Size = new System.Drawing.Size(35, 13);
+            this.durationInMin.Size = new System.Drawing.Size(45, 19);
             this.durationInMin.TabIndex = 29;
             this.durationInMin.Text = "label9";
             this.durationInMin.Visible = false;
@@ -408,6 +432,7 @@
             // 
             this.readyToPickDestinations.BackColor = System.Drawing.SystemColors.HotTrack;
             this.readyToPickDestinations.DropDownWidth = 70;
+            this.readyToPickDestinations.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.readyToPickDestinations.FormattingEnabled = true;
             this.readyToPickDestinations.Items.AddRange(new object[] {
             "University",
@@ -415,18 +440,19 @@
             "Coffee Shop",
             "Gym",
             "Party/Event"});
-            this.readyToPickDestinations.Location = new System.Drawing.Point(215, 62);
+            this.readyToPickDestinations.Location = new System.Drawing.Point(224, 47);
             this.readyToPickDestinations.Name = "readyToPickDestinations";
-            this.readyToPickDestinations.Size = new System.Drawing.Size(19, 21);
+            this.readyToPickDestinations.Size = new System.Drawing.Size(19, 27);
             this.readyToPickDestinations.TabIndex = 30;
             this.readyToPickDestinations.SelectedIndexChanged += new System.EventHandler(this.readyToPickDestinations_SelectedIndexChanged);
             // 
             // recommendShoe
             // 
             this.recommendShoe.AutoSize = true;
-            this.recommendShoe.Location = new System.Drawing.Point(286, 214);
+            this.recommendShoe.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recommendShoe.Location = new System.Drawing.Point(275, 214);
             this.recommendShoe.Name = "recommendShoe";
-            this.recommendShoe.Size = new System.Drawing.Size(175, 13);
+            this.recommendShoe.Size = new System.Drawing.Size(227, 19);
             this.recommendShoe.TabIndex = 31;
             this.recommendShoe.Text = "Recommended shoe for this task is:";
             this.recommendShoe.Visible = false;
@@ -435,7 +461,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 287);
+            this.BackColor = System.Drawing.Color.LightBlue;
+            this.ClientSize = new System.Drawing.Size(834, 311);
             this.Controls.Add(this.recommendShoe);
             this.Controls.Add(this.readyToPickDestinations);
             this.Controls.Add(this.durationInMin);
@@ -456,8 +483,8 @@
             this.Controls.Add(this.minCB);
             this.Controls.Add(this.hoursCB);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -476,15 +503,11 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
         private DateTimePicker dateTimePicker1;
         private ComboBox comboBox1;
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
-        private Button button2;
         private Button button4;
         private ComboBox hoursCB;
         private ComboBox minCB;
@@ -506,5 +529,7 @@
         private Label durationInMin;
         private ComboBox readyToPickDestinations;
         private Label recommendShoe;
+        private RoundedButton btn_submit;
+        private RoundedButton btn_cancel;
     }
 }

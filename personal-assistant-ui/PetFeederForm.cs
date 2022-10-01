@@ -85,12 +85,22 @@ namespace personal_assistant_ui
             var confirm_cat_feed_program = MessageBox.Show("Date: " + date_picker.Value + "\nTime: " + date_picker.Value + "\nPeriod: " + date_picker.Value, "Confirm information", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (confirm_cat_feed_program == DialogResult.OK)
             {
-                MessageBox.Show("Feeding shedule was succesfuly saved.", "Schedule Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 
             }
             else
             {
                 MessageBox.Show("Feeding shedule was succesfuly canceled.", "Schedule Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnAddFood_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddWater_Click(object sender, EventArgs e)
+        {
+
         }
         //TODO: change food/water % images with a diffrent timer tick event
     }

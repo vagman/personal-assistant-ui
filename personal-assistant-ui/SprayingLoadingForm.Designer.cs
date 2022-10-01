@@ -85,13 +85,13 @@
             // lbl_spraying_done
             // 
             this.lbl_spraying_done.AutoSize = true;
-            this.lbl_spraying_done.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_spraying_done.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.lbl_spraying_done.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_spraying_done.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbl_spraying_done.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_spraying_done.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_spraying_done.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lbl_spraying_done.Location = new System.Drawing.Point(137, 56);
+            this.lbl_spraying_done.Location = new System.Drawing.Point(124, 55);
             this.lbl_spraying_done.Name = "lbl_spraying_done";
-            this.lbl_spraying_done.Size = new System.Drawing.Size(428, 31);
+            this.lbl_spraying_done.Size = new System.Drawing.Size(440, 31);
             this.lbl_spraying_done.TabIndex = 21;
             this.lbl_spraying_done.Text = "Spraying your shoes was succesful!";
             this.lbl_spraying_done.Visible = false;
@@ -100,11 +100,11 @@
             // 
             this.lbl_spraying_time.AutoSize = true;
             this.lbl_spraying_time.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.lbl_spraying_time.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_spraying_time.Location = new System.Drawing.Point(142, 24);
+            this.lbl_spraying_time.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_spraying_time.Location = new System.Drawing.Point(122, 23);
             this.lbl_spraying_time.Name = "lbl_spraying_time";
             this.lbl_spraying_time.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.lbl_spraying_time.Size = new System.Drawing.Size(423, 31);
+            this.lbl_spraying_time.Size = new System.Drawing.Size(499, 32);
             this.lbl_spraying_time.TabIndex = 22;
             this.lbl_spraying_time.Text = "Please wait! Your shoes are being spraying with deodorant.";
             this.lbl_spraying_time.UseWaitCursor = true;
@@ -113,8 +113,8 @@
             // 
             this.checkMarkImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkMarkImage.BackgroundImage")));
             this.checkMarkImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.checkMarkImage.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.checkMarkImage.Location = new System.Drawing.Point(571, 37);
+            this.checkMarkImage.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkMarkImage.Location = new System.Drawing.Point(583, 43);
             this.checkMarkImage.Name = "checkMarkImage";
             this.checkMarkImage.Size = new System.Drawing.Size(50, 50);
             this.checkMarkImage.TabIndex = 23;
@@ -126,7 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(701, 141);
+            this.ClientSize = new System.Drawing.Size(684, 141);
             this.Controls.Add(this.checkMarkImage);
             this.Controls.Add(this.lbl_spraying_time);
             this.Controls.Add(this.lbl_spraying_done);

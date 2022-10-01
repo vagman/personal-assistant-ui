@@ -38,12 +38,12 @@ namespace personal_assistant_ui
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Enter a password between 8 - 14 characters.\nYou have to use at least one special character such as: !@#$%^&*().", "Enter a password", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Enter a username with a maximum of 15 characters.", "Enter a username", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void signup_FormClosing(object sender, FormClosingEventArgs e)

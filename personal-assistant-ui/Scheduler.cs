@@ -4,8 +4,6 @@
 // 3) fix edit button to edit name of the .txt file and its content
 // 4) change pick a date (dateTimePicker1) to current day, and create that folder to the Tasks's folder on app first run
 // 5) after dateTime changed
-
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,6 +94,7 @@ namespace personal_assistant_ui
         {
             AddEvent addEventFrm = new AddEvent();
             addEventFrm.ShowDialog();
+            
             //this.Close();
         }
 
@@ -134,7 +133,7 @@ namespace personal_assistant_ui
                 for (int i = selectedItems.Count - 1; i >= 0; i--)
                     listBox1.Items.Remove(selectedItems[i]);
                 File.Delete(Path.Combine(sourceFolder, fileToDelete));
-                gbox.Visible = false; //Hide the groupbox after deletation
+                gb_daily_planner_controls.Visible = false; //Hide the groupbox after deletation
                 refreshList(); //Refresh task list after the delete
                 showTaskBtn.Text = "Show Details";
             }
@@ -155,7 +154,6 @@ namespace personal_assistant_ui
 
                 string fileToRead = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
                 string text = File.ReadAllText(fileToRead);
-
 
                 /* READ FROM TASK.TXT FILE AND PASS THE VALUES FROM LINES TO TOOLS ON SCHEDULER*/
 
@@ -192,16 +190,12 @@ namespace personal_assistant_ui
                 
                 needCoffee.Checked = Convert.ToBoolean(lines[9]);
 
-
-
                 // GroupBox
 
-                gbox.Text = "Task: " + listBox1.SelectedItem.ToString() + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
-                gbox.Name = "My Task";
-                gbox.Visible = true;
-                gbox.AutoSize = false;
-
-
+                gb_daily_planner_controls.Text = "Task: " + listBox1.SelectedItem.ToString() + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
+                gb_daily_planner_controls.Name = "My Task";
+                gb_daily_planner_controls.Visible = true;
+                gb_daily_planner_controls.AutoSize = false;
 
                 /* OnClick "Show" button enable these tools: */
 
@@ -261,7 +255,7 @@ namespace personal_assistant_ui
                 showTaskBtn.Text = "Show Details";
 
                 refreshList();
-                gbox.Visible = false;
+                gb_daily_planner_controls.Visible = false;
 
                 // Turn edit button like the time before clicked.
                 editBtnWasClicked = 1;
@@ -273,7 +267,6 @@ namespace personal_assistant_ui
                 listBox1.SelectedIndex = index;
             }
 
-            
             if(typeBox.Text == "Automation")
             {
                 needCoffee.Visible = false;
@@ -292,12 +285,12 @@ namespace personal_assistant_ui
             string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
             listBox1.Items.AddRange(txtFiles);
         }
+
         // Refresh Button
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             refreshList();
         }
-
         
         /* TASK EDIT BUTTON */
         int editBtnWasClicked = 1;
@@ -316,7 +309,6 @@ namespace personal_assistant_ui
             string newFilePath = newSourceFolder + @"\"; //takes the new datetime from dateTimePickerSch 
 
             string nameOfTaskText = nameOfTask.Text;
-
 
             editBtnWasClicked *= -1;
             
@@ -338,17 +330,13 @@ namespace personal_assistant_ui
                 cancelBtn.Visible = true; // Cancel Button be visible after EditButton clicked.
 
                 hideBtn.Visible = false; //When 'Edit' button clicked the clearBtn dissappear and the work of this button goes to 'Cancel' Button
-
-
             }
             else
             {
                 //Read all lines from .txt file of the task
                 string[] lines = File.ReadAllLines(fileToRename);
 
-
                 //Change title,datetime,hours,min,period,type if changed
-                
                 lines[2] = hoursCB.Text; //Hours
                 lines[3] = minCB.Text; //Minutes
                 lines[4] = periodCB.Text; //Period
@@ -374,35 +362,32 @@ namespace personal_assistant_ui
 
                         //Move file after the changes to the new folder
                         File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
-                        gbox.Visible = false;
+                        gb_daily_planner_controls.Visible = false;
                         showTaskBtn.Text = "Show Details";
                         showTaskBtn.Visible = false;
 
                     }
                     else
                     {
-                        //Change datetime
+                        // Change datetime
                         
-                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy"); //Date
+                        lines[1] = dateTimePickerSch.Value.ToString("dd-MM-yyyy"); // Date
                         
                         MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
-                        File.WriteAllLines(fileToRename, lines); //Write the changes
+                        File.WriteAllLines(fileToRename, lines); // Write the changes
                         MessageBox.Show("Directory is exists");
-                        //TODO
-                        //Move file after the changes to the new folder
+                        // TODO: Move file after the changes to the new folder
 
                         File.Move(fileToRename, (newFilePath + nameOfTask.Text + ".txt"));
-                        gbox.Visible = false;
+                        gb_daily_planner_controls.Visible = false;
                         showTaskBtn.Text = "Show Details";
                         showTaskBtn.Visible = false;
-
-
                     }
                 }
 
                 try
                 {
-                    //At the end, Rename the file of the task (also renamed the title of task)
+                    // At the end, Rename the file of the task (also renamed the title of task)
                     File.Move(newFile, (newFilePath + nameOfTask.Text + ".txt"));
                 }
                 catch
@@ -410,14 +395,11 @@ namespace personal_assistant_ui
                     MessageBox.Show("Task moved to: " + dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
                 }
                 
-
                 MessageBox.Show("File renamed." + listBox1.SelectedItem.ToString() + nameOfTask.Text);
 
                 //update current file name (after rename) 
                 fileToRename = newFilePath + nameOfTask.Text + ".txt";
-                gbox.Text = "Task: " + nameOfTask.Text + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
-
-                
+                gb_daily_planner_controls.Text = "Task: " + nameOfTask.Text + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
 
                 refreshList();
 
@@ -425,14 +407,9 @@ namespace personal_assistant_ui
                 int index = listBox1.FindString(nameOfTask.Text);
                 listBox1.SelectedIndex = index;
                 
-
-
-
-                //TODO change the title of the gbox after the rename
-                //gbox.Text = listBox1.SelectedItem.ToString();
+                // TODO: change the title of the gbox after the rename
+                // gbox.Text = listBox1.SelectedItem.ToString();
                 taskEditBtn.Text = "Edit";
-                
-                
 
                 nameOfTask.Enabled = false;
                 taskEditBtn.BackColor = Color.White;
@@ -448,14 +425,10 @@ namespace personal_assistant_ui
             }
         }
 
-        
-
-
         private void cancelBtn_Click(object sender, EventArgs e)
-        {
-            
+        { 
             refreshList();
-            gbox.Visible = false;
+            gb_daily_planner_controls.Visible = false;
             
             // Turn edit button like the time before clicked.
             editBtnWasClicked = 1;
@@ -464,7 +437,6 @@ namespace personal_assistant_ui
             cancelBtn.Visible = false;
 
             showTaskBtn.Text = "Show Details";
-            
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -493,7 +465,7 @@ namespace personal_assistant_ui
         {
             //todo: delete Hide Button
             refreshList();
-            gbox.Visible = false;
+            gb_daily_planner_controls.Visible = false;
 
             // Turn edit button like the time before clicked.
             editBtnWasClicked = 1;
@@ -509,9 +481,6 @@ namespace personal_assistant_ui
             //MessageBox.Show(path);
             Help.ShowHelp(this, path, HelpNavigator.TopicId, "1");
         }
-
-        
-  
 
         private void typeBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -551,7 +520,6 @@ namespace personal_assistant_ui
                 durationLbl.Visible = true;
             }
         }
-
         private void gbox_Enter(object sender, EventArgs e) { }
         private void nameOfTask_TextChanged(object sender, EventArgs e) { }
         private void suggestionBox_SelectedIndexChanged(object sender, EventArgs e) { }

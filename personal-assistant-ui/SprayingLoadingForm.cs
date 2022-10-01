@@ -43,14 +43,14 @@ namespace personal_assistant_ui
         {
             this.Closed += (s, AssemblyLoadEventArgs) => Close();
             this.Hide();
-            (this.Owner as ShoeRackForm).Enabled = true;
+            ((ShoeRackForm)Owner).Enabled = true;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Closed += (s, AssemblyLoadEventArgs) => Close();
             this.Hide();
-            (this.Owner as ShoeRackForm).Enabled = true;
+            ((ShoeRackForm)Owner).Enabled = true;
         }
 
         private void SprayingLoadingForm_Load(object sender, EventArgs e)

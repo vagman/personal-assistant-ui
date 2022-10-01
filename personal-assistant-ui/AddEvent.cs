@@ -170,10 +170,10 @@ namespace personal_assistant_ui
                     MessageBox.Show("First option");
                     Size = new Size(600, 326); //Grow size of window if the user select first option of the combobox
                                                //the new location will be 449,233
-                    if (button1.Location != new Point(449, 233))
+                    if (btn_submit.Location != new Point(449, 233))
                     {
-                        button1.Location = new Point(button1.Location.X + 300, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 300, button2.Location.Y); // move cancel button
+                        btn_submit.Location = new Point(btn_submit.Location.X + 300, btn_submit.Location.Y); // move submit button
+                        btn_cancel.Location = new Point(btn_cancel.Location.X + 300, btn_cancel.Location.Y); // move cancel button
                     }
 
                     suggestionBox.Items.Clear();
@@ -193,10 +193,10 @@ namespace personal_assistant_ui
                 case 1:
                     Size = new Size(600, 326);
                     MessageBox.Show("Second option");
-                    if (button1.Location != new Point(449, 233))
+                    if (btn_submit.Location != new Point(449, 233))
                     {
-                        button1.Location = new Point(button1.Location.X + 300, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 300, button2.Location.Y); // move cancel button
+                        btn_submit.Location = new Point(btn_submit.Location.X + 300, btn_submit.Location.Y); // move submit button
+                        btn_cancel.Location = new Point(btn_cancel.Location.X + 300, btn_cancel.Location.Y); // move cancel button
                     }
 
                     suggestionBox.Items.Clear();
@@ -240,10 +240,10 @@ namespace personal_assistant_ui
                         MessageBox.Show("ilektrikos");
                         distanceLbl.Visible = true;
                         Size = new Size(791, 326);
-                        if (button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        if (btn_submit.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
                         {
-                            button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                            button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                            btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
+                            btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
                         }
 
                         //Generate a random distance (double number)
@@ -276,10 +276,10 @@ namespace personal_assistant_ui
                         MessageBox.Show("ilektrikos");
                         distanceLbl.Visible = true;
                         Size = new Size(791, 326);
-                        if (button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        if (btn_submit.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
                         {
-                            button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                            button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                            btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
+                            btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
                         }
 
                         //Generate a random distance (double number)
@@ -310,10 +310,10 @@ namespace personal_assistant_ui
                         MessageBox.Show("ilektrikos");
                         distanceLbl.Visible = true;
                         Size = new Size(791, 326);
-                        if (button1.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        if (btn_submit.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
                         {
-                            button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                            button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                            btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
+                            btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
                         }
                         mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car");
                         mapImage.Visible = true;
@@ -338,10 +338,10 @@ namespace personal_assistant_ui
                     break;
                 case 3:
                     Size = new Size(791, 326);
-                    if (button1.Location != new Point(640, 233))
+                    if (btn_submit.Location != new Point(640, 233))
                     {
-                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
+                        btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
                     }
                     needCoffee.Visible = true;
                     //Generate a random distance (double number)
@@ -362,10 +362,10 @@ namespace personal_assistant_ui
                     break;
                 case 4:
                     Size = new Size(791, 326);
-                    if (button1.Location != new Point(640, 233))
+                    if (btn_submit.Location != new Point(640, 233))
                     {
-                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
+                        btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
                     }
                     needCoffee.Visible = true;
 
@@ -386,10 +386,10 @@ namespace personal_assistant_ui
                     break;
                 case 5:
                     Size = new Size(791, 326);
-                    if (button1.Location != new Point(640, 233))
+                    if (btn_submit.Location != new Point(640, 233))
                     {
-                        button1.Location = new Point(button1.Location.X + 191, button1.Location.Y); // move submit button
-                        button2.Location = new Point(button2.Location.X + 191, button2.Location.Y); // move cancel button
+                        btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
+                        btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
                     }
                     needCoffee.Visible = true;
                     //Generate a random distance (double number)

@@ -59,7 +59,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn_back = new System.Windows.Forms.Button();
             this.btnAddWater = new System.Windows.Forms.Button();
-            this.btn_spray = new System.Windows.Forms.Button();
+            this.btn_save_feeding_schedule = new personal_assistant_ui.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cat_water)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cat_food)).BeginInit();
@@ -92,20 +92,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(13, 93);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(112, 30);
             this.label1.TabIndex = 22;
             this.label1.Text = "Live video";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(383, 248);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(382, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.Size = new System.Drawing.Size(58, 25);
             this.label2.TabIndex = 23;
             this.label2.Text = "Food";
             // 
@@ -113,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 123);
+            this.label3.Location = new System.Drawing.Point(38, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 16);
             this.label3.TabIndex = 24;
@@ -122,20 +122,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(575, 248);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(573, 250);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(65, 25);
             this.label4.TabIndex = 38;
             this.label4.Text = "Water";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(6, 238);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(5, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 20);
+            this.label5.Size = new System.Drawing.Size(180, 25);
             this.label5.TabIndex = 39;
             this.label5.Text = "Schedule a feeding";
             // 
@@ -143,7 +143,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(219, 343);
+            this.label7.Location = new System.Drawing.Point(219, 331);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 50;
@@ -153,7 +153,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(152, 343);
+            this.label6.Location = new System.Drawing.Point(152, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 16);
             this.label6.TabIndex = 49;
@@ -163,7 +163,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(88, 343);
+            this.label8.Location = new System.Drawing.Point(88, 331);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 16);
             this.label8.TabIndex = 48;
@@ -173,7 +173,7 @@
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(9, 322);
+            this.timeLabel.Location = new System.Drawing.Point(9, 310);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(41, 16);
             this.timeLabel.TabIndex = 47;
@@ -188,7 +188,7 @@
             this.cb_period.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.cb_period.Location = new System.Drawing.Point(219, 317);
+            this.cb_period.Location = new System.Drawing.Point(219, 305);
             this.cb_period.Name = "cb_period";
             this.cb_period.Size = new System.Drawing.Size(40, 24);
             this.cb_period.TabIndex = 40;
@@ -259,7 +259,7 @@
             "57",
             "58",
             "59"});
-            this.cb_mins.Location = new System.Drawing.Point(155, 317);
+            this.cb_mins.Location = new System.Drawing.Point(155, 305);
             this.cb_mins.Name = "cb_mins";
             this.cb_mins.Size = new System.Drawing.Size(60, 24);
             this.cb_mins.TabIndex = 46;
@@ -283,7 +283,7 @@
             "10",
             "11",
             "12"});
-            this.cb_hours.Location = new System.Drawing.Point(91, 317);
+            this.cb_hours.Location = new System.Drawing.Point(91, 305);
             this.cb_hours.Name = "cb_hours";
             this.cb_hours.Size = new System.Drawing.Size(60, 24);
             this.cb_hours.TabIndex = 45;
@@ -292,7 +292,7 @@
             // 
             this.typeLabel.AutoSize = true;
             this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(13, 378);
+            this.typeLabel.Location = new System.Drawing.Point(7, 369);
             this.typeLabel.Name = "typeLabel";
             this.typeLabel.Size = new System.Drawing.Size(71, 16);
             this.typeLabel.TabIndex = 44;
@@ -302,7 +302,7 @@
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(14, 271);
+            this.dateLabel.Location = new System.Drawing.Point(9, 259);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(39, 16);
             this.dateLabel.TabIndex = 43;
@@ -317,7 +317,7 @@
             "Healthy gourmet",
             "Canned Pate",
             "Pouch Morsels"});
-            this.bc_goof_type.Location = new System.Drawing.Point(90, 378);
+            this.bc_goof_type.Location = new System.Drawing.Point(90, 366);
             this.bc_goof_type.Name = "bc_goof_type";
             this.bc_goof_type.Size = new System.Drawing.Size(169, 24);
             this.bc_goof_type.TabIndex = 42;
@@ -328,7 +328,7 @@
             this.date_picker.CustomFormat = "dd-MM-yyyy";
             this.date_picker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_picker.Location = new System.Drawing.Point(90, 271);
+            this.date_picker.Location = new System.Drawing.Point(90, 259);
             this.date_picker.Name = "date_picker";
             this.date_picker.Size = new System.Drawing.Size(169, 22);
             this.date_picker.TabIndex = 41;
@@ -339,7 +339,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(576, 39);
+            this.label9.Location = new System.Drawing.Point(547, 40);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(210, 16);
             this.label9.TabIndex = 51;
@@ -350,7 +350,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(576, 81);
+            this.label10.Location = new System.Drawing.Point(547, 82);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(166, 32);
             this.label10.TabIndex = 52;
@@ -366,7 +366,7 @@
             "Call 911",
             "Call Annie",
             "Call Mom"});
-            this.cb_send_help.Location = new System.Drawing.Point(579, 138);
+            this.cb_send_help.Location = new System.Drawing.Point(550, 140);
             this.cb_send_help.Name = "cb_send_help";
             this.cb_send_help.Size = new System.Drawing.Size(169, 24);
             this.cb_send_help.TabIndex = 53;
@@ -383,22 +383,24 @@
             // 
             this.btnAddFood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddFood.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddFood.FlatAppearance.BorderSize = 0;
+            this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFood.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFood.Image")));
-            this.btnAddFood.Location = new System.Drawing.Point(480, 303);
+            this.btnAddFood.Location = new System.Drawing.Point(479, 318);
             this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(50, 50);
+            this.btnAddFood.Size = new System.Drawing.Size(35, 35);
             this.btnAddFood.TabIndex = 54;
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // pb_cat_water
             // 
             this.pb_cat_water.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_cat_water.Image = ((System.Drawing.Image)(resources.GetObject("pb_cat_water.Image")));
-            this.pb_cat_water.Location = new System.Drawing.Point(551, 271);
+            this.pb_cat_water.Location = new System.Drawing.Point(550, 278);
             this.pb_cat_water.Name = "pb_cat_water";
-            this.pb_cat_water.Size = new System.Drawing.Size(111, 107);
+            this.pb_cat_water.Size = new System.Drawing.Size(110, 110);
             this.pb_cat_water.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_cat_water.TabIndex = 37;
             this.pb_cat_water.TabStop = false;
@@ -407,18 +409,18 @@
             // 
             this.pb_cat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb_cat.Image = ((System.Drawing.Image)(resources.GetObject("pb_cat.Image")));
-            this.pb_cat.Location = new System.Drawing.Point(256, 10);
+            this.pb_cat.Location = new System.Drawing.Point(267, 12);
             this.pb_cat.Name = "pb_cat";
-            this.pb_cat.Size = new System.Drawing.Size(274, 183);
+            this.pb_cat.Size = new System.Drawing.Size(274, 181);
             this.pb_cat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_cat.TabIndex = 35;
             this.pb_cat.TabStop = false;
             // 
             // pb_cat_food
             // 
-            this.pb_cat_food.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb_cat_food.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pb_cat_food.Image = ((System.Drawing.Image)(resources.GetObject("pb_cat_food.Image")));
-            this.pb_cat_food.Location = new System.Drawing.Point(349, 271);
+            this.pb_cat_food.Location = new System.Drawing.Point(348, 278);
             this.pb_cat_food.Name = "pb_cat_food";
             this.pb_cat_food.Size = new System.Drawing.Size(125, 107);
             this.pb_cat_food.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -453,26 +455,30 @@
             // 
             this.btnAddWater.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddWater.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddWater.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddWater.FlatAppearance.BorderSize = 0;
+            this.btnAddWater.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddWater.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddWater.Image = ((System.Drawing.Image)(resources.GetObject("btnAddWater.Image")));
-            this.btnAddWater.Location = new System.Drawing.Point(668, 303);
+            this.btnAddWater.Location = new System.Drawing.Point(667, 318);
             this.btnAddWater.Name = "btnAddWater";
-            this.btnAddWater.Size = new System.Drawing.Size(50, 50);
+            this.btnAddWater.Size = new System.Drawing.Size(33, 35);
             this.btnAddWater.TabIndex = 55;
             this.btnAddWater.UseVisualStyleBackColor = true;
+            this.btnAddWater.Click += new System.EventHandler(this.btnAddWater_Click);
             // 
-            // btn_spray
+            // btn_save_feeding_schedule
             // 
-            this.btn_spray.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_spray.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_spray.Location = new System.Drawing.Point(116, 418);
-            this.btn_spray.Name = "btn_spray";
-            this.btn_spray.Size = new System.Drawing.Size(80, 31);
-            this.btn_spray.TabIndex = 56;
-            this.btn_spray.Text = "Done";
-            this.btn_spray.UseVisualStyleBackColor = true;
-            this.btn_spray.Click += new System.EventHandler(this.btn_spray_Click);
+            this.btn_save_feeding_schedule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save_feeding_schedule.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
+            this.btn_save_feeding_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save_feeding_schedule.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_feeding_schedule.Location = new System.Drawing.Point(105, 408);
+            this.btn_save_feeding_schedule.Name = "btn_save_feeding_schedule";
+            this.btn_save_feeding_schedule.Size = new System.Drawing.Size(100, 50);
+            this.btn_save_feeding_schedule.TabIndex = 56;
+            this.btn_save_feeding_schedule.Text = "Done";
+            this.btn_save_feeding_schedule.UseVisualStyleBackColor = true;
+            this.btn_save_feeding_schedule.Click += new System.EventHandler(this.btn_spray_Click);
             // 
             // PetFeederForm
             // 
@@ -480,7 +486,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(834, 461);
-            this.Controls.Add(this.btn_spray);
+            this.Controls.Add(this.btn_save_feeding_schedule);
             this.Controls.Add(this.btnAddWater);
             this.Controls.Add(this.btnAddFood);
             this.Controls.Add(this.cb_send_help);
@@ -554,6 +560,6 @@
         private System.Windows.Forms.Timer timer_live_cat_video;
         private Button btnAddFood;
         private Button btnAddWater;
-        private Button btn_spray;
+        private RoundedButton btn_save_feeding_schedule;
     }
 }

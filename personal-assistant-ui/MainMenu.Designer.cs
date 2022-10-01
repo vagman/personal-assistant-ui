@@ -39,24 +39,24 @@
             this.lbl_logout = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btn_settings = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.btn_help = new System.Windows.Forms.Button();
-            this.btn_pet_feeder = new System.Windows.Forms.Button();
-            this.btn_smart_shoe_rack = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_smart_lamp = new personal_assistant_ui.RoundedButton();
+            this.btn_pet_feeder = new personal_assistant_ui.RoundedButton();
+            this.btn_smart_shoe_rack = new personal_assistant_ui.RoundedButton();
+            this.btn_daily_planner = new personal_assistant_ui.RoundedButton();
+            this.btn_signup = new personal_assistant_ui.RoundedButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(125, 276);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 21);
+            this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Daily Planner";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -65,10 +65,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(262, 274);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(276, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 21);
+            this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Smart Lamp";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -77,10 +77,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(403, 276);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(407, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 21);
+            this.label3.Size = new System.Drawing.Size(131, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Smart Shoe Rack";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -89,10 +89,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(543, 276);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(544, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 21);
+            this.label4.Size = new System.Drawing.Size(147, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "   Smart Pet Feeder";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -100,11 +100,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(352, 276);
+            this.label6.Location = new System.Drawing.Point(311, 273);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 21);
+            this.label6.Size = new System.Drawing.Size(31, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "Off";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -113,7 +113,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(282, 73);
+            this.label7.Location = new System.Drawing.Point(268, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(266, 32);
             this.label7.TabIndex = 11;
@@ -148,35 +148,24 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(262, 383);
+            this.label5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(276, 376);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(251, 21);
+            this.label5.Size = new System.Drawing.Size(262, 20);
             this.label5.TabIndex = 18;
             this.label5.Text = "If you can\'t find your smart device..";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(298, 414);
+            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(276, 414);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(147, 21);
+            this.label8.Size = new System.Drawing.Size(131, 19);
             this.label8.TabIndex = 19;
             this.label8.Text = "Don\'t worry! Add it ";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(436, 415);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(41, 20);
-            this.linkLabel1.TabIndex = 20;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "here";
             // 
             // btn_settings
             // 
@@ -206,17 +195,17 @@
             this.btn_logout.MouseEnter += new System.EventHandler(this.btn_logout_MouseEnter);
             this.btn_logout.MouseLeave += new System.EventHandler(this.btn_logout_MouseLeave);
             // 
-            // button5
+            // btn_smart_lamp
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(264, 150);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 120);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btn_smart_lamp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_smart_lamp.BackgroundImage")));
+            this.btn_smart_lamp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_smart_lamp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_smart_lamp.Location = new System.Drawing.Point(264, 150);
+            this.btn_smart_lamp.Name = "btn_smart_lamp";
+            this.btn_smart_lamp.Size = new System.Drawing.Size(120, 120);
+            this.btn_smart_lamp.TabIndex = 4;
+            this.btn_smart_lamp.UseVisualStyleBackColor = true;
+            this.btn_smart_lamp.Click += new System.EventHandler(this.button5_Click);
             // 
             // btn_help
             // 
@@ -255,19 +244,33 @@
             this.btn_smart_shoe_rack.UseVisualStyleBackColor = true;
             this.btn_smart_shoe_rack.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn_daily_planner
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(117, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 120);
-            this.button1.TabIndex = 0;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_daily_planner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_daily_planner.BackgroundImage")));
+            this.btn_daily_planner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_daily_planner.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_daily_planner.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_daily_planner.Location = new System.Drawing.Point(117, 150);
+            this.btn_daily_planner.Name = "btn_daily_planner";
+            this.btn_daily_planner.Size = new System.Drawing.Size(120, 120);
+            this.btn_daily_planner.TabIndex = 0;
+            this.btn_daily_planner.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_daily_planner.UseVisualStyleBackColor = true;
+            this.btn_daily_planner.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_signup
+            // 
+            this.btn_signup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_signup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btn_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_signup.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signup.ForeColor = System.Drawing.Color.Black;
+            this.btn_signup.Location = new System.Drawing.Point(413, 399);
+            this.btn_signup.Name = "btn_signup";
+            this.btn_signup.Size = new System.Drawing.Size(150, 50);
+            this.btn_signup.TabIndex = 20;
+            this.btn_signup.Text = "Add new device";
+            this.btn_signup.UseVisualStyleBackColor = true;
             // 
             // MainMenu
             // 
@@ -275,7 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(834, 461);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_settings);
@@ -288,11 +291,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btn_smart_lamp);
             this.Controls.Add(this.btn_help);
             this.Controls.Add(this.btn_pet_feeder);
             this.Controls.Add(this.btn_smart_shoe_rack);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_daily_planner);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -305,11 +308,11 @@
 
         #endregion
 
-        private Button button1;
+        private Button btn_daily_planner;
         private Button btn_smart_shoe_rack;
         private Button btn_pet_feeder;
         private Button btn_help;
-        private Button button5;
+        private Button btn_smart_lamp;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -322,6 +325,6 @@
         private Button btn_settings;
         private Label label5;
         private Label label8;
-        private LinkLabel linkLabel1;
+        private RoundedButton btn_signup;
     }
 }

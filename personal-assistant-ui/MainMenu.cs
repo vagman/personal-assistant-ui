@@ -45,7 +45,7 @@ namespace personal_assistant_ui
             btnWasClicked *= -1;
             if(btnWasClicked == -1)
             {
-                button5.BackgroundImage = Resources.lights_on;
+                btn_smart_lamp.BackgroundImage = Resources.lights_on;
                 label6.Font = new Font(label6.Font.Name, 12, FontStyle.Bold);
                 label6.Text = "On";
                 label6.ForeColor = green;
@@ -53,7 +53,7 @@ namespace personal_assistant_ui
             }
             else
             {
-                button5.BackgroundImage = Resources.lights_off;
+                btn_smart_lamp.BackgroundImage = Resources.lights_off;
                 label6.Font = new Font(label6.Font.Name, 12, FontStyle.Bold);
                 label6.Text = "Off";
                 label6.ForeColor = red;
@@ -95,7 +95,7 @@ namespace personal_assistant_ui
             btnWasClicked *= -1;
             if (btnWasClicked == -1)
             {
-                button5.BackgroundImage = Properties.Resources.lights_on;
+                btn_smart_lamp.BackgroundImage = Properties.Resources.lights_on;
                 label6.Font = new Font(label6.Font.Name, 9, FontStyle.Bold);
                 label6.Text = "On";
                 label6.ForeColor = green;
@@ -104,7 +104,7 @@ namespace personal_assistant_ui
             }
             else
             {
-                button5.BackgroundImage = Properties.Resources.lights_off;
+                btn_smart_lamp.BackgroundImage = Properties.Resources.lights_off;
                 label6.Text = "Off";
                 label6.ForeColor = red;
                 label6.Refresh();
@@ -113,8 +113,8 @@ namespace personal_assistant_ui
 
         private void label8_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to log out ?", "Log out", MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
+            var confirmResult = MessageBox.Show("Are you sure you want to log out ?", "Log out", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (confirmResult == DialogResult.OK)
             {
                 login login = new login();
                 login.Closed += (s, AssemblyLoadEventArgs) => this.Close();
@@ -128,8 +128,8 @@ namespace personal_assistant_ui
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Are you sure you want to log out ?", "Log out", MessageBoxButtons.YesNo);
-            if (confirmResult == DialogResult.Yes)
+            var confirmResult = MessageBox.Show("Are you sure you want to log out ?", "Log out", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (confirmResult == DialogResult.OK)
             {
                 login login = new login();
                 login.Closed += (s, AssemblyLoadEventArgs) => this.Close();
