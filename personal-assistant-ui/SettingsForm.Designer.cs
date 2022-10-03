@@ -55,7 +55,7 @@
             this.label_Title.ForeColor = System.Drawing.Color.Black;
             this.label_Title.Location = new System.Drawing.Point(124, 15);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(143, 37);
+            this.label_Title.Size = new System.Drawing.Size(179, 46);
             this.label_Title.TabIndex = 0;
             this.label_Title.Text = "SETTINGS";
             // 
@@ -66,7 +66,7 @@
             this.label_Theme.Font = new System.Drawing.Font("Calibri", 14F);
             this.label_Theme.Location = new System.Drawing.Point(25, 115);
             this.label_Theme.Name = "label_Theme";
-            this.label_Theme.Size = new System.Drawing.Size(67, 23);
+            this.label_Theme.Size = new System.Drawing.Size(87, 29);
             this.label_Theme.TabIndex = 4;
             this.label_Theme.Text = "Theme:";
             // 
@@ -78,7 +78,7 @@
             this.label_Language.Font = new System.Drawing.Font("Calibri", 14F);
             this.label_Language.Location = new System.Drawing.Point(25, 158);
             this.label_Language.Name = "label_Language";
-            this.label_Language.Size = new System.Drawing.Size(88, 23);
+            this.label_Language.Size = new System.Drawing.Size(113, 29);
             this.label_Language.TabIndex = 5;
             this.label_Language.Text = "Language:";
             // 
@@ -97,7 +97,7 @@
             this.comboBox_Theme.Location = new System.Drawing.Point(123, 118);
             this.comboBox_Theme.MaxDropDownItems = 2;
             this.comboBox_Theme.Name = "comboBox_Theme";
-            this.comboBox_Theme.Size = new System.Drawing.Size(161, 27);
+            this.comboBox_Theme.Size = new System.Drawing.Size(161, 32);
             this.comboBox_Theme.TabIndex = 1;
             this.comboBox_Theme.TabStop = false;
             this.comboBox_Theme.SelectedIndexChanged += new System.EventHandler(this.comboBox_Theme_SelectedIndexChanged);
@@ -117,7 +117,7 @@
             this.comboBox_Language.Location = new System.Drawing.Point(123, 158);
             this.comboBox_Language.MaxDropDownItems = 2;
             this.comboBox_Language.Name = "comboBox_Language";
-            this.comboBox_Language.Size = new System.Drawing.Size(161, 27);
+            this.comboBox_Language.Size = new System.Drawing.Size(161, 32);
             this.comboBox_Language.TabIndex = 2;
             this.comboBox_Language.TabStop = false;
             this.comboBox_Language.SelectedIndexChanged += new System.EventHandler(this.comboBox_Language_SelectedIndexChanged);
@@ -143,7 +143,7 @@
             this.btn_back1.Location = new System.Drawing.Point(45, 15);
             this.btn_back1.Name = "btn_back1";
             this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.btn_back1.Size = new System.Drawing.Size(47, 30);
+            this.btn_back1.Size = new System.Drawing.Size(59, 35);
             this.btn_back1.TabIndex = 22;
             this.btn_back1.Text = "Back";
             this.btn_back1.Click += new System.EventHandler(this.btn_back1_Click);
@@ -186,10 +186,10 @@
             this.button_Help.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Help.ImageKey = "info.png";
             this.button_Help.ImageList = this.imageList_Buttons;
-            this.button_Help.Location = new System.Drawing.Point(141, 26);
+            this.button_Help.Location = new System.Drawing.Point(132, 11);
             this.button_Help.Name = "button_Help";
             this.button_Help.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button_Help.Size = new System.Drawing.Size(110, 31);
+            this.button_Help.Size = new System.Drawing.Size(110, 49);
             this.button_Help.TabIndex = 10;
             this.button_Help.Text = "Help";
             this.button_Help.UseVisualStyleBackColor = false;
@@ -213,7 +213,7 @@
             // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 291);
             this.Controls.Add(this.panel_Bottom);

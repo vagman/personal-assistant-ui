@@ -196,10 +196,40 @@
   <data name="groumpy_cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\groumpy_cat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_20percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="20percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\20percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_90percent_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="90percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\90percent..jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\0percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="100percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\100percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="10percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\10percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="30percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\30percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="40percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\40percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="50percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\50percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="60percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\60percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="70percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\70percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="80percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\80percent.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sounds\water.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

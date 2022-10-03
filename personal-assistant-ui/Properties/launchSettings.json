@@ -7,6 +7,10 @@
     "Profile 1": {
       "commandName": "Project",
       "workingDirectory": "C:\\Users\\Vaggelis\\source\\repos\\personal-assistant-ui\\personal-assistant-ui\\bin\\Debug"
+    },
+    "dell-laptop": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\bmano\\source\\repos\\vagman\\personal-assistant-ui\\personal-assistant-ui\\bin\\Debug\\net472\\personal-assistant-ui.exe"
     }
   }
 }

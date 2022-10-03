@@ -63,9 +63,9 @@ namespace personal_assistant_ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _20percent {
+        internal static System.Drawing.Bitmap _0percent {
             get {
-                object obj = ResourceManager.GetObject("_20percent", resourceCulture);
+                object obj = ResourceManager.GetObject("0percent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,99 @@ namespace personal_assistant_ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _90percent_ {
+        internal static System.Drawing.Bitmap _100percent {
             get {
-                object obj = ResourceManager.GetObject("_90percent_", resourceCulture);
+                object obj = ResourceManager.GetObject("100percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _10percent {
+            get {
+                object obj = ResourceManager.GetObject("10percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20percent {
+            get {
+                object obj = ResourceManager.GetObject("20percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _30percent {
+            get {
+                object obj = ResourceManager.GetObject("30percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _40percent {
+            get {
+                object obj = ResourceManager.GetObject("40percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _50percent {
+            get {
+                object obj = ResourceManager.GetObject("50percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _60percent {
+            get {
+                object obj = ResourceManager.GetObject("60percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _70percent {
+            get {
+                object obj = ResourceManager.GetObject("70percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _80percent {
+            get {
+                object obj = ResourceManager.GetObject("80percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _90percent {
+            get {
+                object obj = ResourceManager.GetObject("90percent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -334,6 +424,15 @@ namespace personal_assistant_ui.Properties {
             get {
                 object obj = ResourceManager.GetObject("walk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream water {
+            get {
+                return ResourceManager.GetStream("water", resourceCulture);
             }
         }
     }

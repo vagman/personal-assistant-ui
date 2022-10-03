@@ -16,6 +16,9 @@ namespace personal_assistant_ui
     public partial class PetFeederForm : Form
     {
         decimal cat = 0;
+        public static bool flag_notification = false;
+        int food_percentage = 20; // default food displayed percentage: 20% image
+        int water_percentage = 90; // default water displayed percentage: 90% image
         public PetFeederForm()
         {
             InitializeComponent();
@@ -85,7 +88,7 @@ namespace personal_assistant_ui
             var confirm_cat_feed_program = MessageBox.Show("Date: " + date_picker.Value + "\nTime: " + date_picker.Value + "\nPeriod: " + date_picker.Value, "Confirm information", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (confirm_cat_feed_program == DialogResult.OK)
             {
-                 
+                MessageBox.Show("Feeding shedule was succesfuly saved.", "Schedule Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -95,13 +98,245 @@ namespace personal_assistant_ui
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-
+            SoundPlayer sp = new SoundPlayer(Resources.dog_food);
+            switch (food_percentage)
+            {
+                case 0:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("10percent");
+                    food_percentage = 10;
+                    sp.Play();
+                    break;
+                case 10:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("20percent");
+                    food_percentage = 20;
+                    sp.Play();
+                    break;
+                case 20:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("30percent");
+                    food_percentage = 30;
+                    sp.Play();
+                    break;
+                case 30:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("40percent");
+                    food_percentage = 40;
+                    sp.Play();
+                    break;
+                case 40:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("50percent");
+                    food_percentage = 50;
+                    sp.Play();
+                    break;
+                case 50:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("60percent");
+                    food_percentage = 60;
+                    sp.Play();
+                    break;
+                case 60:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("70percent");
+                    food_percentage = 70;
+                    sp.Play();
+                    break;
+                case 70:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("80percent");
+                    food_percentage = 80;
+                    sp.Play();
+                    break;
+                case 80:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("90percent");
+                    food_percentage = 90;
+                    sp.Play();
+                    break;
+                case 90:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("100percent");
+                    food_percentage = 100;
+                    sp.Play();
+                    break;
+                case 100:
+                    MessageBox.Show("Your cat's food is already full.\nPlease try again later.", "Food: 100%", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void btnAddWater_Click(object sender, EventArgs e)
         {
-
+            SoundPlayer sp = new SoundPlayer(Resources.water);
+            switch (water_percentage)
+            {
+                case 0:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("10percent");
+                    water_percentage = 10;
+                    sp.Play();
+                    break;
+                case 10:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("20percent");
+                    water_percentage = 20;
+                    sp.Play();
+                    break;
+                case 20:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("30percent");
+                    water_percentage = 30;
+                    sp.Play();
+                    break;
+                case 30:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("40percent");
+                    water_percentage = 40;
+                    sp.Play();
+                    break;
+                case 40:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("50percent");
+                    water_percentage = 50;
+                    sp.Play();
+                    break;
+                case 50:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("60percent");
+                    water_percentage = 60;
+                    sp.Play();
+                    break;
+                case 60:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("70percent");
+                    water_percentage = 70;
+                    sp.Play();
+                    break;
+                case 70:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("80percent");
+                    water_percentage = 80;
+                    sp.Play();
+                    break;
+                case 80:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("90percent");
+                    water_percentage = 90;
+                    sp.Play();
+                    break;
+                case 90:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("100percent");
+                    water_percentage = 100;
+                    sp.Play();
+                    break;
+                case 100:
+                    MessageBox.Show("Your cat's water is already full.\nPlease try again later.", "Water: 100%", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                default:
+                    break;
+            }
         }
-        //TODO: change food/water % images with a diffrent timer tick event
+
+        private void food_timer_Tick(object sender, EventArgs e)
+        {
+            flag_notification = true;
+            switch (food_percentage)
+            {
+                case 100:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("90percent");
+                    food_percentage = 90;
+                    break;
+                case 90:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("80percent");
+                    food_percentage = 80;
+                    break;
+                case 80:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("70percent");
+                    food_percentage = 70;
+                    break;
+                case 70:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("60percent");
+                    food_percentage = 60;
+                    break;
+                case 60:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("50percent");
+                    food_percentage = 50;
+                    break;
+                case 50:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("40percent");
+                    food_percentage = 40;
+                    break;
+                case 40:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("30percent");
+                    food_percentage = 30;
+                    break;
+                case 30:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("20percent");
+                    food_percentage = 20;
+                    break;
+                case 20:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("10percent");
+                    food_percentage = 10;
+                    break;
+                case 10:
+                    pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("0percent");
+                    food_percentage = 0;
+                    break;
+                case 0:
+                    if (flag_notification)
+                    {
+                        MessageBox.Show("Your cat's needs food!\nPlease add food by pressing the Food '+' sign, next to the food percentage.", "Food: 0%", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void water_timer_Tick(object sender, EventArgs e)
+        {
+            flag_notification = true;
+            switch (water_percentage)
+            {
+                case 100:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("90percent");
+                    water_percentage = 90;
+                    break;
+                case 90:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("80percent");
+                    water_percentage = 80;
+                    break;
+                case 80:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("70percent");
+                    water_percentage = 70;
+                    break;
+                case 70:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("60percent");
+                    water_percentage = 60;
+                    break;
+                case 60:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("50percent");
+                    water_percentage = 50;
+                    break;
+                case 50:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("40percent");
+                    water_percentage = 40;
+                    break;
+                case 40:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("30percent");
+                    water_percentage = 30;
+                    break;
+                case 30:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("20percent");
+                    water_percentage = 20;
+                    break;
+                case 20:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("10percent");
+                    water_percentage = 10;
+                    break;
+                case 10:
+                    pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("0percent");
+                    water_percentage = 0;
+                    break;
+                case 0:
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void PetFeederForm_Load(object sender, EventArgs e)
+        {
+            food_percentage = 20;
+            water_percentage = 90;
+            food_timer.Enabled = true;
+            water_timer.Enabled = true;
+        }
     }
 }

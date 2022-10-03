@@ -16,7 +16,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using System.Reflection;
 
 namespace personal_assistant_ui
-
 {
     public partial class MainMenu : Form
     {
@@ -28,9 +27,9 @@ namespace personal_assistant_ui
         private void button1_Click(object sender, EventArgs e)
         {
             Scheduler scheduler = new Scheduler();
-            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close(); //When exited from the Scheduler form the program closed too.
+            scheduler.Closed += (s, AssemblyLoadEventArgs) => Close(); //When exited from the Scheduler form the program closed too.
             scheduler.Show();
-            this.Hide(); //the Hide method putted at the bottom to hide smoothly the loginForm
+            Hide(); //the Hide method putted at the bottom to hide smoothly the loginForm
         }
 
         int btnWasClicked = 1;
@@ -38,7 +37,7 @@ namespace personal_assistant_ui
         Color red = ColorTranslator.FromHtml("#e84509");
         private void button5_Click(object sender, EventArgs e)
         {
-            // Turn on/off sound of lamp
+            // Lamp turn on/off sound
             SoundPlayer sp = new SoundPlayer(Resources.turn_on_off_lamp);
             sp.Play();
 
@@ -64,30 +63,29 @@ namespace personal_assistant_ui
         private void button3_Click(object sender, EventArgs e)
         {
             PetFeederForm petFeeder = new PetFeederForm();
-            petFeeder.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            petFeeder.Closed += (s, AssemblyLoadEventArgs) => Close();
             petFeeder.Show();
-            this.Hide();
+            Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ShoeRackForm shoerack = new ShoeRackForm();
-            shoerack.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            shoerack.Closed += (s, AssemblyLoadEventArgs) => Close();
             shoerack.Show();
-            this.Hide(); 
+            Hide(); 
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             Scheduler scheduler = new Scheduler();            
-            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            scheduler.Closed += (s, AssemblyLoadEventArgs) => Close();
             scheduler.Show();
-            this.Hide();
+            Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -100,7 +98,6 @@ namespace personal_assistant_ui
                 label6.Text = "On";
                 label6.ForeColor = green;
                 label6.Refresh();
-
             }
             else
             {
@@ -117,9 +114,9 @@ namespace personal_assistant_ui
             if (confirmResult == DialogResult.OK)
             {
                 login login = new login();
-                login.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+                login.Closed += (s, AssemblyLoadEventArgs) => Close();
                 login.Show();
-                this.Hide();
+                Hide();
             }
             else {
                 return;
@@ -132,9 +129,9 @@ namespace personal_assistant_ui
             if (confirmResult == DialogResult.OK)
             {
                 login login = new login();
-                login.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+                login.Closed += (s, AssemblyLoadEventArgs) => Close();
                 login.Show();
-                this.Hide();
+                Hide();
             }
             else{
                 return;
@@ -144,17 +141,17 @@ namespace personal_assistant_ui
         private void label3_Click(object sender, EventArgs e)
         {
             ShoeRackForm shoerack = new ShoeRackForm();
-            shoerack.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            shoerack.Closed += (s, AssemblyLoadEventArgs) => Close();
             shoerack.Show();
-            this.Hide();
+            Hide();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
             PetFeederForm petFeeder = new PetFeederForm();
-            petFeeder.Closed += (s, AssemblyLoadEventArgs) => this.Close();
+            petFeeder.Closed += (s, AssemblyLoadEventArgs) => Close();
             petFeeder.Show();
-            this.Hide();
+            Hide();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -189,7 +186,7 @@ namespace personal_assistant_ui
             SettingsForm sf = new SettingsForm();
             sf.Closed += (s, AssemblyLoadEventArgs) => Close();
             sf.Show();
-            this.Hide();
+            Hide();
         }
 
         private void lbl_logout_MouseEnter(object sender, EventArgs e)
