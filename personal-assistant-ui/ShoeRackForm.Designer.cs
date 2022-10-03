@@ -36,9 +36,12 @@ namespace personal_assistant_ui
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_no_shoes = new System.Windows.Forms.Label();
             this.cb_date = new System.Windows.Forms.ComboBox();
+            this.btn_spray = new personal_assistant_ui.RoundedButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_shoe_right = new personal_assistant_ui.RoundedButton();
+            this.btn_shoe_left = new personal_assistant_ui.RoundedButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,9 +61,6 @@ namespace personal_assistant_ui
             this.lbl_buy_new_shoes = new System.Windows.Forms.Label();
             this.lbl_link_skroutz = new System.Windows.Forms.LinkLabel();
             this.lbl_buy_new_shoes1 = new System.Windows.Forms.Label();
-            this.btn_spray = new personal_assistant_ui.RoundedButton();
-            this.btn_shoe_right = new personal_assistant_ui.RoundedButton();
-            this.btn_shoe_left = new personal_assistant_ui.RoundedButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_shoes)).BeginInit();
             this.SuspendLayout();
@@ -151,6 +151,21 @@ namespace personal_assistant_ui
             this.cb_date.Text = "6/10/2022 (Tommorow)";
             this.cb_date.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // btn_spray
+            // 
+            this.btn_spray.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_spray.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btn_spray.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_spray.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_spray.Location = new System.Drawing.Point(8, 96);
+            this.btn_spray.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_spray.Name = "btn_spray";
+            this.btn_spray.Size = new System.Drawing.Size(166, 65);
+            this.btn_spray.TabIndex = 31;
+            this.btn_spray.Text = "Strart spraying";
+            this.btn_spray.UseVisualStyleBackColor = true;
+            this.btn_spray.Click += new System.EventHandler(this.btn_spray_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -182,6 +197,36 @@ namespace personal_assistant_ui
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(212, 1);
             this.label6.TabIndex = 28;
+            // 
+            // btn_shoe_right
+            // 
+            this.btn_shoe_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_shoe_right.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_shoe_right.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btn_shoe_right.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_shoe_right.Image = ((System.Drawing.Image)(resources.GetObject("btn_shoe_right.Image")));
+            this.btn_shoe_right.Location = new System.Drawing.Point(497, 212);
+            this.btn_shoe_right.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_shoe_right.Name = "btn_shoe_right";
+            this.btn_shoe_right.Size = new System.Drawing.Size(90, 65);
+            this.btn_shoe_right.TabIndex = 27;
+            this.btn_shoe_right.UseVisualStyleBackColor = true;
+            this.btn_shoe_right.Click += new System.EventHandler(this.btn_shoe_right_Click);
+            // 
+            // btn_shoe_left
+            // 
+            this.btn_shoe_left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_shoe_left.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_shoe_left.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.btn_shoe_left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_shoe_left.Image = ((System.Drawing.Image)(resources.GetObject("btn_shoe_left.Image")));
+            this.btn_shoe_left.Location = new System.Drawing.Point(385, 212);
+            this.btn_shoe_left.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_shoe_left.Name = "btn_shoe_left";
+            this.btn_shoe_left.Size = new System.Drawing.Size(90, 65);
+            this.btn_shoe_left.TabIndex = 26;
+            this.btn_shoe_left.UseVisualStyleBackColor = true;
+            this.btn_shoe_left.Click += new System.EventHandler(this.btn_shoe_left_Click);
             // 
             // label5
             // 
@@ -314,22 +359,22 @@ namespace personal_assistant_ui
             // lbl_shoe_name
             // 
             this.lbl_shoe_name.AutoSize = true;
-            this.lbl_shoe_name.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shoe_name.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_shoe_name.Location = new System.Drawing.Point(780, 395);
             this.lbl_shoe_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_shoe_name.Name = "lbl_shoe_name";
-            this.lbl_shoe_name.Size = new System.Drawing.Size(118, 20);
+            this.lbl_shoe_name.Size = new System.Drawing.Size(121, 19);
             this.lbl_shoe_name.TabIndex = 28;
             this.lbl_shoe_name.Text = "Nike Air Presto";
             // 
             // lbl_shoe_use
             // 
             this.lbl_shoe_use.AutoSize = true;
-            this.lbl_shoe_use.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shoe_use.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_shoe_use.Location = new System.Drawing.Point(806, 454);
             this.lbl_shoe_use.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_shoe_use.Name = "lbl_shoe_use";
-            this.lbl_shoe_use.Size = new System.Drawing.Size(109, 20);
+            this.lbl_shoe_use.Size = new System.Drawing.Size(114, 19);
             this.lbl_shoe_use.TabIndex = 29;
             this.lbl_shoe_use.Text = "Training & Gym";
             // 
@@ -347,11 +392,11 @@ namespace personal_assistant_ui
             // lbl_shoe_size
             // 
             this.lbl_shoe_size.AutoSize = true;
-            this.lbl_shoe_size.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_shoe_size.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_shoe_size.Location = new System.Drawing.Point(731, 424);
             this.lbl_shoe_size.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_shoe_size.Name = "lbl_shoe_size";
-            this.lbl_shoe_size.Size = new System.Drawing.Size(27, 20);
+            this.lbl_shoe_size.Size = new System.Drawing.Size(27, 19);
             this.lbl_shoe_size.TabIndex = 31;
             this.lbl_shoe_size.Text = "49";
             // 
@@ -405,51 +450,6 @@ namespace personal_assistant_ui
             this.lbl_buy_new_shoes1.Text = "or your local shoe shop\nto buy a pair of new ones.";
             this.lbl_buy_new_shoes1.Visible = false;
             // 
-            // btn_spray
-            // 
-            this.btn_spray.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_spray.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.btn_spray.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_spray.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_spray.Location = new System.Drawing.Point(8, 96);
-            this.btn_spray.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_spray.Name = "btn_spray";
-            this.btn_spray.Size = new System.Drawing.Size(166, 65);
-            this.btn_spray.TabIndex = 31;
-            this.btn_spray.Text = "Strart spraying";
-            this.btn_spray.UseVisualStyleBackColor = true;
-            this.btn_spray.Click += new System.EventHandler(this.btn_spray_Click);
-            // 
-            // btn_shoe_right
-            // 
-            this.btn_shoe_right.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_shoe_right.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_shoe_right.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.btn_shoe_right.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_shoe_right.Image = ((System.Drawing.Image)(resources.GetObject("btn_shoe_right.Image")));
-            this.btn_shoe_right.Location = new System.Drawing.Point(497, 212);
-            this.btn_shoe_right.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_shoe_right.Name = "btn_shoe_right";
-            this.btn_shoe_right.Size = new System.Drawing.Size(90, 65);
-            this.btn_shoe_right.TabIndex = 27;
-            this.btn_shoe_right.UseVisualStyleBackColor = true;
-            this.btn_shoe_right.Click += new System.EventHandler(this.btn_shoe_right_Click);
-            // 
-            // btn_shoe_left
-            // 
-            this.btn_shoe_left.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_shoe_left.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_shoe_left.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.btn_shoe_left.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_shoe_left.Image = ((System.Drawing.Image)(resources.GetObject("btn_shoe_left.Image")));
-            this.btn_shoe_left.Location = new System.Drawing.Point(385, 212);
-            this.btn_shoe_left.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_shoe_left.Name = "btn_shoe_left";
-            this.btn_shoe_left.Size = new System.Drawing.Size(90, 65);
-            this.btn_shoe_left.TabIndex = 26;
-            this.btn_shoe_left.UseVisualStyleBackColor = true;
-            this.btn_shoe_left.Click += new System.EventHandler(this.btn_shoe_left_Click);
-            // 
             // ShoeRackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -472,8 +472,11 @@ namespace personal_assistant_ui
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ShoeRackForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Smart Shoe Rack";

@@ -1,4 +1,4 @@
-using System;
+ο»Ώusing System;
 using System.IO;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
@@ -16,16 +16,16 @@ namespace personal_assistant_ui
         }
         public void changeToGreek()
         {
-            lbl_username.Text = "Όνομα χρήστη";
-            lbl_username.Location = new Point(lbl_username.Location.X - 10, lbl_username.Location.Y);
-            lbl_password.Text = "Κωδικός πρόσβασης";
-            lbl_password.Location = new Point(lbl_password.Location.X - 35, lbl_password.Location.Y);
-            lbl_new_user.Text = "Νέος χρήστης ; Πατήστε";
-            lbl_new_user.Location = new Point(lbl_new_user.Location.X - 25, lbl_new_user.Location.Y);
-            lbl_need_help.Text = "Χρειάζεστε βοήθεια ;";
-            lbl_need_help.Location = new Point(lbl_need_help.Location.X - 70, lbl_need_help.Location.Y);
-            btn_login.Text = "Είσοδος";
-            btn_signup.Text = "Εδώ";
+            lbl_username.Text = "ΞΞ½ΞΏΞΌΞ± Ο‡ΟΞ®ΟƒΟ„Ξ·";
+            lbl_username.Location = new Point(lbl_username.Location.X - 20, lbl_username.Location.Y);
+            lbl_password.Text = "ΞΟ‰Ξ΄ΞΉΞΊΟΟ‚ Ο€ΟΟΟƒΞ²Ξ±ΟƒΞ·Ο‚";
+            lbl_password.Location = new Point(lbl_password.Location.X - 45, lbl_password.Location.Y);
+            lbl_new_user.Text = "ΞΞ­ΞΏΟ‚ Ο‡ΟΞ®ΟƒΟ„Ξ·Ο‚ ;";
+            lbl_new_user.Location = new Point(lbl_new_user.Location.X - 35, lbl_new_user.Location.Y);
+            lbl_need_help.Text = "Ξ§ΟΞµΞΉΞ¬Ξ¶ΞµΟƒΞ±ΞΉ Ξ²ΞΏΞ®ΞΈΞµΞΉΞ± ;";
+            lbl_need_help.Location = new Point(lbl_need_help.Location.X - 80, lbl_need_help.Location.Y);
+            btn_login.Text = "Ξ£ΟΞ½Ξ΄ΞµΟƒΞ·";
+            btn_signup.Text = "Ξ•Ξ³Ξ³ΟΞ±Ο†Ξ®";
         }
         private void button2_Click(object sender, EventArgs e)
         {
