@@ -259,6 +259,12 @@ namespace personal_assistant_ui
                         durationLbl.Visible = true;
                         durationInMin.Visible = true;
                         needCoffee.Visible = true;
+
+
+                        mapImage.Visible = true;
+                        mapImage.BackgroundImageLayout = ImageLayout.Stretch;
+                        mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podia4");
+
                     }
                     
                     break;
@@ -298,6 +304,11 @@ namespace personal_assistant_ui
                         durationInMin.Visible = true;
                         
                         needCoffee.Visible = true;
+
+                        mapImage.Visible = true;
+                        mapImage.BackgroundImageLayout = ImageLayout.Stretch;
+                        mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podia3");
+
                     }
                     break;
                 case 2:
@@ -309,6 +320,7 @@ namespace personal_assistant_ui
                     }
                     else
                     {
+                        //autokinito
                         //MessageBox.Show("ilektrikos");
                         distanceLbl.Visible = true;
                         Size = new Size(800, 346);
@@ -336,6 +348,8 @@ namespace personal_assistant_ui
                         durationInMin.Visible = true;
 
                         needCoffee.Visible = true;
+                        
+
                     }
                     break;
                 case 3:
@@ -361,6 +375,11 @@ namespace personal_assistant_ui
                     durationLbl.Visible = true;
                     durationInMin.Visible = true;
 
+                    mapImage.Visible = true;
+                    mapImage.BackgroundImageLayout = ImageLayout.Stretch;
+                    mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podia5");
+
+
                     break;
                 case 4:
                     Size = new Size(800, 346);
@@ -385,6 +404,12 @@ namespace personal_assistant_ui
                     durationInMin.Text = minutes.ToString("0.0") + " Min";
                     durationLbl.Visible = true;
                     durationInMin.Visible = true;
+
+
+                    mapImage.Visible = true;
+                    mapImage.BackgroundImageLayout = ImageLayout.Stretch;
+                    mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car4");
+
                     break;
                 case 5:
                     Size = new Size(800, 346);
@@ -408,6 +433,11 @@ namespace personal_assistant_ui
                     durationInMin.Text = minutes.ToString("0.0") + " Min";
                     durationLbl.Visible = true;
                     durationInMin.Visible = true;
+
+                    mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car3");
+                    mapImage.Visible = true;
+                    mapImage.BackgroundImageLayout = ImageLayout.Stretch;
+
 
                     break;
             }
@@ -440,13 +470,39 @@ namespace personal_assistant_ui
 
         private void needCoffee_CheckedChanged(object sender, EventArgs e)
         {
-            if (needCoffee.Checked)
+            object currentSuggestion = suggestionBox.SelectedItem;
+            object currentSuggestionText = suggestionBox.GetItemText(currentSuggestion);
+
+            int indexSuggestion = suggestionBox.FindString(suggestionBox.Text);
+            suggestionBox.SelectedIndex = indexSuggestion;
+
+            switch(indexSuggestion)
             {
-                mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("carCoffee");
-            }
-            else
-            {
-                mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car");
+                case 0:
+                    if(needCoffee.Checked) mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podiaCoffee4");
+                    else mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podia4");
+                    break;
+                case 1:
+                    if (needCoffee.Checked) mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podiaCoffee3");
+                    else mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podia3");
+                    break;
+                case 2:
+                    if (needCoffee.Checked) mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("carCoffee");
+                    else mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car");
+                    break;
+                case 3:
+                    if (needCoffee.Checked) mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podiaCoffee5");
+                    else mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("podia5");
+                    break;
+                case 4:
+                    if (needCoffee.Checked) mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("carCoffee4");
+                    else mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car4");
+                    break;
+                case 5:
+                    if (needCoffee.Checked) mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("carCoffee3");
+                    else mapImage.Image = (Image)Properties.Resources.ResourceManager.GetObject("car3");
+                    break;
+
             }
         }
     }
