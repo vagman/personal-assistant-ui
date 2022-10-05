@@ -115,6 +115,7 @@ namespace personal_assistant_ui
         {
             //TODO close the window with the cancel button
             //TODO check if any text box is not empty show message "Are you sure to cancel?"
+            this.Close();
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -129,24 +130,19 @@ namespace personal_assistant_ui
 
         private void AddEvent_Load(object sender, EventArgs e)
         {
-            Size = new Size(300, 326);
+            Size = new Size(300, 346);
             FormBorderStyle = FormBorderStyle.FixedSingle; //dont allow the user to change size of the window form
         }
 
         private void btn_back1_Click(object sender, EventArgs e)
         {
-            Scheduler scheduler = new Scheduler();
-            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close();
-            scheduler.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Scheduler scheduler = new Scheduler();
-            scheduler.Closed += (s, AssemblyLoadEventArgs) => this.Close();
-            scheduler.Show();
-            this.Hide();
+           
+            this.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -167,13 +163,13 @@ namespace personal_assistant_ui
             switch (index)
             {
                 case 0:
-                    MessageBox.Show("First option");
-                    Size = new Size(600, 326); //Grow size of window if the user select first option of the combobox
-                                               //the new location will be 449,233
-                    if (btn_submit.Location != new Point(449, 233))
+                    //MessageBox.Show("First option");
+                    Size = new Size(600, 346); //Grow size of window if the user select first option of the combobox
+                                               //the new location will be 449,249
+                    if (btn_submit.Location != new Point(449, 249))
                     {
-                        btn_submit.Location = new Point(btn_submit.Location.X + 300, btn_submit.Location.Y); // move submit button
-                        btn_cancel.Location = new Point(btn_cancel.Location.X + 300, btn_cancel.Location.Y); // move cancel button
+                        btn_submit.Location = new Point(btn_submit.Location.X + 319, btn_submit.Location.Y); // move submit button // 130 + 319 = 449
+                        btn_cancel.Location = new Point(btn_cancel.Location.X + 319, btn_cancel.Location.Y); // move cancel button
                     }
 
                     suggestionBox.Items.Clear();
@@ -191,12 +187,12 @@ namespace personal_assistant_ui
                     destinationSuggText.Text = "How do you want to get to the destination?";
                     break;
                 case 1:
-                    Size = new Size(600, 326);
-                    MessageBox.Show("Second option");
-                    if (btn_submit.Location != new Point(449, 233))
+                    Size = new Size(600, 346);
+                    //MessageBox.Show("Second option");
+                    if (btn_submit.Location != new Point(449, 249))
                     {
-                        btn_submit.Location = new Point(btn_submit.Location.X + 300, btn_submit.Location.Y); // move submit button
-                        btn_cancel.Location = new Point(btn_cancel.Location.X + 300, btn_cancel.Location.Y); // move cancel button
+                        btn_submit.Location = new Point(449, 249); // move submit button
+                        btn_cancel.Location = new Point(353, 249); // move cancel button
                     }
 
                     suggestionBox.Items.Clear();
@@ -233,14 +229,16 @@ namespace personal_assistant_ui
 
                     if (suggestionBox.Text == "Smart Lamp")
                     {
-                        MessageBox.Show("SMART LAMP");
+                        //MessageBox.Show("SMART LAMP");
+                        btn_submit.Location = new Point(449, 249); // move submit button
+                        btn_cancel.Location = new Point(353, 249); // move cancel button
                     }
                     else
                     {
-                        MessageBox.Show("ilektrikos");
+                        //MessageBox.Show("ilektrikos");
                         distanceLbl.Visible = true;
-                        Size = new Size(791, 326);
-                        if (btn_submit.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        Size = new Size(800, 346);
+                        if (btn_submit.Location != new Point(640, 249)) //if the location of one of the two buttons is 640,249 then dont change any button location
                         {
                             btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
                             btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
@@ -269,14 +267,16 @@ namespace personal_assistant_ui
                 case 1:
                     if (suggestionBox.Text == "Shoe rack")
                     {
-                        MessageBox.Show("SMART shoe");
+                        //MessageBox.Show("SMART shoe");
+                        btn_submit.Location = new Point(449, 249); // move submit button
+                        btn_cancel.Location = new Point(353, 249); // move cancel button
                     }
                     else
                     {
-                        MessageBox.Show("ilektrikos");
+                        //MessageBox.Show("ilektrikos");
                         distanceLbl.Visible = true;
-                        Size = new Size(791, 326);
-                        if (btn_submit.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        Size = new Size(800, 346);
+                        if (btn_submit.Location != new Point(640, 249)) //if the location of one of the two buttons is 640,249 then dont change any button location
                         {
                             btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
                             btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
@@ -303,14 +303,16 @@ namespace personal_assistant_ui
                 case 2:
                     if (suggestionBox.Text == "Pet feeder")
                     {
-                        MessageBox.Show("SMART feeder");
+                        //MessageBox.Show("SMART feeder");
+                        btn_submit.Location = new Point(449, 249); // move submit button
+                        btn_cancel.Location = new Point(353, 249); // move cancel button
                     }
                     else
                     {
-                        MessageBox.Show("ilektrikos");
+                        //MessageBox.Show("ilektrikos");
                         distanceLbl.Visible = true;
-                        Size = new Size(791, 326);
-                        if (btn_submit.Location != new Point(640, 233)) //if the location of one of the two buttons is 640,233 then dont change any button location
+                        Size = new Size(800, 346);
+                        if (btn_submit.Location != new Point(640, 249)) //if the location of one of the two buttons is 640,249 then dont change any button location
                         {
                             btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
                             btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
@@ -337,8 +339,8 @@ namespace personal_assistant_ui
                     }
                     break;
                 case 3:
-                    Size = new Size(791, 326);
-                    if (btn_submit.Location != new Point(640, 233))
+                    Size = new Size(800, 346);
+                    if (btn_submit.Location != new Point(640, 249))
                     {
                         btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
                         btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
@@ -361,8 +363,8 @@ namespace personal_assistant_ui
 
                     break;
                 case 4:
-                    Size = new Size(791, 326);
-                    if (btn_submit.Location != new Point(640, 233))
+                    Size = new Size(800, 346);
+                    if (btn_submit.Location != new Point(640, 249))
                     {
                         btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
                         btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button
@@ -385,8 +387,8 @@ namespace personal_assistant_ui
                     durationInMin.Visible = true;
                     break;
                 case 5:
-                    Size = new Size(791, 326);
-                    if (btn_submit.Location != new Point(640, 233))
+                    Size = new Size(800, 346);
+                    if (btn_submit.Location != new Point(640, 249))
                     {
                         btn_submit.Location = new Point(btn_submit.Location.X + 191, btn_submit.Location.Y); // move submit button
                         btn_cancel.Location = new Point(btn_cancel.Location.X + 191, btn_cancel.Location.Y); // move cancel button

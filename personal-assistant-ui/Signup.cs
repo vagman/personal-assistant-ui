@@ -26,7 +26,10 @@ namespace personal_assistant_ui
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   if (tb_password.Text != tb_password_confirm.Text)
+            {
+
+            }
             string text = "Welcome to the personal assistant application";
             speak.SpeakAsync(text);
 
@@ -65,6 +68,65 @@ namespace personal_assistant_ui
             login.Closed += (s, AssemblyLoadEventArgs) => this.Close();
             login.Show();
             this.Hide();
+        }
+
+        private void signup_Load(object sender, EventArgs e)
+        {
+            string path = "Settings.txt";
+            if (!File.Exists(path))
+            {
+                File.Create(path).Dispose();
+                using (TextWriter tw = new StreamWriter(path))
+                {
+                    tw.WriteLine("English");
+                    tw.WriteLine("Light");
+                    tw.Close();
+                }
+            }
+            var lines = File.ReadAllLines("Settings.txt");
+            if (lines[0].ToLower().Equals("greek"))
+            {
+                changeToGreek();
+            }
+            if (lines[1].ToLower().Equals("dark"))
+            {
+                changeToDark();
+            }
+        }
+
+        public void changeToGreek()
+        {
+            
+        }
+
+        public void changeToDark()
+        {
+            BackColor = Color.DarkSlateGray;
+        }
+
+        private void tb_username_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void tb_full_name_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void tb_email_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void tb_password_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void tb_password_confirm_Validating(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

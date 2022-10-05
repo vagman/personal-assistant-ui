@@ -59,9 +59,9 @@ namespace personal_assistant_ui
             string sourceDir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
             if (IsDirectoryEmpty(sourceDir))
             {
-                string message = "There is no task that day!";
-                string title = "Error";
-                MessageBox.Show(message, title);
+                //string message = "There is no task that day!";
+                //string title = "Error";
+                //MessageBox.Show(message, title);
             }
             else
             {
@@ -71,12 +71,12 @@ namespace personal_assistant_ui
                     string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
                     listBox1.Items.AddRange(txtFiles);
                 }
-                else
-                {
-                    string message = "Never created task for that day";
-                    string title = "Error";
-                    MessageBox.Show(message, title);
-                }
+                //else
+                //{
+                //    string message = "Never created task for that day";
+                //    string title = "Error";
+                //    MessageBox.Show(message, title);
+                //}
             }
         }
 
@@ -127,15 +127,16 @@ namespace personal_assistant_ui
             if (listBox1.SelectedIndex != -1)
             {
                 //TODO VERIFICATION FOR DELETATION
-                MessageBox.Show("Are you sure do you want to delete: " + listBox1.SelectedItem.ToString());
+                if(MessageBox.Show("Are you sure do you want to delete: " + listBox1.SelectedItem.ToString(), "Delete of: " + listBox1.SelectedItem.ToString(), MessageBoxButtons.OKCancel) == DialogResult.OK) {
+                    for (int i = selectedItems.Count - 1; i >= 0; i--)
+                        listBox1.Items.Remove(selectedItems[i]);
+                    File.Delete(Path.Combine(sourceFolder, fileToDelete));
+                    gb_daily_planner_controls.Visible = false; //Hide the groupbox after deletation
+                    refreshList(); //Refresh task list after the delete
+                    showTaskBtn.Text = "Show Details";
+                }
 
-
-                for (int i = selectedItems.Count - 1; i >= 0; i--)
-                    listBox1.Items.Remove(selectedItems[i]);
-                File.Delete(Path.Combine(sourceFolder, fileToDelete));
-                gb_daily_planner_controls.Visible = false; //Hide the groupbox after deletation
-                refreshList(); //Refresh task list after the delete
-                showTaskBtn.Text = "Show Details";
+                
             }
             else
                 MessageBox.Show("error");
@@ -280,10 +281,18 @@ namespace personal_assistant_ui
         /* METHOD TO REFRESH LISTBOX */
         public void refreshList()
         {
-            listBox1.Items.Clear();
-            string sourceDir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
-            string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
-            listBox1.Items.AddRange(txtFiles);
+            try
+            {
+                listBox1.Items.Clear();
+                string sourceDir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
+                string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
+                listBox1.Items.AddRange(txtFiles);
+            }
+            catch
+            {
+                MessageBox.Show("There are no tasks!");
+            }
+            
         }
 
         // Refresh Button
@@ -523,5 +532,12 @@ namespace personal_assistant_ui
         private void gbox_Enter(object sender, EventArgs e) { }
         private void nameOfTask_TextChanged(object sender, EventArgs e) { }
         private void suggestionBox_SelectedIndexChanged(object sender, EventArgs e) { }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
+            //MessageBox.Show(path);
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "1");
+        }
     }
 }

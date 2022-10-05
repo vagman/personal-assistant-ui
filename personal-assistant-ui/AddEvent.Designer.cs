@@ -171,7 +171,7 @@
             "12"});
             this.hoursCB.Location = new System.Drawing.Point(92, 139);
             this.hoursCB.Name = "hoursCB";
-            this.hoursCB.Size = new System.Drawing.Size(36, 27);
+            this.hoursCB.Size = new System.Drawing.Size(42, 27);
             this.hoursCB.TabIndex = 10;
             // 
             // minCB
@@ -433,6 +433,7 @@
             this.readyToPickDestinations.BackColor = System.Drawing.SystemColors.HotTrack;
             this.readyToPickDestinations.DropDownWidth = 70;
             this.readyToPickDestinations.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readyToPickDestinations.ForeColor = System.Drawing.SystemColors.Menu;
             this.readyToPickDestinations.FormattingEnabled = true;
             this.readyToPickDestinations.Items.AddRange(new object[] {
             "University",
