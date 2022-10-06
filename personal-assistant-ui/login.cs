@@ -3,11 +3,13 @@ using System.IO;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace personal_assistant_ui
 {
     public partial class login : Form
     {
+        public static string workingDirectory = Environment.CurrentDirectory;
         SpeechSynthesizer speak;
         public login()
         {
@@ -51,7 +53,8 @@ namespace personal_assistant_ui
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "13");
         }
 
         private void login_Load(object sender, EventArgs e)

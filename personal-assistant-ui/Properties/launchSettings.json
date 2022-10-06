@@ -11,6 +11,11 @@
     "dell-laptop": {
       "commandName": "Executable",
       "executablePath": "C:\\Users\\bmano\\source\\repos\\vagman\\personal-assistant-ui\\personal-assistant-ui\\bin\\Debug\\net472\\personal-assistant-ui.exe"
+    },
+    "Profile 2": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\bmano\\source\\repos\\personal-assistant-ui\\personal-assistant-ui\\bin\\Debug\\net472\\personal-assistant-ui.exe",
+      "workingDirectory": "C:\\Users\\bmano\\source\\repos\\personal-assistant-ui\\personal-assistant-ui\\bin\\Debug"
     }
   }
 }

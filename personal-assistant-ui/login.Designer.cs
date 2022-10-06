@@ -56,10 +56,9 @@
             this.btn_signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_signup.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signup.ForeColor = System.Drawing.Color.Black;
-            this.btn_signup.Location = new System.Drawing.Point(595, 433);
-            this.btn_signup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_signup.Location = new System.Drawing.Point(446, 352);
             this.btn_signup.Name = "btn_signup";
-            this.btn_signup.Size = new System.Drawing.Size(133, 62);
+            this.btn_signup.Size = new System.Drawing.Size(100, 50);
             this.btn_signup.TabIndex = 1;
             this.btn_signup.Text = "Sign up";
             this.btn_signup.UseVisualStyleBackColor = true;
@@ -72,10 +71,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(391, 135);
-            this.lbl_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_username.Location = new System.Drawing.Point(293, 110);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(108, 27);
+            this.lbl_username.Size = new System.Drawing.Size(87, 21);
             this.lbl_username.TabIndex = 2;
             this.lbl_username.Text = "Username";
             // 
@@ -83,33 +81,30 @@
             // 
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password.Location = new System.Drawing.Point(391, 192);
-            this.lbl_password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_password.Location = new System.Drawing.Point(293, 156);
             this.lbl_password.Name = "lbl_password";
-            this.lbl_password.Size = new System.Drawing.Size(103, 27);
+            this.lbl_password.Size = new System.Drawing.Size(82, 21);
             this.lbl_password.TabIndex = 3;
             this.lbl_password.Text = "Password";
             // 
             // tb_username
             // 
             this.tb_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_username.Location = new System.Drawing.Point(564, 135);
-            this.tb_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_username.Location = new System.Drawing.Point(423, 110);
             this.tb_username.MaxLength = 30;
             this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(252, 30);
+            this.tb_username.Size = new System.Drawing.Size(190, 26);
             this.tb_username.TabIndex = 4;
             this.tb_username.Validating += new System.ComponentModel.CancelEventHandler(this.tb_username_Validating);
             // 
             // tb_password
             // 
             this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_password.Location = new System.Drawing.Point(564, 194);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_password.Location = new System.Drawing.Point(423, 158);
             this.tb_password.MaxLength = 14;
             this.tb_password.Name = "tb_password";
             this.tb_password.PasswordChar = '*';
-            this.tb_password.Size = new System.Drawing.Size(252, 30);
+            this.tb_password.Size = new System.Drawing.Size(190, 26);
             this.tb_password.TabIndex = 5;
             this.tb_password.Validating += new System.ComponentModel.CancelEventHandler(this.tb_password_Validating);
             // 
@@ -118,10 +113,9 @@
             this.lbl_new_user.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_new_user.AutoSize = true;
             this.lbl_new_user.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_new_user.Location = new System.Drawing.Point(460, 452);
-            this.lbl_new_user.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_new_user.Location = new System.Drawing.Point(345, 367);
             this.lbl_new_user.Name = "lbl_new_user";
-            this.lbl_new_user.Size = new System.Drawing.Size(117, 27);
+            this.lbl_new_user.Size = new System.Drawing.Size(95, 21);
             this.lbl_new_user.TabIndex = 8;
             this.lbl_new_user.Text = "New user ?";
             // 
@@ -142,10 +136,9 @@
             this.lbl_need_help.AutoSize = true;
             this.lbl_need_help.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_need_help.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_need_help.Location = new System.Drawing.Point(919, 516);
-            this.lbl_need_help.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_need_help.Location = new System.Drawing.Point(679, 419);
             this.lbl_need_help.Name = "lbl_need_help";
-            this.lbl_need_help.Size = new System.Drawing.Size(126, 27);
+            this.lbl_need_help.Size = new System.Drawing.Size(102, 21);
             this.lbl_need_help.TabIndex = 15;
             this.lbl_need_help.Text = "Need help ?";
             this.lbl_need_help.Click += new System.EventHandler(this.label5_Click);
@@ -153,10 +146,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-107, -61);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(-80, -50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(351, 489);
+            this.pictureBox1.Size = new System.Drawing.Size(263, 397);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -165,10 +157,9 @@
             this.btn_help.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_help.BackgroundImage")));
             this.btn_help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_help.Location = new System.Drawing.Point(1049, 510);
-            this.btn_help.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_help.Location = new System.Drawing.Point(787, 414);
             this.btn_help.Name = "btn_help";
-            this.btn_help.Size = new System.Drawing.Size(47, 43);
+            this.btn_help.Size = new System.Drawing.Size(35, 35);
             this.btn_help.TabIndex = 7;
             this.btn_help.UseVisualStyleBackColor = true;
             this.btn_help.Click += new System.EventHandler(this.button4_Click);
@@ -178,10 +169,9 @@
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(390, 50);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(292, 41);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(390, 32);
+            this.label7.Size = new System.Drawing.Size(302, 25);
             this.label7.TabIndex = 17;
             this.label7.Text = "Unipi Smart Assistan Application";
             // 
@@ -190,10 +180,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(411, 540);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(308, 439);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 20);
+            this.label1.Size = new System.Drawing.Size(187, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "This software is licensed under the";
             // 
@@ -201,10 +190,9 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(659, 540);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(494, 439);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(88, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(69, 16);
             this.linkLabel1.TabIndex = 19;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "MIT License";
@@ -215,10 +203,9 @@
             this.btn_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(564, 263);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_login.Location = new System.Drawing.Point(423, 214);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(253, 68);
+            this.btn_login.Size = new System.Drawing.Size(190, 55);
             this.btn_login.TabIndex = 0;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
@@ -226,11 +213,11 @@
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1112, 567);
+            this.ClientSize = new System.Drawing.Size(834, 461);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
@@ -246,7 +233,6 @@
             this.Controls.Add(this.btn_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login";

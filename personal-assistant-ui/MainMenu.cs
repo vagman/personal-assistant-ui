@@ -14,11 +14,14 @@ using System.Resources;
 using personal_assistant_ui.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using System.Reflection;
+using System.Net.NetworkInformation;
 
 namespace personal_assistant_ui
 {
     public partial class MainMenu : Form
     {
+        public static string workingDirectory = Environment.CurrentDirectory;
+
         public MainMenu()
         {
             InitializeComponent();
@@ -211,6 +214,12 @@ namespace personal_assistant_ui
         {
             btn_logout.ForeColor = Color.Black;
             lbl_logout.ForeColor = Color.Black;
+        }
+
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\Personal Assistant (User Manual).chm";
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "13");
         }
     }
 }

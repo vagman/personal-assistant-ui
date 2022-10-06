@@ -72,11 +72,10 @@
             this.btn_back1.AutoSize = true;
             this.btn_back1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back1.Location = new System.Drawing.Point(51, 12);
-            this.btn_back1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btn_back1.Location = new System.Drawing.Point(38, 10);
             this.btn_back1.Name = "btn_back1";
-            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
-            this.btn_back1.Size = new System.Drawing.Size(62, 38);
+            this.btn_back1.Padding = new System.Windows.Forms.Padding(0, 4, 4, 4);
+            this.btn_back1.Size = new System.Drawing.Size(50, 29);
             this.btn_back1.TabIndex = 22;
             this.btn_back1.Text = "Back";
             this.btn_back1.Click += new System.EventHandler(this.btn_back1_Click);
@@ -86,10 +85,9 @@
             this.btn_help1.AutoSize = true;
             this.btn_help1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_help1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_help1.Location = new System.Drawing.Point(928, 516);
-            this.btn_help1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btn_help1.Location = new System.Drawing.Point(696, 419);
             this.btn_help1.Name = "btn_help1";
-            this.btn_help1.Size = new System.Drawing.Size(116, 28);
+            this.btn_help1.Size = new System.Drawing.Size(92, 21);
             this.btn_help1.TabIndex = 33;
             this.btn_help1.Text = "Need help ?";
             // 
@@ -97,10 +95,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 88);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(67, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 37);
+            this.label1.Size = new System.Drawing.Size(112, 30);
             this.label1.TabIndex = 22;
             this.label1.Text = "Live video";
             // 
@@ -108,10 +105,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(562, 291);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(422, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 32);
+            this.label2.Size = new System.Drawing.Size(58, 25);
             this.label2.TabIndex = 23;
             this.label2.Text = "Food";
             // 
@@ -119,10 +115,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(92, 139);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(69, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 20);
+            this.label3.Size = new System.Drawing.Size(182, 16);
             this.label3.TabIndex = 24;
             this.label3.Text = "Here is a live feed of your cat.";
             // 
@@ -130,10 +125,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(821, 291);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(616, 236);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 32);
+            this.label4.Size = new System.Drawing.Size(65, 25);
             this.label4.TabIndex = 38;
             this.label4.Text = "Water";
             // 
@@ -141,10 +135,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 265);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(5, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(230, 32);
+            this.label5.Size = new System.Drawing.Size(180, 25);
             this.label5.TabIndex = 39;
             this.label5.Text = "Schedule a feeding";
             // 
@@ -152,10 +145,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(275, 407);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(206, 331);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
+            this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 50;
             this.label7.Text = "Period";
             // 
@@ -163,10 +155,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(188, 407);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(141, 331);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.Size = new System.Drawing.Size(53, 16);
             this.label6.TabIndex = 49;
             this.label6.Text = "Minutes";
             // 
@@ -174,10 +165,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(117, 407);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(88, 331);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 20);
+            this.label8.Size = new System.Drawing.Size(43, 16);
             this.label8.TabIndex = 48;
             this.label8.Text = "Hours";
             // 
@@ -185,10 +175,9 @@
             // 
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(12, 382);
-            this.timeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timeLabel.Location = new System.Drawing.Point(9, 310);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(51, 20);
+            this.timeLabel.Size = new System.Drawing.Size(41, 16);
             this.timeLabel.TabIndex = 47;
             this.timeLabel.Text = "Time:";
             // 
@@ -201,10 +190,9 @@
             this.cb_period.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.cb_period.Location = new System.Drawing.Point(279, 375);
-            this.cb_period.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_period.Location = new System.Drawing.Point(209, 305);
             this.cb_period.Name = "cb_period";
-            this.cb_period.Size = new System.Drawing.Size(65, 28);
+            this.cb_period.Size = new System.Drawing.Size(50, 24);
             this.cb_period.TabIndex = 40;
             // 
             // cb_mins
@@ -273,10 +261,9 @@
             "57",
             "58",
             "59"});
-            this.cb_mins.Location = new System.Drawing.Point(192, 375);
-            this.cb_mins.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_mins.Location = new System.Drawing.Point(144, 305);
             this.cb_mins.Name = "cb_mins";
-            this.cb_mins.Size = new System.Drawing.Size(79, 28);
+            this.cb_mins.Size = new System.Drawing.Size(60, 24);
             this.cb_mins.TabIndex = 46;
             // 
             // cb_hours
@@ -298,20 +285,18 @@
             "10",
             "11",
             "12"});
-            this.cb_hours.Location = new System.Drawing.Point(121, 375);
-            this.cb_hours.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_hours.Location = new System.Drawing.Point(91, 305);
             this.cb_hours.Name = "cb_hours";
-            this.cb_hours.Size = new System.Drawing.Size(62, 28);
+            this.cb_hours.Size = new System.Drawing.Size(48, 24);
             this.cb_hours.TabIndex = 45;
             // 
             // typeLabel
             // 
             this.typeLabel.AutoSize = true;
             this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(9, 454);
-            this.typeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.typeLabel.Location = new System.Drawing.Point(7, 369);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(87, 20);
+            this.typeLabel.Size = new System.Drawing.Size(71, 16);
             this.typeLabel.TabIndex = 44;
             this.typeLabel.Text = "Food type:";
             // 
@@ -319,10 +304,9 @@
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(12, 319);
-            this.dateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dateLabel.Location = new System.Drawing.Point(9, 259);
             this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(50, 20);
+            this.dateLabel.Size = new System.Drawing.Size(39, 16);
             this.dateLabel.TabIndex = 43;
             this.dateLabel.Text = "Date:";
             // 
@@ -335,10 +319,9 @@
             "Healthy gourmet",
             "Canned Pate",
             "Pouch Morsels"});
-            this.bc_goof_type.Location = new System.Drawing.Point(120, 450);
-            this.bc_goof_type.Margin = new System.Windows.Forms.Padding(4);
+            this.bc_goof_type.Location = new System.Drawing.Point(90, 366);
             this.bc_goof_type.Name = "bc_goof_type";
-            this.bc_goof_type.Size = new System.Drawing.Size(224, 28);
+            this.bc_goof_type.Size = new System.Drawing.Size(169, 24);
             this.bc_goof_type.TabIndex = 42;
             // 
             // date_picker
@@ -347,10 +330,9 @@
             this.date_picker.CustomFormat = "dd-MM-yyyy";
             this.date_picker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date_picker.Location = new System.Drawing.Point(120, 319);
-            this.date_picker.Margin = new System.Windows.Forms.Padding(4);
+            this.date_picker.Location = new System.Drawing.Point(90, 259);
             this.date_picker.Name = "date_picker";
-            this.date_picker.Size = new System.Drawing.Size(224, 26);
+            this.date_picker.Size = new System.Drawing.Size(169, 22);
             this.date_picker.TabIndex = 41;
             this.date_picker.Value = new System.DateTime(2022, 9, 22, 0, 0, 0, 0);
             // 
@@ -359,10 +341,9 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(729, 49);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(547, 40);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(262, 20);
+            this.label9.Size = new System.Drawing.Size(210, 16);
             this.label9.TabIndex = 51;
             this.label9.Text = "Your cat seems to be just fine";
             // 
@@ -371,10 +352,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(729, 101);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(547, 82);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(207, 40);
+            this.label10.Size = new System.Drawing.Size(166, 32);
             this.label10.TabIndex = 52;
             this.label10.Text = "She is relaxed and walking\naround as usual.";
             // 
@@ -388,10 +368,9 @@
             "Call 911",
             "Call Annie",
             "Call Mom"});
-            this.cb_send_help.Location = new System.Drawing.Point(733, 172);
-            this.cb_send_help.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_send_help.Location = new System.Drawing.Point(550, 140);
             this.cb_send_help.Name = "cb_send_help";
-            this.cb_send_help.Size = new System.Drawing.Size(224, 28);
+            this.cb_send_help.Size = new System.Drawing.Size(169, 24);
             this.cb_send_help.TabIndex = 53;
             this.cb_send_help.Text = "Call Mom!";
             this.cb_send_help.Visible = false;
@@ -410,10 +389,9 @@
             this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFood.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFood.Image")));
-            this.btnAddFood.Location = new System.Drawing.Point(695, 388);
-            this.btnAddFood.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddFood.Location = new System.Drawing.Point(521, 315);
             this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(47, 43);
+            this.btnAddFood.Size = new System.Drawing.Size(35, 35);
             this.btnAddFood.TabIndex = 54;
             this.btnAddFood.UseVisualStyleBackColor = true;
             this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
@@ -422,10 +400,9 @@
             // 
             this.pb_cat_water.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_cat_water.Image = ((System.Drawing.Image)(resources.GetObject("pb_cat_water.Image")));
-            this.pb_cat_water.Location = new System.Drawing.Point(789, 339);
-            this.pb_cat_water.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_cat_water.Location = new System.Drawing.Point(592, 275);
             this.pb_cat_water.Name = "pb_cat_water";
-            this.pb_cat_water.Size = new System.Drawing.Size(147, 135);
+            this.pb_cat_water.Size = new System.Drawing.Size(110, 110);
             this.pb_cat_water.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_cat_water.TabIndex = 37;
             this.pb_cat_water.TabStop = false;
@@ -434,10 +411,9 @@
             // 
             this.pb_cat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb_cat.Image = ((System.Drawing.Image)(resources.GetObject("pb_cat.Image")));
-            this.pb_cat.Location = new System.Drawing.Point(379, 13);
-            this.pb_cat.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_cat.Location = new System.Drawing.Point(284, 11);
             this.pb_cat.Name = "pb_cat";
-            this.pb_cat.Size = new System.Drawing.Size(342, 223);
+            this.pb_cat.Size = new System.Drawing.Size(256, 171);
             this.pb_cat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_cat.TabIndex = 35;
             this.pb_cat.TabStop = false;
@@ -446,10 +422,9 @@
             // 
             this.pb_cat_food.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pb_cat_food.Image = ((System.Drawing.Image)(resources.GetObject("pb_cat_food.Image")));
-            this.pb_cat_food.Location = new System.Drawing.Point(520, 339);
-            this.pb_cat_food.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_cat_food.Location = new System.Drawing.Point(390, 275);
             this.pb_cat_food.Name = "pb_cat_food";
-            this.pb_cat_food.Size = new System.Drawing.Size(167, 132);
+            this.pb_cat_food.Size = new System.Drawing.Size(125, 107);
             this.pb_cat_food.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_cat_food.TabIndex = 36;
             this.pb_cat_food.TabStop = false;
@@ -459,10 +434,9 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(1052, 511);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(789, 415);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 43);
+            this.button1.Size = new System.Drawing.Size(35, 35);
             this.button1.TabIndex = 34;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -472,10 +446,9 @@
             this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_back.Location = new System.Drawing.Point(13, 12);
-            this.btn_back.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_back.Location = new System.Drawing.Point(10, 10);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(35, 32);
+            this.btn_back.Size = new System.Drawing.Size(26, 26);
             this.btn_back.TabIndex = 21;
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
@@ -488,10 +461,9 @@
             this.btnAddWater.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddWater.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddWater.Image = ((System.Drawing.Image)(resources.GetObject("btnAddWater.Image")));
-            this.btnAddWater.Location = new System.Drawing.Point(945, 388);
-            this.btnAddWater.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddWater.Location = new System.Drawing.Point(709, 315);
             this.btnAddWater.Name = "btnAddWater";
-            this.btnAddWater.Size = new System.Drawing.Size(44, 43);
+            this.btnAddWater.Size = new System.Drawing.Size(33, 35);
             this.btnAddWater.TabIndex = 55;
             this.btnAddWater.UseVisualStyleBackColor = true;
             this.btnAddWater.Click += new System.EventHandler(this.btnAddWater_Click);
@@ -514,10 +486,9 @@
             this.btn_save_feeding_schedule.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
             this.btn_save_feeding_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save_feeding_schedule.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save_feeding_schedule.Location = new System.Drawing.Point(138, 492);
-            this.btn_save_feeding_schedule.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_save_feeding_schedule.Location = new System.Drawing.Point(104, 400);
             this.btn_save_feeding_schedule.Name = "btn_save_feeding_schedule";
-            this.btn_save_feeding_schedule.Size = new System.Drawing.Size(133, 62);
+            this.btn_save_feeding_schedule.Size = new System.Drawing.Size(100, 50);
             this.btn_save_feeding_schedule.TabIndex = 56;
             this.btn_save_feeding_schedule.Text = "Done";
             this.btn_save_feeding_schedule.UseVisualStyleBackColor = true;
@@ -525,10 +496,10 @@
             // 
             // PetFeederForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(1112, 567);
+            this.ClientSize = new System.Drawing.Size(834, 461);
             this.Controls.Add(this.btn_save_feeding_schedule);
             this.Controls.Add(this.btnAddWater);
             this.Controls.Add(this.btnAddFood);
@@ -561,7 +532,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PetFeederForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personal Assistant - Smart Pet Feeder";

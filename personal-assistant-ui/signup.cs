@@ -26,17 +26,8 @@ namespace personal_assistant_ui
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {   if (tb_password.Text != tb_password_confirm.Text)
-            {
-
-            }
-            string text = "Welcome to the personal assistant application";
-            speak.SpeakAsync(text);
-
-            MainMenu mainmenu = new MainMenu();
-            mainmenu.Closed += (s, AssemblyLoadEventArgs) => Close();
-            mainmenu.Show();
-            Hide();
+        {   
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -106,12 +97,28 @@ namespace personal_assistant_ui
 
         private void tb_username_Validating(object sender, CancelEventArgs e)
         {
-
+            if (string.IsNullOrEmpty(tb_username.Text))
+            {
+                e.Cancel = true;
+                signupErrorProvider.SetIconPadding(tb_username, 5);
+                signupErrorProvider.SetError(tb_full_name, "Oops Error! Please enter your full name.");
+            } else {
+                e.Cancel = false;
+                signupErrorProvider.SetError(tb_username, null);
+            }
         }
 
         private void tb_full_name_Validating(object sender, CancelEventArgs e)
         {
-
+            if (string.IsNullOrEmpty(tb_full_name.Text))
+            {
+                e.Cancel = true;
+                signupErrorProvider.SetIconPadding(tb_username, 5);
+                signupErrorProvider.SetError(tb_full_name, "Oops Error! Please enter your full name.");
+            } else {
+                e.Cancel = false;
+                signupErrorProvider.SetError(tb_username, null);
+            }
         }
 
         private void tb_email_Validating(object sender, CancelEventArgs e)
@@ -126,7 +133,7 @@ namespace personal_assistant_ui
 
         private void tb_password_confirm_Validating(object sender, CancelEventArgs e)
         {
-
+            
         }
     }
 }
