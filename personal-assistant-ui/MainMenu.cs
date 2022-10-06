@@ -218,8 +218,8 @@ namespace personal_assistant_ui
 
         private void btn_help_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\Personal Assistant (User Manual).chm";
-            Help.ShowHelp(this, path, HelpNavigator.TopicId, "13");
+            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "7");
         }
     }
 }

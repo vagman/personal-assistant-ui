@@ -61,6 +61,8 @@
             this.btnAddWater = new System.Windows.Forms.Button();
             this.food_timer = new System.Windows.Forms.Timer(this.components);
             this.water_timer = new System.Windows.Forms.Timer(this.components);
+            this.lbl_food_warning = new System.Windows.Forms.Label();
+            this.lbl_water_warning = new System.Windows.Forms.Label();
             this.btn_save_feeding_schedule = new personal_assistant_ui.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cat_water)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cat)).BeginInit();
@@ -439,6 +441,7 @@
             this.button1.Size = new System.Drawing.Size(35, 35);
             this.button1.TabIndex = 34;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_back
             // 
@@ -480,8 +483,31 @@
             this.water_timer.Interval = 5000;
             this.water_timer.Tick += new System.EventHandler(this.water_timer_Tick);
             // 
+            // lbl_food_warning
+            // 
+            this.lbl_food_warning.AutoSize = true;
+            this.lbl_food_warning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_food_warning.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_food_warning.Location = new System.Drawing.Point(390, 400);
+            this.lbl_food_warning.Name = "lbl_food_warning";
+            this.lbl_food_warning.Size = new System.Drawing.Size(0, 16);
+            this.lbl_food_warning.TabIndex = 57;
+            this.lbl_food_warning.Visible = false;
+            // 
+            // lbl_water_warning
+            // 
+            this.lbl_water_warning.AutoSize = true;
+            this.lbl_water_warning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_water_warning.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_water_warning.Location = new System.Drawing.Point(589, 400);
+            this.lbl_water_warning.Name = "lbl_water_warning";
+            this.lbl_water_warning.Size = new System.Drawing.Size(0, 16);
+            this.lbl_water_warning.TabIndex = 58;
+            this.lbl_water_warning.Visible = false;
+            // 
             // btn_save_feeding_schedule
             // 
+            this.btn_save_feeding_schedule.BackColor = System.Drawing.Color.LawnGreen;
             this.btn_save_feeding_schedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save_feeding_schedule.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
             this.btn_save_feeding_schedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -490,8 +516,8 @@
             this.btn_save_feeding_schedule.Name = "btn_save_feeding_schedule";
             this.btn_save_feeding_schedule.Size = new System.Drawing.Size(100, 50);
             this.btn_save_feeding_schedule.TabIndex = 56;
-            this.btn_save_feeding_schedule.Text = "Done";
-            this.btn_save_feeding_schedule.UseVisualStyleBackColor = true;
+            this.btn_save_feeding_schedule.Text = "Submit";
+            this.btn_save_feeding_schedule.UseVisualStyleBackColor = false;
             this.btn_save_feeding_schedule.Click += new System.EventHandler(this.btn_spray_Click);
             // 
             // PetFeederForm
@@ -500,6 +526,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.lbl_water_warning);
+            this.Controls.Add(this.lbl_food_warning);
             this.Controls.Add(this.btn_save_feeding_schedule);
             this.Controls.Add(this.btnAddWater);
             this.Controls.Add(this.btnAddFood);
@@ -578,5 +606,7 @@
         private RoundedButton btn_save_feeding_schedule;
         private System.Windows.Forms.Timer food_timer;
         private System.Windows.Forms.Timer water_timer;
+        private Label lbl_food_warning;
+        private Label lbl_water_warning;
     }
 }

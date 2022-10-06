@@ -485,7 +485,6 @@ namespace personal_assistant_ui
 
         private void button4_Click(object sender, EventArgs e)
         {
-
             string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
             Help.ShowHelp(this, path, HelpNavigator.TopicId, "1");
         }

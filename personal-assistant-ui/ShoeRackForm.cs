@@ -13,6 +13,7 @@ namespace personal_assistant_ui
 {
     public partial class ShoeRackForm : Form
     {
+        public static string workingDirectory = Environment.CurrentDirectory;
         public ShoeRackForm()
         {
             InitializeComponent();
@@ -169,7 +170,8 @@ namespace personal_assistant_ui
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "2");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

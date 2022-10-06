@@ -15,8 +15,8 @@ namespace personal_assistant_ui
 {
     public partial class PetFeederForm : Form
     {
+        public static string workingDirectory = Environment.CurrentDirectory;
         decimal cat = 0;
-        public static bool flag_notification = false;
         int food_percentage = 20; // default food displayed percentage: 20% image
         int water_percentage = 90; // default water displayed percentage: 90% image
         public PetFeederForm()
@@ -224,54 +224,63 @@ namespace personal_assistant_ui
 
         private void food_timer_Tick(object sender, EventArgs e)
         {
-            flag_notification = true;
             switch (food_percentage)
             {
                 case 100:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("90percent");
                     food_percentage = 90;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 90:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("80percent");
                     food_percentage = 80;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 80:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("70percent");
                     food_percentage = 70;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 70:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("60percent");
                     food_percentage = 60;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 60:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("50percent");
                     food_percentage = 50;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 50:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("40percent");
                     food_percentage = 40;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 40:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("30percent");
                     food_percentage = 30;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 30:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("20percent");
                     food_percentage = 20;
+                    lbl_food_warning.Visible = false;
                     break;
                 case 20:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("10percent");
                     food_percentage = 10;
+                    lbl_food_warning.Text = "Your pet will soon need more food.";
+                    lbl_food_warning.Visible = true;
+                    lbl_food_warning.ForeColor = Color.OrangeRed;
                     break;
                 case 10:
                     pb_cat_food.Image = (Image)Resources.ResourceManager.GetObject("0percent");
                     food_percentage = 0;
+                    lbl_food_warning.Text = "Your pet needs food!";
+                    lbl_food_warning.Visible = true;
+                    lbl_food_warning.ForeColor = Color.Red;
                     break;
                 case 0:
-                    if (flag_notification)
-                    {
-                        MessageBox.Show("Your cat's needs food!\nPlease add food by pressing the Food '+' sign, next to the food percentage.", "Food: 0%", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
                     break;
                 default:
                     break;
@@ -280,48 +289,61 @@ namespace personal_assistant_ui
 
         private void water_timer_Tick(object sender, EventArgs e)
         {
-            flag_notification = true;
             switch (water_percentage)
             {
                 case 100:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("90percent");
                     water_percentage = 90;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 90:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("80percent");
                     water_percentage = 80;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 80:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("70percent");
                     water_percentage = 70;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 70:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("60percent");
                     water_percentage = 60;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 60:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("50percent");
                     water_percentage = 50;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 50:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("40percent");
                     water_percentage = 40;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 40:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("30percent");
                     water_percentage = 30;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 30:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("20percent");
                     water_percentage = 20;
+                    lbl_water_warning.Visible = false;
                     break;
                 case 20:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("10percent");
                     water_percentage = 10;
+                    lbl_water_warning.Text = "Your pet will soon need more water.";
+                    lbl_food_warning.Visible = true;
+                    lbl_water_warning.ForeColor = Color.OrangeRed;
                     break;
                 case 10:
                     pb_cat_water.Image = (Image)Resources.ResourceManager.GetObject("0percent");
                     water_percentage = 0;
+                    lbl_water_warning.Text = "Your pet needs water!";
+                    lbl_food_warning.Visible = true;
+                    lbl_water_warning.ForeColor = Color.Red;
                     break;
                 case 0:
 
@@ -337,6 +359,12 @@ namespace personal_assistant_ui
             water_percentage = 90;
             food_timer.Enabled = true;
             water_timer.Enabled = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "9");
         }
     }
 }

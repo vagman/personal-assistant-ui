@@ -13,6 +13,7 @@ namespace personal_assistant_ui
 {
     public partial class signup : Form
     {
+        public static string workingDirectory = Environment.CurrentDirectory;
         SpeechSynthesizer speak;
         public signup()
         {
@@ -134,6 +135,12 @@ namespace personal_assistant_ui
         private void tb_password_confirm_Validating(object sender, CancelEventArgs e)
         {
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetParent(workingDirectory).Parent.Parent.FullName + @"\HelpFiles\PersonalAssistant.chm";
+            Help.ShowHelp(this, path, HelpNavigator.TopicId, "15");
         }
     }
 }
