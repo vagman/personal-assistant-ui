@@ -41,6 +41,9 @@ namespace personal_assistant_ui
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             showDayTasks();
+            showTaskBtn.Visible = false;
+            gb_daily_planner_controls.Visible = false;
+            refreshList();
         }
 
         public bool IsDirectoryEmpty(string path)
@@ -62,6 +65,7 @@ namespace personal_assistant_ui
                 //string message = "There is no task that day!";
                 //string title = "Error";
                 //MessageBox.Show(message, title);
+
             }
             else
             {
@@ -70,6 +74,10 @@ namespace personal_assistant_ui
                     listBox1.Items.Clear();
                     string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
                     listBox1.Items.AddRange(txtFiles);
+                    showTaskBtn.Visible = false;
+                    gb_daily_planner_controls.Visible = false;
+                    isShowBtnClicked = 1;
+                    showTaskBtn.Text = "Show Details";
                 }
                 //else
                 //{
@@ -145,137 +153,145 @@ namespace personal_assistant_ui
         int isShowBtnClicked = 1;
         private void showTaskBtn_Click(object sender, EventArgs e)
         {
-            isShowBtnClicked *= -1;
-
-            if(isShowBtnClicked == -1)
+            try
             {
-                showTaskBtn.Text = "Hide Details"; // When the 'Show Details Button' is clicked it renamed to 'Hide Details'
-                string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
-                //string newSourceFolder = projectDirectory + @"\Tasks\" + dateTimePickerSch.Value.ToString("dd-MM-yyyy"); //the path takes the value from dateTimePickerSch not from dateTimePicker1
+                isShowBtnClicked *= -1;
 
-                string fileToRead = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
-                string text = File.ReadAllText(fileToRead);
+                if (isShowBtnClicked == -1)
+                {
+                    showTaskBtn.Text = "Hide Details"; // When the 'Show Details Button' is clicked it renamed to 'Hide Details'
+                    string sourceFolder = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
+                    //string newSourceFolder = projectDirectory + @"\Tasks\" + dateTimePickerSch.Value.ToString("dd-MM-yyyy"); //the path takes the value from dateTimePickerSch not from dateTimePicker1
 
-                /* READ FROM TASK.TXT FILE AND PASS THE VALUES FROM LINES TO TOOLS ON SCHEDULER*/
+                    string fileToRead = sourceFolder + @"\" + listBox1.SelectedItem.ToString() + ".txt";
+                    string text = File.ReadAllText(fileToRead);
 
-                //Create array to store each line's value to an index
-                string[] lines = File.ReadAllLines(fileToRead);
-                //First line of .txt file is for Title of task
+                    /* READ FROM TASK.TXT FILE AND PASS THE VALUES FROM LINES TO TOOLS ON SCHEDULER*/
 
-                //Second line of .txt file is for Datetime
-                string date = lines[1];
-                //Pass value from second line (from .txt) to dateTimePickerSch
-                dateTimePickerSch.Value = DateTime.ParseExact(date, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
-                //MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
+                    //Create array to store each line's value to an index
+                    string[] lines = File.ReadAllLines(fileToRead);
+                    //First line of .txt file is for Title of task
 
-                //Third line of .txt file is for Hours
-                hoursCB.Text = lines[2];
-                //Fourth line of .txt file is for Minutes
-                minCB.Text = lines[3];
-                //Fifth line of .txt file is for Period of time
-                periodCB.Text = lines[4];
+                    //Second line of .txt file is for Datetime
+                    string date = lines[1];
+                    //Pass value from second line (from .txt) to dateTimePickerSch
+                    dateTimePickerSch.Value = DateTime.ParseExact(date, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
+                    //MessageBox.Show(dateTimePickerSch.Value.ToString("dd-MM-yyyy"));
 
-                //Sixth line of .txt file is for Type of task
-                typeBox.Text = lines[5];
+                    //Third line of .txt file is for Hours
+                    hoursCB.Text = lines[2];
+                    //Fourth line of .txt file is for Minutes
+                    minCB.Text = lines[3];
+                    //Fifth line of .txt file is for Period of time
+                    periodCB.Text = lines[4];
 
-                //Seventh line is for 
-                suggestionBox.Text = lines[6];
+                    //Sixth line of .txt file is for Type of task
+                    typeBox.Text = lines[5];
 
-                //8th line
-                distanceInKm.Text = lines[7];
+                    //Seventh line is for 
+                    suggestionBox.Text = lines[6];
 
-                //9th
-                durationInMin.Text = lines[8];
+                    //8th line
+                    distanceInKm.Text = lines[7];
 
-                //10th
-                
-                needCoffee.Checked = Convert.ToBoolean(lines[9]);
+                    //9th
+                    durationInMin.Text = lines[8];
 
-                // GroupBox
+                    //10th
 
-                gb_daily_planner_controls.Text = "Task: " + listBox1.SelectedItem.ToString() + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
-                gb_daily_planner_controls.Name = "My Task";
-                gb_daily_planner_controls.Visible = true;
-                gb_daily_planner_controls.AutoSize = false;
+                    needCoffee.Checked = Convert.ToBoolean(lines[9]);
 
-                /* OnClick "Show" button enable these tools: */
+                    // GroupBox
 
-                //Title of task
-                label2.Visible = true;
-                //TextBox of task
-                nameOfTask.Text = listBox1.SelectedItem.ToString();
-                nameOfTask.Visible = true;
-                nameOfTask.Enabled = false;
+                    gb_daily_planner_controls.Text = "Task: " + listBox1.SelectedItem.ToString() + " / " + "(" + dateTimePicker1.Value.ToString("dd-MM-yyyy") + ")";
+                    gb_daily_planner_controls.Name = "My Task";
+                    gb_daily_planner_controls.Visible = true;
+                    gb_daily_planner_controls.AutoSize = false;
 
-                //Date of task
-                dateLabel.Visible = true;
-                dateTimePickerSch.Visible = true;
-                dateTimePickerSch.Enabled = false;
+                    /* OnClick "Show" button enable these tools: */
 
-                //Time of task
-                timeLabel.Visible = true;
-                //Hours
-                hoursCB.Visible = true;
-                hoursCB.Enabled = false;
-                //Minutes
-                minCB.Visible = true;
-                minCB.Enabled = false;
-                //Period
-                periodCB.Visible = true;
-                periodCB.Enabled = false;
+                    //Title of task
+                    label2.Visible = true;
+                    //TextBox of task
+                    nameOfTask.Text = listBox1.SelectedItem.ToString();
+                    nameOfTask.Visible = true;
+                    nameOfTask.Enabled = false;
 
-                //Type of task
-                typeLabel.Visible = true;
-                typeBox.Visible = true;
-                typeBox.Enabled = false;
+                    //Date of task
+                    dateLabel.Visible = true;
+                    dateTimePickerSch.Visible = true;
+                    dateTimePickerSch.Enabled = false;
 
-                //
-                suggestionBox.Visible = true;
-                suggestionBox.Enabled = false;
-                destinationSuggText.Visible = true;
-                //
-                distanceLbl.Visible = true;
-                distanceInKm.Visible = true;
-                distanceInKm.Enabled = false;
+                    //Time of task
+                    timeLabel.Visible = true;
+                    //Hours
+                    hoursCB.Visible = true;
+                    hoursCB.Enabled = false;
+                    //Minutes
+                    minCB.Visible = true;
+                    minCB.Enabled = false;
+                    //Period
+                    periodCB.Visible = true;
+                    periodCB.Enabled = false;
 
-                //
-                durationInMin.Visible = true;
-                durationInMin.Enabled = false;
-                durationLbl.Visible = true;
+                    //Type of task
+                    typeLabel.Visible = true;
+                    typeBox.Visible = true;
+                    typeBox.Enabled = false;
 
-                //
-                needCoffee.Visible = true;
-                needCoffee.Enabled = false;
+                    //
+                    suggestionBox.Visible = true;
+                    suggestionBox.Enabled = false;
+                    destinationSuggText.Visible = true;
+                    //
+                    distanceLbl.Visible = true;
+                    distanceInKm.Visible = true;
+                    distanceInKm.Enabled = false;
+
+                    //
+                    durationInMin.Visible = true;
+                    durationInMin.Enabled = false;
+                    durationLbl.Visible = true;
+
+                    //
+                    needCoffee.Visible = true;
+                    needCoffee.Enabled = false;
 
 
-                // Display my task edit button
-                taskEditBtn.Visible = true;
+                    // Display my task edit button
+                    taskEditBtn.Visible = true;
+                }
+                else
+                {
+                    showTaskBtn.Text = "Show Details";
+
+                    refreshList();
+                    gb_daily_planner_controls.Visible = false;
+
+                    // Turn edit button like the time before clicked.
+                    editBtnWasClicked = 1;
+                    taskEditBtn.Text = "Edit";
+                    taskEditBtn.BackColor = Color.White;
+                    cancelBtn.Visible = false;
+                    //select the same item  from listbox after press hide
+                    int index = listBox1.FindString(nameOfTask.Text);
+                    listBox1.SelectedIndex = index;
+                }
+
+                if (typeBox.Text == "Automation")
+                {
+                    needCoffee.Visible = false;
+                    durationInMin.Visible = false;
+                    distanceInKm.Visible = false;
+                    distanceLbl.Visible = false;
+                    durationLbl.Visible = false;
+                }
             }
-            else
+            catch
             {
-                showTaskBtn.Text = "Show Details";
-
-                refreshList();
-                gb_daily_planner_controls.Visible = false;
-
-                // Turn edit button like the time before clicked.
-                editBtnWasClicked = 1;
-                taskEditBtn.Text = "Edit";
-                taskEditBtn.BackColor = Color.White;
-                cancelBtn.Visible = false;
-                //select the same item  from listbox after press hide
-                int index = listBox1.FindString(nameOfTask.Text);
-                listBox1.SelectedIndex = index;
+                MessageBox.Show("You need to select a task first");
             }
-
-            if(typeBox.Text == "Automation")
-            {
-                needCoffee.Visible = false;
-                durationInMin.Visible = false;
-                distanceInKm.Visible = false;
-                distanceLbl.Visible = false;
-                durationLbl.Visible = false;
-            }
+            
         }
 
         /* METHOD TO REFRESH LISTBOX */
@@ -287,9 +303,14 @@ namespace personal_assistant_ui
                 string sourceDir = projectDirectory + @"\Tasks\" + dateTimePicker1.Value.ToString("dd-MM-yyyy");
                 string[] txtFiles = Directory.GetFiles(sourceDir).Select(file => Path.GetFileNameWithoutExtension(file)).ToArray();
                 listBox1.Items.AddRange(txtFiles);
+                showTaskBtn.Visible = false;
+                gb_daily_planner_controls.Visible = false;
+                
             }
             catch
             {
+                showTaskBtn.Visible = false;
+                gb_daily_planner_controls.Visible = false;
                 MessageBox.Show("There are no tasks!");
             }
             
